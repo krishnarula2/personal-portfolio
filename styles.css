@@ -1582,6 +1582,61 @@ body.scrolling::after {
     .project-card,
     .blog-card {
         max-width: 300px;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    
+    /* Ensure projects grid is properly centered on small mobile */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        justify-items: center !important;
+        align-items: center !important;
+        display: grid !important;
+    }
+    
+    /* Fix project card centering */
+    .project-card {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        display: block !important;
+        position: relative !important;
+    }
+    
+    .project-image {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 0 auto 15px auto !important;
+    }
+    
+    .project-card h3 {
+        text-align: center !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .project-card p {
+        text-align: center !important;
+        margin-bottom: 15px !important;
+        padding: 0 10px !important;
+    }
+    
+    .project-tech {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+        margin-bottom: 20px !important;
+        justify-content: center !important;
+    }
+    
+    .project-link {
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        width: fit-content !important;
     }
 }
 
