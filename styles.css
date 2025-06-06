@@ -2889,78 +2889,109 @@ section {
     }
 }
 
-/* VISIBLE ANIMATED BACKGROUND ORBS */
+/* TECH-SAVVY ANIMATED BACKGROUND ELEMENTS */
 .moving-orb {
     position: fixed;
-    width: 120px;
-    height: 120px;
-    background: radial-gradient(circle, rgba(79, 195, 247, 0.8) 0%, rgba(79, 195, 247, 0.4) 50%, transparent 100%);
-    border-radius: 50%;
     pointer-events: none;
-    z-index: 1;
-    box-shadow: 0 0 80px rgba(79, 195, 247, 0.8);
-    filter: blur(2px);
+    z-index: -1;
 }
 
+/* Hexagonal Tech Elements */
 .orb-1 {
-    animation: moveAcross1 10s linear infinite;
-    background: radial-gradient(circle, rgba(79, 195, 247, 0.9) 0%, rgba(79, 195, 247, 0.5) 50%, transparent 100%);
-    box-shadow: 0 0 100px rgba(79, 195, 247, 1);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, transparent 40%, rgba(79, 195, 247, 0.3) 50%, transparent 60%);
+    border: 2px solid rgba(79, 195, 247, 0.4);
+    border-radius: 8px;
+    animation: techFloat1 15s linear infinite;
+    box-shadow: 0 0 20px rgba(79, 195, 247, 0.3);
 }
 
+.orb-1::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(79, 195, 247, 0.6);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Circuit Line Pattern */
 .orb-2 {
-    animation: moveAcross2 12s linear infinite;
-    animation-delay: -4s;
-    background: radial-gradient(circle, rgba(41, 182, 246, 0.8) 0%, rgba(41, 182, 246, 0.4) 50%, transparent 100%);
-    box-shadow: 0 0 90px rgba(41, 182, 246, 0.9);
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(41, 182, 246, 0.8) 20%, rgba(41, 182, 246, 0.4) 80%, transparent 100%);
+    animation: techFloat2 20s linear infinite;
+    box-shadow: 0 0 10px rgba(41, 182, 246, 0.5);
 }
 
+.orb-2::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -8px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(41, 182, 246, 0.7);
+    border-radius: 50%;
+    background: rgba(41, 182, 246, 0.2);
+}
+
+/* Matrix Particle */
 .orb-3 {
-    animation: moveAcross3 14s linear infinite;
-    animation-delay: -8s;
-    background: radial-gradient(circle, rgba(3, 169, 244, 0.7) 0%, rgba(3, 169, 244, 0.35) 50%, transparent 100%);
-    box-shadow: 0 0 80px rgba(3, 169, 244, 0.8);
-    width: 100px;
-    height: 100px;
+    width: 4px;
+    height: 80px;
+    background: linear-gradient(0deg, transparent 0%, rgba(3, 169, 244, 0.8) 30%, rgba(3, 169, 244, 0.4) 70%, transparent 100%);
+    animation: techFloat3 12s linear infinite;
+    box-shadow: 0 0 15px rgba(3, 169, 244, 0.6);
+    border-radius: 2px;
 }
 
-@keyframes moveAcross1 {
+/* Tech Animation Keyframes */
+@keyframes techFloat1 {
     0% {
-        transform: translateX(-150px) translateY(20vh);
+        transform: translateX(-80px) translateY(25vh) rotate(0deg);
         opacity: 0;
     }
     10% {
         opacity: 1;
     }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(calc(100vw + 150px)) translateY(60vh);
-        opacity: 0;
-    }
-}
-
-@keyframes moveAcross2 {
-    0% {
-        transform: translateX(calc(100vw + 150px)) translateY(70vh);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
+    50% {
+        transform: translateX(50vw) translateY(35vh) rotate(180deg);
     }
     90% {
         opacity: 1;
     }
     100% {
-        transform: translateX(-150px) translateY(30vh);
+        transform: translateX(calc(100vw + 80px)) translateY(45vh) rotate(360deg);
         opacity: 0;
     }
 }
 
-@keyframes moveAcross3 {
+@keyframes techFloat2 {
     0% {
-        transform: translateX(-150px) translateY(80vh);
+        transform: translateX(calc(100vw + 150px)) translateY(60vh) rotate(0deg);
+        opacity: 0;
+    }
+    8% {
+        opacity: 1;
+    }
+    92% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-150px) translateY(20vh) rotate(5deg);
+        opacity: 0;
+    }
+}
+
+@keyframes techFloat3 {
+    0% {
+        transform: translateX(-10px) translateY(10vh);
         opacity: 0;
     }
     15% {
@@ -2970,30 +3001,50 @@ section {
         opacity: 1;
     }
     100% {
-        transform: translateX(calc(100vw + 150px)) translateY(15vh);
+        transform: translateX(calc(100vw + 10px)) translateY(80vh);
         opacity: 0;
     }
 }
 
-/* Mobile - smaller orbs but still visible */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.4;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+/* Mobile - tech elements scale down */
 @media (max-width: 768px) {
-    .moving-orb {
-        width: 80px;
-        height: 80px;
-        box-shadow: 0 0 60px rgba(79, 195, 247, 0.7);
+    .orb-1 {
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 0 15px rgba(79, 195, 247, 0.3);
     }
     
-    .orb-1 {
-        box-shadow: 0 0 70px rgba(79, 195, 247, 0.9);
+    .orb-1::before {
+        width: 12px;
+        height: 12px;
     }
     
     .orb-2 {
-        box-shadow: 0 0 65px rgba(41, 182, 246, 0.8);
+        width: 100px;
+        height: 2px;
+        box-shadow: 0 0 8px rgba(41, 182, 246, 0.4);
+    }
+    
+    .orb-2::after {
+        width: 12px;
+        height: 12px;
+        top: -6px;
     }
     
     .orb-3 {
-        width: 70px;
-        height: 70px;
-        box-shadow: 0 0 60px rgba(3, 169, 244, 0.7);
+        width: 3px;
+        height: 60px;
+        box-shadow: 0 0 10px rgba(3, 169, 244, 0.5);
     }
 }
