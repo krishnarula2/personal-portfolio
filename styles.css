@@ -1059,39 +1059,46 @@ body.scrolling::after {
         gap: 15px;
     }
     
-    /* FIXED ABOUT SECTION LAYOUT FOR MOBILE */
+    /* CLEAN MOBILE ABOUT SECTION LAYOUT */
     .about {
         padding: 40px 0;
     }
     
     .about-text-section {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        align-items: center;
+    }
+    
+    /* Profile image centered at top */
+    .about-image {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 25px auto;
+    }
+    
+    /* Text content below image */
+    .about-text {
+        order: 2;
+        max-width: 100%;
         text-align: center;
     }
     
-    /* Image directly under About Me title */
-    .about-image {
-        order: 1;
-        justify-content: center;
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-    
-    /* Text displayed horizontally after image */
-    .about-text {
-        order: 2;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-    
     .about-text p {
-        font-size: 0.95rem;
-        margin-bottom: 0;
-        padding-left: 15px;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        padding: 0 15px;
         line-height: 1.6;
-        text-align: left;
+        text-align: center;
+        color: #e2e8f0;
+    }
+    
+    /* Remove bullet points on mobile */
+    .about-text p:before {
+        display: none;
     }
     
     /* FIXED STATS SECTION - NO MORE TEXT CUTOFF */
@@ -1131,12 +1138,15 @@ body.scrolling::after {
     }
     
     .image-placeholder {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgba(79, 195, 247, 0.4);
+        box-shadow: 0 4px 15px rgba(79, 195, 247, 0.2);
     }
     
     .image-placeholder i {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        color: #4fc3f7;
     }
     
     /* Section container mobile */
@@ -1415,9 +1425,29 @@ body.scrolling::after {
         font-size: 0.75rem !important;
     }
     
+    /* Small mobile about section improvements */
+    .about-text-section {
+        gap: 20px;
+    }
+    
+    .about-image {
+        margin-bottom: 20px;
+    }
+    
     .about-text p {
-        font-size: 0.9rem;
-        padding-left: 12px;
+        font-size: 0.85rem;
+        padding: 0 10px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    
+    .image-placeholder {
+        width: 85px;
+        height: 85px;
+    }
+    
+    .image-placeholder i {
+        font-size: 2rem;
     }
     
     .stat {
