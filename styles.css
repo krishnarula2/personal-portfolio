@@ -1061,44 +1061,60 @@ body.scrolling::after {
     
     /* CLEAN MOBILE ABOUT SECTION LAYOUT */
     .about {
-        padding: 40px 0;
+        padding: 40px 0 !important;
     }
     
     .about-text-section {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        text-align: center;
-        align-items: center;
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+        flex-direction: column !important;
     }
     
-    /* Profile image centered at top */
+    /* Profile image centered at top - FULL WIDTH BLOCK */
     .about-image {
-        order: 1;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 25px auto;
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 0 30px 0 !important;
+        clear: both !important;
+        float: none !important;
+        order: 1 !important;
     }
     
-    /* Text content below image */
+    /* Text content below image - FULL WIDTH BLOCK */
     .about-text {
-        order: 2;
-        max-width: 100%;
-        text-align: center;
+        display: block !important;
+        width: 100% !important;
+        clear: both !important;
+        margin: 30px 0 0 0 !important;
+        float: none !important;
+        order: 2 !important;
     }
     
     .about-text p {
-        font-size: 0.9rem;
-        margin-bottom: 15px;
-        padding: 0 15px;
-        line-height: 1.6;
-        text-align: center;
-        color: #e2e8f0;
+        font-size: 0.9rem !important;
+        margin-bottom: 15px !important;
+        padding: 0 20px !important;
+        line-height: 1.7 !important;
+        text-align: center !important;
+        color: #e2e8f0 !important;
+        clear: both !important;
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
     }
     
     /* Remove bullet points on mobile */
     .about-text p:before {
-        display: none;
+        display: none !important;
+    }
+    
+    /* Force clean layout */
+    .image-placeholder {
+        float: none !important;
+        margin: 0 auto !important;
+        position: relative !important;
     }
     
     /* FIXED STATS SECTION - NO MORE TEXT CUTOFF */
@@ -1426,24 +1442,26 @@ body.scrolling::after {
     }
     
     /* Small mobile about section improvements */
-    .about-text-section {
-        gap: 20px;
+    .about-image {
+        margin: 0 0 25px 0;
     }
     
-    .about-image {
-        margin-bottom: 20px;
+    .about-text {
+        margin-top: 25px;
     }
     
     .about-text p {
         font-size: 0.85rem;
-        padding: 0 10px;
+        padding: 0 15px;
         margin-bottom: 12px;
         text-align: center;
+        line-height: 1.6;
     }
     
     .image-placeholder {
         width: 85px;
         height: 85px;
+        margin: 0 auto;
     }
     
     .image-placeholder i {
