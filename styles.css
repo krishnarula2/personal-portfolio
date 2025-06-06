@@ -2889,55 +2889,55 @@ section {
     }
 }
 
-/* BRIGHT GLOWING TECH ORBS */
+/* SUBTLE BLURRED BACKGROUND ORBS */
 .moving-orb {
     position: fixed;
     pointer-events: none;
     z-index: 1;
     border-radius: 50%;
     background: 
-        radial-gradient(circle at center, rgba(10, 20, 40, 0.8) 0%, rgba(10, 20, 40, 0.6) 30%, rgba(79, 195, 247, 0.3) 60%, transparent 100%);
+        radial-gradient(circle at center, rgba(79, 195, 247, 0.15) 0%, rgba(79, 195, 247, 0.08) 50%, transparent 100%);
     box-shadow: 
-        0 0 40px rgba(79, 195, 247, 0.8),
-        0 0 80px rgba(79, 195, 247, 0.6),
-        0 0 120px rgba(79, 195, 247, 0.4),
-        0 0 160px rgba(79, 195, 247, 0.2),
-        inset 0 0 20px rgba(79, 195, 247, 0.3);
-    filter: blur(1px);
+        0 0 60px rgba(79, 195, 247, 0.3),
+        0 0 120px rgba(79, 195, 247, 0.15);
+    filter: blur(4px);
+    opacity: 0.7;
 }
 
-/* Bright Glowing Energy Orbs */
+/* Subtle Background Orbs */
 .orb-1 {
-    width: 70px;
-    height: 70px;
-    animation: simpleFloat1 18s linear infinite;
-    filter: blur(2px);
-    box-shadow: 
-        0 0 30px rgba(79, 195, 247, 1),
-        0 0 60px rgba(79, 195, 247, 0.8),
-        0 0 90px rgba(79, 195, 247, 0.6);
+    width: 80px;
+    height: 80px;
+    animation: simpleFloat1 25s linear infinite;
+    animation-delay: 0s;
 }
 
 .orb-2 {
-    width: 90px;
-    height: 90px;
-    animation: simpleFloat2 22s linear infinite;
-    filter: blur(2.5px);
-    box-shadow: 
-        0 0 35px rgba(79, 195, 247, 1),
-        0 0 70px rgba(79, 195, 247, 0.8),
-        0 0 105px rgba(79, 195, 247, 0.6);
+    width: 60px;
+    height: 60px;
+    animation: simpleFloat2 20s linear infinite;
+    animation-delay: -8s;
 }
 
 .orb-3 {
-    width: 50px;
-    height: 50px;
-    animation: simpleFloat3 14s linear infinite;
-    filter: blur(1.5px);
-    box-shadow: 
-        0 0 25px rgba(79, 195, 247, 1),
-        0 0 50px rgba(79, 195, 247, 0.8),
-        0 0 75px rgba(79, 195, 247, 0.6);
+    width: 100px;
+    height: 100px;
+    animation: simpleFloat3 30s linear infinite;
+    animation-delay: -15s;
+}
+
+.orb-4 {
+    width: 70px;
+    height: 70px;
+    animation: simpleFloat1 28s linear infinite;
+    animation-delay: -20s;
+}
+
+.orb-5 {
+    width: 90px;
+    height: 90px;
+    animation: simpleFloat2 24s linear infinite;
+    animation-delay: -10s;
 }
 
 /* Enhanced Tech Float Animations */
@@ -2968,47 +2968,7 @@ section {
     }
 }
 
-/* Organic Morphing Animations */
-@keyframes organicMorph1 {
-    0%, 100% {
-        border-radius: 45% 30% 40% 50%;
-        transform: scale(1);
-    }
-    33% {
-        border-radius: 35% 60% 30% 45%;
-        transform: scale(1.1);
-    }
-    66% {
-        border-radius: 50% 40% 60% 35%;
-        transform: scale(0.9);
-    }
-}
 
-@keyframes organicMorph2 {
-    0%, 100% {
-        border-radius: 35% 50% 30% 60%;
-        transform: scale(1);
-    }
-    50% {
-        border-radius: 60% 30% 50% 40%;
-        transform: scale(1.15);
-    }
-}
-
-@keyframes organicMorph3 {
-    0%, 100% {
-        border-radius: 60% 40% 55% 35%;
-        transform: scale(1);
-    }
-    25% {
-        border-radius: 40% 55% 35% 60%;
-        transform: scale(1.2);
-    }
-    75% {
-        border-radius: 55% 35% 60% 40%;
-        transform: scale(0.8);
-    }
-}
 
 /* Mobile - aesthetic tech orbs scale down */
 @media (max-width: 768px) {
