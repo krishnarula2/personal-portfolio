@@ -2889,105 +2889,111 @@ section {
     }
 }
 
-/* CLEAN MOVING BALL ANIMATION - WORKS ON BOTH DESKTOP & MOBILE */
+/* VISIBLE ANIMATED BACKGROUND ORBS */
 .moving-orb {
     position: fixed;
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(circle, rgba(79, 195, 247, 0.4) 0%, rgba(79, 195, 247, 0.2) 40%, transparent 80%);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(79, 195, 247, 0.8) 0%, rgba(79, 195, 247, 0.4) 50%, transparent 100%);
     border-radius: 50%;
     pointer-events: none;
-    z-index: -1;
-    box-shadow: 0 0 50px rgba(79, 195, 247, 0.6);
+    z-index: 1;
+    box-shadow: 0 0 80px rgba(79, 195, 247, 0.8);
+    filter: blur(2px);
 }
 
 .orb-1 {
-    animation: moveAcross1 12s linear infinite;
-    background: radial-gradient(circle, rgba(79, 195, 247, 0.5) 0%, rgba(79, 195, 247, 0.2) 40%, transparent 80%);
+    animation: moveAcross1 10s linear infinite;
+    background: radial-gradient(circle, rgba(79, 195, 247, 0.9) 0%, rgba(79, 195, 247, 0.5) 50%, transparent 100%);
+    box-shadow: 0 0 100px rgba(79, 195, 247, 1);
 }
 
 .orb-2 {
-    animation: moveAcross2 15s linear infinite;
-    animation-delay: -5s;
-    background: radial-gradient(circle, rgba(41, 182, 246, 0.4) 0%, rgba(41, 182, 246, 0.15) 40%, transparent 80%);
-    box-shadow: 0 0 45px rgba(41, 182, 246, 0.5);
+    animation: moveAcross2 12s linear infinite;
+    animation-delay: -4s;
+    background: radial-gradient(circle, rgba(41, 182, 246, 0.8) 0%, rgba(41, 182, 246, 0.4) 50%, transparent 100%);
+    box-shadow: 0 0 90px rgba(41, 182, 246, 0.9);
 }
 
 .orb-3 {
-    animation: moveAcross3 18s linear infinite;
-    animation-delay: -10s;
-    background: radial-gradient(circle, rgba(3, 169, 244, 0.35) 0%, rgba(3, 169, 244, 0.12) 40%, transparent 80%);
-    box-shadow: 0 0 40px rgba(3, 169, 244, 0.4);
-    width: 80px;
-    height: 80px;
+    animation: moveAcross3 14s linear infinite;
+    animation-delay: -8s;
+    background: radial-gradient(circle, rgba(3, 169, 244, 0.7) 0%, rgba(3, 169, 244, 0.35) 50%, transparent 100%);
+    box-shadow: 0 0 80px rgba(3, 169, 244, 0.8);
+    width: 100px;
+    height: 100px;
 }
 
 @keyframes moveAcross1 {
     0% {
-        left: -120px;
-        top: 20vh;
+        transform: translateX(-150px) translateY(20vh);
         opacity: 0;
     }
-    5% {
+    10% {
         opacity: 1;
     }
-    95% {
+    90% {
         opacity: 1;
     }
     100% {
-        left: 100vw;
-        top: 70vh;
+        transform: translateX(calc(100vw + 150px)) translateY(60vh);
         opacity: 0;
     }
 }
 
 @keyframes moveAcross2 {
     0% {
-        left: 100vw;
-        top: 60vh;
+        transform: translateX(calc(100vw + 150px)) translateY(70vh);
         opacity: 0;
     }
-    5% {
+    10% {
         opacity: 1;
     }
-    95% {
+    90% {
         opacity: 1;
     }
     100% {
-        left: -120px;
-        top: 25vh;
+        transform: translateX(-150px) translateY(30vh);
         opacity: 0;
     }
 }
 
 @keyframes moveAcross3 {
     0% {
-        left: -100px;
-        top: 75vh;
+        transform: translateX(-150px) translateY(80vh);
         opacity: 0;
     }
-    8% {
+    15% {
         opacity: 1;
     }
-    92% {
+    85% {
         opacity: 1;
     }
     100% {
-        left: 100vw;
-        top: 15vh;
+        transform: translateX(calc(100vw + 150px)) translateY(15vh);
         opacity: 0;
     }
 }
 
-/* Mobile - same animation, just smaller orbs */
+/* Mobile - smaller orbs but still visible */
 @media (max-width: 768px) {
     .moving-orb {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
+        box-shadow: 0 0 60px rgba(79, 195, 247, 0.7);
+    }
+    
+    .orb-1 {
+        box-shadow: 0 0 70px rgba(79, 195, 247, 0.9);
+    }
+    
+    .orb-2 {
+        box-shadow: 0 0 65px rgba(41, 182, 246, 0.8);
     }
     
     .orb-3 {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
+        box-shadow: 0 0 60px rgba(3, 169, 244, 0.7);
     }
 }
