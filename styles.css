@@ -938,10 +938,10 @@ body.scrolling::after {
         padding: 0 20px;
     }
     
-    /* Navigation fixes - LESS CLUTTERED MOBILE */
+    /* Navigation fixes - MUCH LESS CLUTTERED MOBILE */
     .nav-container {
-        padding: 0 10px !important;
-        height: 50px !important;
+        padding: 0 5px !important;
+        height: 40px !important;
         overflow-x: auto;
         scrollbar-width: none;
         -ms-overflow-style: none;
@@ -953,23 +953,23 @@ body.scrolling::after {
     
     .nav-menu {
         gap: 0 !important;
-        padding: 2px !important;
+        padding: 1px !important;
         white-space: nowrap;
         min-width: max-content;
     }
     
     .nav-link {
-        padding: 6px 8px !important;
-        font-size: 0.75rem !important;
+        padding: 4px 6px !important;
+        font-size: 0.65rem !important;
         white-space: nowrap;
-        margin: 0 1px !important;
+        margin: 0 0.5px !important;
     }
     
     .nav-home-link {
-        font-size: 0.75rem !important;
-        padding: 5px 8px !important;
+        font-size: 0.65rem !important;
+        padding: 4px 6px !important;
         white-space: nowrap;
-        margin-right: 4px !important;
+        margin-right: 2px !important;
     }
     
     /* Loading screen mobile fixes */
@@ -1457,20 +1457,20 @@ body.scrolling::after {
     }
     
     .nav-container {
-        padding: 0 8px !important;
-        height: 45px !important;
+        padding: 0 4px !important;
+        height: 35px !important;
     }
     
     .nav-home-link {
-        font-size: 0.7rem !important;
-        padding: 4px 6px !important;
-        margin-right: 2px !important;
+        font-size: 0.6rem !important;
+        padding: 3px 4px !important;
+        margin-right: 1px !important;
     }
     
     .nav-link {
-        padding: 4px 6px !important;
-        font-size: 0.7rem !important;
-        margin: 0 0.5px !important;
+        padding: 3px 4px !important;
+        font-size: 0.6rem !important;
+        margin: 0 0.3px !important;
     }
     
     .hero {
