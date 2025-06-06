@@ -938,10 +938,10 @@ body.scrolling::after {
         padding: 0 20px;
     }
     
-    /* Navigation fixes */
+    /* Navigation fixes - LESS CLUTTERED MOBILE */
     .nav-container {
-        padding: 0 20px;
-        height: 60px;
+        padding: 0 10px !important;
+        height: 50px !important;
         overflow-x: auto;
         scrollbar-width: none;
         -ms-overflow-style: none;
@@ -952,22 +952,24 @@ body.scrolling::after {
     }
     
     .nav-menu {
-        gap: 0;
-        padding: 4px;
+        gap: 0 !important;
+        padding: 2px !important;
         white-space: nowrap;
         min-width: max-content;
     }
     
     .nav-link {
-        padding: 8px 14px;
-        font-size: 0.85rem;
+        padding: 6px 8px !important;
+        font-size: 0.75rem !important;
         white-space: nowrap;
+        margin: 0 1px !important;
     }
     
     .nav-home-link {
-        font-size: 0.85rem;
-        padding: 6px 12px;
+        font-size: 0.75rem !important;
+        padding: 5px 8px !important;
         white-space: nowrap;
+        margin-right: 4px !important;
     }
     
     /* Loading screen mobile fixes */
@@ -1079,7 +1081,7 @@ body.scrolling::after {
         display: block !important;
         width: 100% !important;
         text-align: center !important;
-        margin: 35px 0 30px 0 !important;
+        margin: 50px 0 35px 0 !important;
         clear: both !important;
         float: none !important;
     }
@@ -1090,7 +1092,7 @@ body.scrolling::after {
         display: block !important;
         width: 100% !important;
         clear: both !important;
-        margin: 10px 0 25px 0 !important;
+        margin: 15px 0 35px 0 !important;
         float: none !important;
     }
     
@@ -1361,52 +1363,61 @@ body.scrolling::after {
     
     /* PROPERLY CENTERED CONTACT GRID FOR MOBILE */
     .contact-description {
-        font-size: 0.95rem;
-        margin-bottom: 30px;
-        padding: 0 10px;
-        text-align: center;
+        font-size: 0.95rem !important;
+        margin-bottom: 30px !important;
+        padding: 0 !important;
+        text-align: center !important;
+        width: 100% !important;
     }
     
     .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        justify-items: center;
-        align-items: center;
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+        justify-items: center !important;
+        align-items: center !important;
+        display: grid !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
     }
     
     .contact-card {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
+        padding: 20px !important;
+        text-align: center !important;
+        display: block !important;
+        position: relative !important;
     }
     
     .contact-icon {
-        width: 60px;
-        height: 60px;
-        margin: 0 auto 15px auto;
+        width: 60px !important;
+        height: 60px !important;
+        margin: 0 auto 15px auto !important;
+        display: block !important;
     }
     
     .contact-icon i {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
+        text-align: center !important;
     }
     
     .contact-card h3 {
-        text-align: center;
-        margin-bottom: 12px;
+        text-align: center !important;
+        margin-bottom: 12px !important;
     }
     
     .contact-card p {
-        text-align: center;
-        margin-bottom: 15px;
+        text-align: center !important;
+        margin-bottom: 15px !important;
     }
     
     .contact-link {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        width: fit-content;
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        width: fit-content !important;
     }
 }
 
@@ -1440,18 +1451,20 @@ body.scrolling::after {
     }
     
     .nav-container {
-        padding: 0 15px;
-        height: 55px;
+        padding: 0 8px !important;
+        height: 45px !important;
     }
     
     .nav-home-link {
-        font-size: 0.8rem;
-        padding: 5px 10px;
+        font-size: 0.7rem !important;
+        padding: 4px 6px !important;
+        margin-right: 2px !important;
     }
     
     .nav-link {
-        padding: 6px 10px;
-        font-size: 0.8rem;
+        padding: 4px 6px !important;
+        font-size: 0.7rem !important;
+        margin: 0 0.5px !important;
     }
     
     .hero {
@@ -1498,12 +1511,12 @@ body.scrolling::after {
     
     /* Small mobile about section improvements */
     .about-image {
-        margin: 30px 0 25px 0 !important;
+        margin: 45px 0 30px 0 !important;
         order: 1 !important;
     }
     
     .about-text {
-        margin: 8px 0 20px 0 !important;
+        margin: 12px 0 30px 0 !important;
         order: 2 !important;
     }
     
