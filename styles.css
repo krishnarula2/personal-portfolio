@@ -1077,7 +1077,7 @@ body.scrolling::after {
         display: block !important;
         width: 100% !important;
         text-align: center !important;
-        margin: 0 0 30px 0 !important;
+        margin: 0 0 20px 0 !important;
         clear: both !important;
         float: none !important;
     }
@@ -1113,8 +1113,10 @@ body.scrolling::after {
     /* Force clean layout */
     .image-placeholder {
         float: none !important;
-        margin: 0 auto !important;
+        margin: 0 auto 20px auto !important;
         position: relative !important;
+        width: 80px !important;
+        height: 80px !important;
     }
     
     /* MOBILE AI TOOLS SECTION FIX */
@@ -1150,6 +1152,14 @@ body.scrolling::after {
         line-height: 1.5 !important;
         text-align: center !important;
         color: #cccccc !important;
+    }
+    
+    /* Profile image sizing */
+    .profile-image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
     }
     
     /* FIXED STATS SECTION - NO MORE TEXT CUTOFF */
@@ -1496,9 +1506,9 @@ body.scrolling::after {
     }
     
     .image-placeholder {
-        width: 85px !important;
-        height: 85px !important;
-        margin: 0 auto !important;
+        width: 70px !important;
+        height: 70px !important;
+        margin: 0 auto 15px auto !important;
     }
     
     .image-placeholder i {
@@ -1835,18 +1845,19 @@ section {
     margin-top: -30px;
 }
 
-.image-placeholder {
-    width: 85px;
-    height: 85px;
-    background: rgba(10, 15, 28, 0.5);
-    border: 2px solid rgba(79, 195, 247, 0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(8px);
-    transition: all 0.3s ease;
-}
+    .image-placeholder {
+        width: 80px !important;
+        height: 80px !important;
+        background: rgba(10, 15, 28, 0.5);
+        border: 2px solid rgba(79, 195, 247, 0.3);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(8px);
+        transition: all 0.3s ease;
+        margin: 0 auto 20px auto !important;
+    }
 
 .image-placeholder:hover {
     border-color: rgba(79, 195, 247, 0.5);
