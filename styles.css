@@ -1065,31 +1065,31 @@ body.scrolling::after {
     }
     
     .about-text-section {
-        display: block !important;
+        display: flex !important;
+        flex-direction: column !important;
         width: 100% !important;
         float: none !important;
-        flex-direction: column !important;
     }
     
-    /* Profile image centered at top - FULL WIDTH BLOCK */
+    /* Profile image FIRST - directly under About Me title */
     .about-image {
+        order: 1 !important;
         display: block !important;
         width: 100% !important;
         text-align: center !important;
         margin: 0 0 30px 0 !important;
         clear: both !important;
         float: none !important;
-        order: 1 !important;
     }
     
-    /* Text content below image - FULL WIDTH BLOCK */
+    /* Text content SECOND - below image */
     .about-text {
+        order: 2 !important;
         display: block !important;
         width: 100% !important;
         clear: both !important;
-        margin: 30px 0 0 0 !important;
+        margin: 0 !important;
         float: none !important;
-        order: 2 !important;
     }
     
     .about-text p {
@@ -1115,6 +1115,41 @@ body.scrolling::after {
         float: none !important;
         margin: 0 auto !important;
         position: relative !important;
+    }
+    
+    /* MOBILE AI TOOLS SECTION FIX */
+    .about-stats {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        margin-top: 40px !important;
+        width: 100% !important;
+    }
+    
+    .stat {
+        display: block !important;
+        width: 100% !important;
+        padding: 20px 15px !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+    
+    .stat h3 {
+        font-size: 1.8rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .stat p {
+        font-size: 0.9rem !important;
+        margin-bottom: 10px !important;
+        font-weight: 600 !important;
+    }
+    
+    .skill-list {
+        font-size: 0.8rem !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+        color: #cccccc !important;
     }
     
     /* FIXED STATS SECTION - NO MORE TEXT CUTOFF */
@@ -1443,29 +1478,54 @@ body.scrolling::after {
     
     /* Small mobile about section improvements */
     .about-image {
-        margin: 0 0 25px 0;
+        margin: 0 0 25px 0 !important;
+        order: 1 !important;
     }
     
     .about-text {
-        margin-top: 25px;
+        margin: 0 !important;
+        order: 2 !important;
     }
     
     .about-text p {
-        font-size: 0.85rem;
-        padding: 0 15px;
-        margin-bottom: 12px;
-        text-align: center;
-        line-height: 1.6;
+        font-size: 0.85rem !important;
+        padding: 0 15px !important;
+        margin-bottom: 12px !important;
+        text-align: center !important;
+        line-height: 1.6 !important;
     }
     
     .image-placeholder {
-        width: 85px;
-        height: 85px;
-        margin: 0 auto;
+        width: 85px !important;
+        height: 85px !important;
+        margin: 0 auto !important;
     }
     
     .image-placeholder i {
-        font-size: 2rem;
+        font-size: 2rem !important;
+    }
+    
+    /* Small mobile AI Tools improvements */
+    .about-stats {
+        gap: 12px !important;
+        margin-top: 35px !important;
+    }
+    
+    .stat {
+        padding: 15px 10px !important;
+    }
+    
+    .stat h3 {
+        font-size: 1.6rem !important;
+    }
+    
+    .stat p {
+        font-size: 0.85rem !important;
+    }
+    
+    .skill-list {
+        font-size: 0.75rem !important;
+        padding: 0 5px !important;
     }
     
     .stat {
