@@ -1077,7 +1077,7 @@ body.scrolling::after {
         display: block !important;
         width: 100% !important;
         text-align: center !important;
-        margin: 0 0 20px 0 !important;
+        margin: 15px 0 20px 0 !important;
         clear: both !important;
         float: none !important;
     }
@@ -1088,7 +1088,7 @@ body.scrolling::after {
         display: block !important;
         width: 100% !important;
         clear: both !important;
-        margin: 0 !important;
+        margin: 0 0 15px 0 !important;
         float: none !important;
     }
     
@@ -1124,7 +1124,7 @@ body.scrolling::after {
         display: flex !important;
         flex-direction: column !important;
         gap: 15px !important;
-        margin-top: 40px !important;
+        margin-top: 25px !important;
         width: 100% !important;
     }
     
@@ -1488,7 +1488,7 @@ body.scrolling::after {
     
     /* Small mobile about section improvements */
     .about-image {
-        margin: 0 0 25px 0 !important;
+        margin: 12px 0 18px 0 !important;
         order: 1 !important;
     }
     
@@ -1518,7 +1518,7 @@ body.scrolling::after {
     /* Small mobile AI Tools improvements */
     .about-stats {
         gap: 12px !important;
-        margin-top: 35px !important;
+        margin-top: 20px !important;
     }
     
     .stat {
