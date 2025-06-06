@@ -1221,12 +1221,15 @@ body.scrolling::after {
     }
     
     .section-title {
-        font-size: 2rem;
-        text-align: center;
-        flex-direction: column;
-        justify-content: center;
+        font-size: 2rem !important;
+        text-align: center !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
         gap: 8px;
         margin-bottom: 25px;
+        display: flex !important;
+        width: 100% !important;
     }
     
     .section-title i {
@@ -1563,7 +1566,14 @@ body.scrolling::after {
     }
     
     .section-title {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
+        text-align: center !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        display: flex !important;
+        width: 100% !important;
+        margin: 0 auto 25px auto !important;
     }
     
     .loading-progress {
