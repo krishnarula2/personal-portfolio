@@ -2889,61 +2889,116 @@ section {
     }
 }
 
-/* SIMPLE TECH BACKGROUND */
+/* ENHANCED GLOWY TECH BACKGROUND */
 .moving-orb {
     position: fixed;
     pointer-events: none;
     z-index: 1;
-    border-radius: 50%;
-    background: rgba(79, 195, 247, 0.25);
-    border: 1px solid rgba(79, 195, 247, 0.4);
-    box-shadow: 0 0 30px rgba(79, 195, 247, 0.3);
+    border-radius: 40%;
+    background: 
+        radial-gradient(ellipse 70% 50% at 30% 30%, rgba(79, 195, 247, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 80% at 70% 70%, rgba(79, 195, 247, 0.1) 0%, transparent 60%),
+        radial-gradient(circle, rgba(79, 195, 247, 0.08) 0%, transparent 70%);
+    border: none;
+    box-shadow: 
+        0 0 60px rgba(79, 195, 247, 0.4),
+        0 0 100px rgba(79, 195, 247, 0.2),
+        0 0 140px rgba(79, 195, 247, 0.1);
+    filter: blur(2px);
 }
 
-/* Simple Tech Orbs - Single Blue Color */
+/* Enhanced Glowy Orbs - Organic Shapes */
 .orb-1 {
-    width: 60px;
+    width: 80px;
     height: 60px;
-    animation: simpleFloat1 15s linear infinite;
+    border-radius: 45% 30% 40% 50%;
+    animation: simpleFloat1 18s linear infinite, organicMorph1 8s ease-in-out infinite;
+    filter: blur(3px);
 }
 
 .orb-2 {
-    width: 80px;
-    height: 80px;
-    animation: simpleFloat2 20s linear infinite;
+    width: 100px;
+    height: 70px;
+    border-radius: 35% 50% 30% 60%;
+    animation: simpleFloat2 22s linear infinite, organicMorph2 6s ease-in-out infinite;
+    filter: blur(2.5px);
 }
 
 .orb-3 {
-    width: 40px;
+    width: 50px;
     height: 40px;
-    animation: simpleFloat3 12s linear infinite;
+    border-radius: 60% 40% 55% 35%;
+    animation: simpleFloat3 14s linear infinite, organicMorph3 5s ease-in-out infinite;
+    filter: blur(3.5px);
 }
 
-/* Simple Tech Float Animations */
+/* Enhanced Tech Float Animations */
 @keyframes simpleFloat1 {
     0% {
-        transform: translateX(-80px) translateY(20vh);
+        transform: translateX(-100px) translateY(15vh) rotate(0deg);
     }
     100% {
-        transform: translateX(calc(100vw + 80px)) translateY(70vh);
+        transform: translateX(calc(100vw + 100px)) translateY(75vh) rotate(180deg);
     }
 }
 
 @keyframes simpleFloat2 {
     0% {
-        transform: translateX(calc(100vw + 80px)) translateY(60vh);
+        transform: translateX(calc(100vw + 100px)) translateY(65vh) rotate(0deg);
     }
     100% {
-        transform: translateX(-80px) translateY(30vh);
+        transform: translateX(-100px) translateY(25vh) rotate(-120deg);
     }
 }
 
 @keyframes simpleFloat3 {
     0% {
-        transform: translateX(-60px) translateY(80vh);
+        transform: translateX(-80px) translateY(85vh) rotate(0deg);
     }
     100% {
-        transform: translateX(calc(100vw + 60px)) translateY(40vh);
+        transform: translateX(calc(100vw + 80px)) translateY(35vh) rotate(240deg);
+    }
+}
+
+/* Organic Morphing Animations */
+@keyframes organicMorph1 {
+    0%, 100% {
+        border-radius: 45% 30% 40% 50%;
+        transform: scale(1);
+    }
+    33% {
+        border-radius: 35% 60% 30% 45%;
+        transform: scale(1.1);
+    }
+    66% {
+        border-radius: 50% 40% 60% 35%;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes organicMorph2 {
+    0%, 100% {
+        border-radius: 35% 50% 30% 60%;
+        transform: scale(1);
+    }
+    50% {
+        border-radius: 60% 30% 50% 40%;
+        transform: scale(1.15);
+    }
+}
+
+@keyframes organicMorph3 {
+    0%, 100% {
+        border-radius: 60% 40% 55% 35%;
+        transform: scale(1);
+    }
+    25% {
+        border-radius: 40% 55% 35% 60%;
+        transform: scale(1.2);
+    }
+    75% {
+        border-radius: 55% 35% 60% 40%;
+        transform: scale(0.8);
     }
 }
 
