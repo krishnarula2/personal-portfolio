@@ -1001,7 +1001,7 @@ body.scrolling::after {
     }
     
     .hero-title {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         margin-bottom: 20px;
         position: relative;
     }
@@ -1446,7 +1446,7 @@ body.scrolling::after {
     }
     
     .hero-title {
-        font-size: 1.4rem;
+        font-size: 1.0rem;
     }
     
     /* Enhanced gradient overlay for small mobile */
