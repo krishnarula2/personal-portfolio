@@ -1005,7 +1005,7 @@ body.scrolling::after {
     }
     
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         margin-bottom: 20px;
         position: relative;
     }
@@ -1031,7 +1031,7 @@ body.scrolling::after {
     }
     
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 0.85rem;
         margin-bottom: 30px;
         text-align: center;
         line-height: 1.2;
@@ -1042,7 +1042,7 @@ body.scrolling::after {
     
     /* Mobile - make all text same size */
     .hero-subtitle, .hero-subtitle * {
-        font-size: 1.1rem !important;
+        font-size: 0.85rem !important;
     }
     
     /* Mobile typing text alignment fix */
@@ -1050,7 +1050,7 @@ body.scrolling::after {
         display: inline;
         text-align: center;
         white-space: nowrap;
-        font-size: 1.1rem !important;
+        font-size: 0.85rem !important;
     }
     
     .hero-buttons {
@@ -1379,7 +1379,7 @@ body.scrolling::after {
     }
     
     .hero-title {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
     
     /* Enhanced gradient overlay for small mobile */
@@ -1394,7 +1394,7 @@ body.scrolling::after {
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.75rem;
         text-align: center;
         line-height: 1.1;
         letter-spacing: 0.2px;
@@ -1404,7 +1404,7 @@ body.scrolling::after {
     
     /* Small mobile - make all text same size */
     .hero-subtitle, .hero-subtitle * {
-        font-size: 1rem !important;
+        font-size: 0.75rem !important;
     }
     
     /* Small mobile typing text alignment */
@@ -1412,7 +1412,7 @@ body.scrolling::after {
         display: inline;
         text-align: center;
         white-space: nowrap;
-        font-size: 1rem !important;
+        font-size: 0.75rem !important;
     }
     
     .about-text p {
@@ -1521,7 +1521,7 @@ body.scrolling::after {
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 40px;
     color: #f1f5f9;
     animation: fadeInUp 1s ease-out 0.2s both;
@@ -1535,14 +1535,14 @@ body.scrolling::after {
 
 /* Make all text in hero-subtitle the same size */
 .hero-subtitle, .hero-subtitle * {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
 }
 
 #dynamic-text {
     display: inline;
     text-align: center;
     white-space: nowrap;
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
 }
 
 .highlight {
