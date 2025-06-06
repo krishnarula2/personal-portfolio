@@ -5,12 +5,17 @@
     box-sizing: border-box;
 }
 
+html {
+    background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+    min-height: 100vh !important;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #ffffff;
-    background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%);
-    min-height: 100vh;
+    background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+    min-height: 100vh !important;
     overflow-x: hidden;
     position: relative;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><radialGradient id="cursorGrad" cx="50%25" cy="50%25" r="50%25"><stop offset="0%25" style="stop-color:%234fc3f7;stop-opacity:1"/><stop offset="30%25" style="stop-color:%2329b6f6;stop-opacity:0.8"/><stop offset="60%25" style="stop-color:%234fc3f7;stop-opacity:0.4"/><stop offset="100%25" style="stop-color:%23ffffff;stop-opacity:0.1"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="16" cy="16" r="12" fill="url(%23cursorGrad)" opacity="0.4" filter="url(%23glow)"><animate attributeName="r" values="12;15;12" dur="2s" repeatCount="indefinite"/></circle><circle cx="16" cy="16" r="6" fill="%234fc3f7" opacity="0.8"><animate attributeName="opacity" values="0.8;1;0.8" dur="1.5s" repeatCount="indefinite"/></circle><circle cx="16" cy="16" r="2" fill="%23ffffff"><animate attributeName="r" values="2;3;2" dur="1s" repeatCount="indefinite"/></circle><path d="M16,8 L18,14 L16,16 L14,14 Z" fill="%234fc3f7" opacity="0.6"><animateTransform attributeName="transform" type="rotate" values="0 16 16;360 16 16" dur="3s" repeatCount="indefinite"/></path></svg>'), auto;
@@ -803,11 +808,34 @@ body.scrolling::after {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Force dark background on mobile */
+    /* FORCE DARK BACKGROUND ON MOBILE */
+    html {
+        background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background-attachment: fixed !important;
+        min-height: 100vh !important;
+    }
+    
     body {
         background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
         background-attachment: fixed !important;
         min-height: 100vh !important;
+    }
+    
+    /* DISABLE ALL ANIMATIONS THAT CAUSE FRAME MOVEMENT */
+    *, *::before, *::after {
+        animation-duration: 0s !important;
+        animation-delay: 0s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0s !important;
+    }
+    
+    /* Keep only essential animations */
+    .progress-bar {
+        animation: progressLoad 3s ease-out forwards !important;
+    }
+    
+    .code-line {
+        animation: codeAppear 0.8s ease-out forwards !important;
     }
     
     /* Container adjustments */
@@ -899,19 +927,20 @@ body.scrolling::after {
         gap: 15px;
     }
     
-    /* About section mobile fixes */
+    /* REORGANIZED ABOUT SECTION FOR MOBILE */
     .about {
         padding: 40px 0;
     }
     
     .about-text-section {
         grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: left;
+        gap: 20px;
+        text-align: center;
     }
     
     .about-text {
         order: 2;
+        text-align: left;
     }
     
     .about-image {
@@ -928,36 +957,37 @@ body.scrolling::after {
         line-height: 1.6;
     }
     
-    /* Stats section mobile fixes */
+    /* IMPROVED STATS SECTION LAYOUT FOR MOBILE */
     .about-stats {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
         max-width: 100%;
         padding: 0 10px;
+        justify-items: center;
     }
     
     .stat {
-        padding: 20px;
+        padding: 15px 10px;
         border-radius: 12px;
         width: 100%;
-        max-width: 320px;
+        max-width: 160px;
         text-align: center;
     }
     
     .stat h3 {
-        font-size: 1.8rem;
-        margin-bottom: 8px;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
     }
     
     .stat p {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
+        font-size: 0.75rem;
+        margin-bottom: 8px;
     }
     
     .skill-list {
-        font-size: 0.8rem;
-        line-height: 1.4;
+        font-size: 0.7rem;
+        line-height: 1.3;
     }
     
     .image-placeholder {
@@ -1012,43 +1042,79 @@ body.scrolling::after {
         font-size: 0.9rem;
     }
     
-    /* Projects grid mobile fixes */
+    /* CENTERED PROJECTS GRID FOR MOBILE */
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 20px;
         justify-items: center;
+        place-items: center;
     }
     
     .project-card {
         width: 100%;
         max-width: 350px;
         margin: 0 auto;
+        text-align: center;
     }
     
-    /* Blogs grid mobile fixes */
+    .project-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .project-card h3 {
+        text-align: center;
+    }
+    
+    .project-card p {
+        text-align: center;
+    }
+    
+    /* CENTERED BLOGS GRID FOR MOBILE */
     .blogs-grid {
         grid-template-columns: 1fr;
         gap: 20px;
         justify-items: center;
+        place-items: center;
     }
     
     .blog-card {
         width: 100%;
         max-width: 350px;
         margin: 0 auto;
+        text-align: center;
     }
     
-    /* Contact grid mobile fixes */
+    .blog-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .blog-card h3 {
+        text-align: center;
+    }
+    
+    .blog-card p {
+        text-align: center;
+    }
+    
+    /* CENTERED CONTACT GRID FOR MOBILE */
     .contact-description {
         font-size: 0.95rem;
         margin-bottom: 30px;
         padding: 0 10px;
+        text-align: center;
     }
     
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 20px;
         justify-items: center;
+        place-items: center;
     }
     
     .contact-card {
@@ -1056,11 +1122,13 @@ body.scrolling::after {
         max-width: 320px;
         margin: 0 auto;
         padding: 20px;
+        text-align: center;
     }
     
     .contact-icon {
         width: 50px;
         height: 50px;
+        margin: 0 auto 15px auto;
     }
     
     .contact-icon i {
@@ -1070,6 +1138,11 @@ body.scrolling::after {
 
 @media (max-width: 480px) {
     /* Extra small mobile devices */
+    html {
+        background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background-attachment: fixed !important;
+    }
+    
     body {
         background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
         background-attachment: fixed !important;
@@ -1112,13 +1185,27 @@ body.scrolling::after {
         padding-left: 12px;
     }
     
+    /* Even more compact stats for very small screens */
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
     .stat {
-        padding: 15px;
-        max-width: 300px;
+        padding: 12px 8px;
+        max-width: 140px;
     }
     
     .stat h3 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
+    }
+    
+    .stat p {
+        font-size: 0.7rem;
+    }
+    
+    .skill-list {
+        font-size: 0.65rem;
     }
     
     .section-container {
@@ -1800,7 +1887,7 @@ section {
     padding: 30px;
     border-radius: 12px;
     border: 1px solid rgba(79, 195, 247, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    transition: all 0.3s ease;
     backdrop-filter: blur(8px);
     text-align: center;
     display: flex;
@@ -1819,6 +1906,9 @@ section {
 .project-image {
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-image i {
@@ -1831,6 +1921,7 @@ section {
     margin-bottom: 15px;
     font-size: 1.3rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .project-card p {
@@ -1839,6 +1930,7 @@ section {
     line-height: 1.6;
     font-size: 0.95rem;
     flex-grow: 1;
+    text-align: center;
 }
 
 .project-tech {
@@ -1953,7 +2045,7 @@ section {
     border: 1px solid rgba(79, 195, 247, 0.2);
     border-radius: 12px;
     padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    transition: all 0.3s ease;
     backdrop-filter: blur(8px);
     text-align: center;
     text-decoration: none;
@@ -2165,9 +2257,9 @@ section {
     padding: 30px;
     border-radius: 12px;
     border: 1px solid rgba(79, 195, 247, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    transition: all 0.3s ease;
     backdrop-filter: blur(8px);
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2184,6 +2276,9 @@ section {
 .blog-image {
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .blog-image i {
