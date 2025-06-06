@@ -1005,13 +1005,42 @@ body.scrolling::after {
     }
     
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         margin-bottom: 20px;
+        position: relative;
+    }
+    
+    /* Beautiful gradient overlay for mobile hero */
+    .hero-title::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: linear-gradient(135deg, 
+            rgba(79, 195, 247, 0.1) 0%, 
+            rgba(41, 182, 246, 0.08) 25%,
+            rgba(3, 169, 244, 0.06) 50%,
+            rgba(41, 182, 246, 0.08) 75%,
+            rgba(79, 195, 247, 0.1) 100%);
+        border-radius: 20px;
+        blur: 20px;
+        z-index: -1;
+        animation: gradientShift 4s ease-in-out infinite;
     }
     
     .hero-subtitle {
         font-size: 1.1rem;
         margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    /* Mobile typing text alignment fix */
+    #dynamic-text {
+        min-width: 200px;
+        text-align: center;
+        display: inline-block;
     }
     
     .hero-buttons {
@@ -1340,11 +1369,30 @@ body.scrolling::after {
     }
     
     .hero-title {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
+    }
+    
+    /* Enhanced gradient overlay for small mobile */
+    .hero-title::before {
+        background: linear-gradient(135deg, 
+            rgba(79, 195, 247, 0.12) 0%, 
+            rgba(41, 182, 246, 0.1) 25%,
+            rgba(3, 169, 244, 0.08) 50%,
+            rgba(41, 182, 246, 0.1) 75%,
+            rgba(79, 195, 247, 0.12) 100%);
+        border-radius: 15px;
     }
     
     .hero-subtitle {
         font-size: 1rem;
+        text-align: center;
+    }
+    
+    /* Small mobile typing text alignment */
+    #dynamic-text {
+        min-width: 180px;
+        text-align: center;
+        display: inline-block;
     }
     
     .about-text p {
@@ -1429,6 +1477,27 @@ body.scrolling::after {
     animation: fadeInUp 1s ease-out;
     text-shadow: 0 0 40px rgba(79, 195, 247, 0.4);
     letter-spacing: -1px;
+    position: relative;
+}
+
+/* Desktop gradient overlay */
+.hero-title::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: linear-gradient(135deg, 
+        rgba(79, 195, 247, 0.08) 0%, 
+        rgba(41, 182, 246, 0.06) 25%,
+        rgba(3, 169, 244, 0.04) 50%,
+        rgba(41, 182, 246, 0.06) 75%,
+        rgba(79, 195, 247, 0.08) 100%);
+    border-radius: 25px;
+    blur: 25px;
+    z-index: -1;
+    animation: gradientShift 6s ease-in-out infinite;
 }
 
 .hero-subtitle {
@@ -1443,7 +1512,7 @@ body.scrolling::after {
 #dynamic-text {
     display: inline-block;
     min-width: 250px;
-    text-align: left;
+    text-align: center;
 }
 
 .highlight {
@@ -2656,5 +2725,17 @@ section {
     100% { 
         transform: translate(-50%, -50%) rotate(calc(var(--rotation) + 360deg));
         opacity: 0.6;
+    }
+}
+
+/* Mobile hero gradient animation */
+@keyframes gradientShift {
+    0%, 100% { 
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 0.7;
+        transform: scale(1.05);
     }
 }
