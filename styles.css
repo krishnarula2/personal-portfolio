@@ -18,8 +18,8 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #ffffff !important;
-    background: #0a0a0f !important;
-    background-image: linear-gradient(135deg, #0a0a0f 0%, #0f1018 25%, #080810 50%, #1a0f28 75%, #0a0a0f 100%) !important;
+    background: #0f0f1a !important;
+    background-image: linear-gradient(135deg, #0f0f1a 0%, #14152a 25%, #0d0d18 50%, #241a38 75%, #0f0f1a 100%) !important;
     background-attachment: fixed !important;
     min-height: 100vh !important;
     overflow-x: hidden;
@@ -276,7 +276,7 @@ body.scrolling::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #0a0a0f 0%, #0f1018 25%, #080810 50%, #1a0f28 75%, #0a0a0f 100%);
+    background: linear-gradient(135deg, #0f0f1a 0%, #14152a 25%, #0d0d18 50%, #241a38 75%, #0f0f1a 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -867,20 +867,20 @@ body.scrolling::after {
 @media (max-width: 768px) {
     /* DARK BLUE TO PURPLE MOBILE BACKGROUND */
     html {
-        background: #0a0a0f !important;
-        background-image: linear-gradient(135deg, #0a0a0f 0%, #0f1018 25%, #080810 50%, #1a0f28 75%, #0a0a0f 100%) !important;
+        background: #0f0f1a !important;
+        background-image: linear-gradient(135deg, #0f0f1a 0%, #14152a 25%, #0d0d18 50%, #241a38 75%, #0f0f1a 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
         min-height: 100vh !important;
         color-scheme: dark only !important;
         -webkit-color-scheme: dark !important;
-        background-color: #0a0a0f !important;
+        background-color: #0f0f1a !important;
     }
     
     body {
-        background: #0a0a0f !important;
-        background-image: linear-gradient(135deg, #0a0a0f 0%, #0f1018 25%, #080810 50%, #1a0f28 75%, #0a0a0f 100%) !important;
+        background: #0f0f1a !important;
+        background-image: linear-gradient(135deg, #0f0f1a 0%, #14152a 25%, #0d0d18 50%, #241a38 75%, #0f0f1a 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
@@ -1410,8 +1410,8 @@ body.scrolling::after {
     }
     
     body {
-        background: #0a0a0f !important;
-        background-image: linear-gradient(135deg, #0a0a0f 0%, #0f1018 25%, #080810 50%, #1a0f28 75%, #0a0a0f 100%) !important;
+        background: #0f0f1a !important;
+        background-image: linear-gradient(135deg, #0f0f1a 0%, #14152a 25%, #0d0d18 50%, #241a38 75%, #0f0f1a 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
