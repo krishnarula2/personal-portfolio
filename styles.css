@@ -6,19 +6,27 @@
 }
 
 html {
-    background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+    background: #050a12 !important;
+    background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+    background-attachment: fixed !important;
     min-height: 100vh !important;
+    /* Force dark mode override */
+    color-scheme: dark !important;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #ffffff;
-    background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+    color: #ffffff !important;
+    background: #050a12 !important;
+    background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+    background-attachment: fixed !important;
     min-height: 100vh !important;
     overflow-x: hidden;
     position: relative;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><radialGradient id="cursorGrad" cx="50%25" cy="50%25" r="50%25"><stop offset="0%25" style="stop-color:%234fc3f7;stop-opacity:1"/><stop offset="30%25" style="stop-color:%2329b6f6;stop-opacity:0.8"/><stop offset="60%25" style="stop-color:%234fc3f7;stop-opacity:0.4"/><stop offset="100%25" style="stop-color:%23ffffff;stop-opacity:0.1"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="16" cy="16" r="12" fill="url(%23cursorGrad)" opacity="0.4" filter="url(%23glow)"><animate attributeName="r" values="12;15;12" dur="2s" repeatCount="indefinite"/></circle><circle cx="16" cy="16" r="6" fill="%234fc3f7" opacity="0.8"><animate attributeName="opacity" values="0.8;1;0.8" dur="1.5s" repeatCount="indefinite"/></circle><circle cx="16" cy="16" r="2" fill="%23ffffff"><animate attributeName="r" values="2;3;2" dur="1s" repeatCount="indefinite"/></circle><path d="M16,8 L18,14 L16,16 L14,14 Z" fill="%234fc3f7" opacity="0.6"><animateTransform attributeName="transform" type="rotate" values="0 16 16;360 16 16" dur="3s" repeatCount="indefinite"/></path></svg>'), auto;
+    /* Force dark mode override */
+    color-scheme: dark !important;
 }
 
 /* Custom cursor for interactive elements */
@@ -808,17 +816,34 @@ body.scrolling::after {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* FORCE DARK BACKGROUND ON MOBILE */
+    /* FORCE DARK BACKGROUND ON MOBILE - STRONGER OVERRIDES */
     html {
-        background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background: #050a12 !important;
+        background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
         background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
         min-height: 100vh !important;
+        /* Force dark color scheme to override browser defaults */
+        color-scheme: dark only !important;
+        -webkit-color-scheme: dark !important;
+        /* Prevent white background fallback */
+        background-color: #050a12 !important;
     }
     
     body {
-        background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background: #050a12 !important;
+        background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
         background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
         min-height: 100vh !important;
+        color: #ffffff !important;
+        /* Force dark color scheme to override browser defaults */
+        color-scheme: dark only !important;
+        -webkit-color-scheme: dark !important;
+        /* Prevent white background fallback */
+        background-color: #050a12 !important;
     }
     
     /* DISABLE ONLY PROBLEMATIC ANIMATIONS - KEEP BACKGROUND ANIMATIONS */
@@ -1217,15 +1242,28 @@ body.scrolling::after {
 }
 
 @media (max-width: 480px) {
-    /* Extra small mobile devices */
+    /* Extra small mobile devices - STRONGER DARK BACKGROUND */
     html {
-        background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background: #050a12 !important;
+        background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
         background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-color: #050a12 !important;
+        color-scheme: dark only !important;
+        -webkit-color-scheme: dark !important;
     }
     
     body {
-        background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background: #050a12 !important;
+        background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
         background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-color: #050a12 !important;
+        color: #ffffff !important;
+        color-scheme: dark only !important;
+        -webkit-color-scheme: dark !important;
     }
     
     .container {
