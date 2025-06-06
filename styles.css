@@ -821,21 +821,40 @@ body.scrolling::after {
         min-height: 100vh !important;
     }
     
-    /* DISABLE ALL ANIMATIONS THAT CAUSE FRAME MOVEMENT */
-    *, *::before, *::after {
-        animation-duration: 0s !important;
-        animation-delay: 0s !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0s !important;
+    /* DISABLE ONLY PROBLEMATIC ANIMATIONS - KEEP BACKGROUND ANIMATIONS */
+    .stat:hover {
+        transform: none !important;
     }
     
-    /* Keep only essential animations */
+    .project-card:hover,
+    .blog-card:hover,
+    .contact-card:hover,
+    .experience-item:hover,
+    .education-item:hover {
+        transform: none !important;
+    }
+    
+    .nav-link:hover,
+    .nav-home-link:hover {
+        transform: none !important;
+    }
+    
+    /* Keep loading screen animations */
     .progress-bar {
-        animation: progressLoad 3s ease-out forwards !important;
+        animation: progressLoad 3s ease-out forwards, progressShine 1.5s ease-in-out infinite !important;
     }
     
     .code-line {
         animation: codeAppear 0.8s ease-out forwards !important;
+    }
+    
+    /* Keep DNA animations */
+    .dna-strand {
+        animation: advancedSpin 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite !important;
+    }
+    
+    .dna-base {
+        animation: quantumPulse 2s ease-in-out infinite !important;
     }
     
     /* Container adjustments */
@@ -927,67 +946,75 @@ body.scrolling::after {
         gap: 15px;
     }
     
-    /* REORGANIZED ABOUT SECTION FOR MOBILE */
+    /* FIXED ABOUT SECTION LAYOUT FOR MOBILE */
     .about {
         padding: 40px 0;
     }
     
     .about-text-section {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 30px;
         text-align: center;
     }
     
-    .about-text {
-        order: 2;
-        text-align: left;
-    }
-    
+    /* Image directly under About Me title */
     .about-image {
         order: 1;
         justify-content: center;
         margin-top: 0;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    
+    /* Text displayed horizontally after image */
+    .about-text {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
     
     .about-text p {
         font-size: 0.95rem;
-        margin-bottom: 15px;
+        margin-bottom: 0;
         padding-left: 15px;
         line-height: 1.6;
+        text-align: left;
     }
     
-    /* IMPROVED STATS SECTION LAYOUT FOR MOBILE */
+    /* FIXED STATS SECTION - NO MORE TEXT CUTOFF */
     .about-stats {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
+        grid-template-columns: 1fr;
+        gap: 20px;
         max-width: 100%;
         padding: 0 10px;
         justify-items: center;
     }
     
     .stat {
-        padding: 15px 10px;
+        padding: 20px 15px;
         border-radius: 12px;
         width: 100%;
-        max-width: 160px;
+        max-width: 300px;
         text-align: center;
     }
     
     .stat h3 {
-        font-size: 1.5rem;
-        margin-bottom: 5px;
-    }
-    
-    .stat p {
-        font-size: 0.75rem;
+        font-size: 1.8rem;
         margin-bottom: 8px;
     }
     
+    .stat p {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+    
     .skill-list {
-        font-size: 0.7rem;
-        line-height: 1.3;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        word-wrap: break-word;
+        white-space: normal;
     }
     
     .image-placeholder {
@@ -1042,17 +1069,17 @@ body.scrolling::after {
         font-size: 0.9rem;
     }
     
-    /* CENTERED PROJECTS GRID FOR MOBILE */
+    /* PROPERLY CENTERED PROJECTS GRID FOR MOBILE */
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 25px;
         justify-items: center;
-        place-items: center;
+        align-items: center;
     }
     
     .project-card {
         width: 100%;
-        max-width: 350px;
+        max-width: 340px;
         margin: 0 auto;
         text-align: center;
     }
@@ -1062,27 +1089,45 @@ body.scrolling::after {
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin-bottom: 20px;
     }
     
     .project-card h3 {
         text-align: center;
+        margin-bottom: 15px;
     }
     
     .project-card p {
         text-align: center;
+        margin-bottom: 20px;
     }
     
-    /* CENTERED BLOGS GRID FOR MOBILE */
+    .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 25px;
+        justify-content: center;
+    }
+    
+    .project-link {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: fit-content;
+    }
+    
+    /* PROPERLY CENTERED BLOGS GRID FOR MOBILE */
     .blogs-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 25px;
         justify-items: center;
-        place-items: center;
+        align-items: center;
     }
     
     .blog-card {
         width: 100%;
-        max-width: 350px;
+        max-width: 340px;
         margin: 0 auto;
         text-align: center;
     }
@@ -1092,17 +1137,35 @@ body.scrolling::after {
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin-bottom: 20px;
     }
     
     .blog-card h3 {
         text-align: center;
+        margin-bottom: 15px;
     }
     
     .blog-card p {
         text-align: center;
+        margin-bottom: 15px;
     }
     
-    /* CENTERED CONTACT GRID FOR MOBILE */
+    .blog-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 25px;
+        justify-content: center;
+    }
+    
+    .blog-link {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: fit-content;
+    }
+    
+    /* PROPERLY CENTERED CONTACT GRID FOR MOBILE */
     .contact-description {
         font-size: 0.95rem;
         margin-bottom: 30px;
@@ -1112,27 +1175,44 @@ body.scrolling::after {
     
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 25px;
         justify-items: center;
-        place-items: center;
+        align-items: center;
     }
     
     .contact-card {
         width: 100%;
-        max-width: 320px;
+        max-width: 300px;
         margin: 0 auto;
         padding: 20px;
         text-align: center;
     }
     
     .contact-icon {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         margin: 0 auto 15px auto;
     }
     
     .contact-icon i {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+    }
+    
+    .contact-card h3 {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    
+    .contact-card p {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .contact-link {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: fit-content;
     }
 }
 
@@ -1185,27 +1265,21 @@ body.scrolling::after {
         padding-left: 12px;
     }
     
-    /* Even more compact stats for very small screens */
-    .about-stats {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-    
     .stat {
-        padding: 12px 8px;
-        max-width: 140px;
+        padding: 15px 10px;
+        max-width: 280px;
     }
     
     .stat h3 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
     
     .stat p {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
     
     .skill-list {
-        font-size: 0.65rem;
+        font-size: 0.75rem;
     }
     
     .section-container {
