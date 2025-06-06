@@ -2889,47 +2889,55 @@ section {
     }
 }
 
-/* ENHANCED GLOWY TECH BACKGROUND */
+/* BRIGHT GLOWING TECH ORBS */
 .moving-orb {
     position: fixed;
     pointer-events: none;
     z-index: 1;
-    border-radius: 40%;
+    border-radius: 50%;
     background: 
-        radial-gradient(ellipse 70% 50% at 30% 30%, rgba(79, 195, 247, 0.15) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 80% at 70% 70%, rgba(79, 195, 247, 0.1) 0%, transparent 60%),
-        radial-gradient(circle, rgba(79, 195, 247, 0.08) 0%, transparent 70%);
-    border: none;
+        radial-gradient(circle at center, rgba(10, 20, 40, 0.8) 0%, rgba(10, 20, 40, 0.6) 30%, rgba(79, 195, 247, 0.3) 60%, transparent 100%);
     box-shadow: 
-        0 0 60px rgba(79, 195, 247, 0.4),
-        0 0 100px rgba(79, 195, 247, 0.2),
-        0 0 140px rgba(79, 195, 247, 0.1);
-    filter: blur(2px);
+        0 0 40px rgba(79, 195, 247, 0.8),
+        0 0 80px rgba(79, 195, 247, 0.6),
+        0 0 120px rgba(79, 195, 247, 0.4),
+        0 0 160px rgba(79, 195, 247, 0.2),
+        inset 0 0 20px rgba(79, 195, 247, 0.3);
+    filter: blur(1px);
 }
 
-/* Enhanced Glowy Orbs - Organic Shapes */
+/* Bright Glowing Energy Orbs */
 .orb-1 {
-    width: 80px;
-    height: 60px;
-    border-radius: 45% 30% 40% 50%;
-    animation: simpleFloat1 18s linear infinite, organicMorph1 8s ease-in-out infinite;
-    filter: blur(3px);
+    width: 70px;
+    height: 70px;
+    animation: simpleFloat1 18s linear infinite;
+    filter: blur(2px);
+    box-shadow: 
+        0 0 30px rgba(79, 195, 247, 1),
+        0 0 60px rgba(79, 195, 247, 0.8),
+        0 0 90px rgba(79, 195, 247, 0.6);
 }
 
 .orb-2 {
-    width: 100px;
-    height: 70px;
-    border-radius: 35% 50% 30% 60%;
-    animation: simpleFloat2 22s linear infinite, organicMorph2 6s ease-in-out infinite;
+    width: 90px;
+    height: 90px;
+    animation: simpleFloat2 22s linear infinite;
     filter: blur(2.5px);
+    box-shadow: 
+        0 0 35px rgba(79, 195, 247, 1),
+        0 0 70px rgba(79, 195, 247, 0.8),
+        0 0 105px rgba(79, 195, 247, 0.6);
 }
 
 .orb-3 {
     width: 50px;
-    height: 40px;
-    border-radius: 60% 40% 55% 35%;
-    animation: simpleFloat3 14s linear infinite, organicMorph3 5s ease-in-out infinite;
-    filter: blur(3.5px);
+    height: 50px;
+    animation: simpleFloat3 14s linear infinite;
+    filter: blur(1.5px);
+    box-shadow: 
+        0 0 25px rgba(79, 195, 247, 1),
+        0 0 50px rgba(79, 195, 247, 0.8),
+        0 0 75px rgba(79, 195, 247, 0.6);
 }
 
 /* Enhanced Tech Float Animations */
