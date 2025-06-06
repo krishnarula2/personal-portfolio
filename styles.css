@@ -6,8 +6,8 @@
 }
 
 html {
-    background: #050a12 !important;
-    background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+    background: #0a0a0a !important;
+    background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%) !important;
     background-attachment: fixed !important;
     min-height: 100vh !important;
     /* Force dark mode override */
@@ -18,8 +18,8 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #ffffff !important;
-    background: #050a12 !important;
-    background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+    background: #0a0a0a !important;
+    background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%) !important;
     background-attachment: fixed !important;
     min-height: 100vh !important;
     overflow-x: hidden;
@@ -867,8 +867,8 @@ body.scrolling::after {
 @media (max-width: 768px) {
     /* FORCE DARK BACKGROUND ON MOBILE - STRONGER OVERRIDES */
     html {
-        background: #050a12 !important;
-        background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background: #0a0a0a !important;
+        background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
@@ -877,12 +877,12 @@ body.scrolling::after {
         color-scheme: dark only !important;
         -webkit-color-scheme: dark !important;
         /* Prevent white background fallback */
-        background-color: #050a12 !important;
+        background-color: #0a0a0a !important;
     }
     
     body {
-        background: #050a12 !important;
-        background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background: #0a0a0a !important;
+        background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
@@ -892,7 +892,7 @@ body.scrolling::after {
         color-scheme: dark only !important;
         -webkit-color-scheme: dark !important;
         /* Prevent white background fallback */
-        background-color: #050a12 !important;
+        background-color: #0a0a0a !important;
     }
     
     /* DISABLE ONLY PROBLEMATIC ANIMATIONS - KEEP BACKGROUND ANIMATIONS */
@@ -1040,12 +1040,17 @@ body.scrolling::after {
         overflow: hidden;
     }
     
+    /* Mobile - make all text same size */
+    .hero-subtitle, .hero-subtitle * {
+        font-size: 1.1rem !important;
+    }
+    
     /* Mobile typing text alignment fix */
     #dynamic-text {
         display: inline;
         text-align: center;
         white-space: nowrap;
-        font-size: 0.65em;
+        font-size: 1.1rem !important;
     }
     
     .hero-buttons {
@@ -1327,23 +1332,23 @@ body.scrolling::after {
 @media (max-width: 480px) {
     /* Extra small mobile devices - STRONGER DARK BACKGROUND */
     html {
-        background: #050a12 !important;
-        background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background: #0a0a0a !important;
+        background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
-        background-color: #050a12 !important;
+        background-color: #0a0a0a !important;
         color-scheme: dark only !important;
         -webkit-color-scheme: dark !important;
     }
     
     body {
-        background: #050a12 !important;
-        background-image: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background: #0a0a0a !important;
+        background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
-        background-color: #050a12 !important;
+        background-color: #0a0a0a !important;
         color: #ffffff !important;
         color-scheme: dark only !important;
         -webkit-color-scheme: dark !important;
@@ -1397,12 +1402,17 @@ body.scrolling::after {
         overflow: hidden;
     }
     
+    /* Small mobile - make all text same size */
+    .hero-subtitle, .hero-subtitle * {
+        font-size: 1rem !important;
+    }
+    
     /* Small mobile typing text alignment */
     #dynamic-text {
         display: inline;
         text-align: center;
         white-space: nowrap;
-        font-size: 0.6em;
+        font-size: 1rem !important;
     }
     
     .about-text p {
@@ -1523,11 +1533,16 @@ body.scrolling::after {
     overflow: hidden;
 }
 
+/* Make all text in hero-subtitle the same size */
+.hero-subtitle, .hero-subtitle * {
+    font-size: 1.5rem !important;
+}
+
 #dynamic-text {
     display: inline;
     text-align: center;
     white-space: nowrap;
-    font-size: 0.75em;
+    font-size: 1.5rem !important;
 }
 
 .highlight {
