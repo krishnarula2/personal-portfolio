@@ -18,8 +18,8 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #ffffff !important;
-    background: #1f1f38 !important;
-    background-image: linear-gradient(135deg, #1f1f38 0%, #252649 25%, #1b2648 50%, #362255 75%, #1f1f38 100%) !important;
+    background: #2d2f5e !important;
+    background-image: linear-gradient(135deg, #2d2f5e 0%, #353974 25%, #2a3768 50%, #4a3078 75%, #2d2f5e 100%) !important;
     background-attachment: fixed !important;
     min-height: 100vh !important;
     overflow-x: hidden;
@@ -879,8 +879,8 @@ body.scrolling::after {
     }
     
     body {
-        background: #252649 !important;
-        background-image: linear-gradient(135deg, #252649 0%, #2a2f5c 25%, #1f2b58 50%, #3d2868 75%, #252649 100%) !important;
+        background: #2f3268 !important;
+        background-image: linear-gradient(135deg, #2f3268 0%, #35397a 25%, #303d70 50%, #4a3480 75%, #2f3268 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
@@ -888,7 +888,7 @@ body.scrolling::after {
         color: #ffffff !important;
         color-scheme: dark only !important;
         -webkit-color-scheme: dark !important;
-        background-color: #1a1a2e !important;
+        background-color: #2a2d60 !important;
     }
     
     /* DISABLE ONLY PROBLEMATIC ANIMATIONS - KEEP BACKGROUND ANIMATIONS */
@@ -1441,12 +1441,12 @@ body.scrolling::after {
     }
     
     body {
-        background: #252649 !important;
-        background-image: linear-gradient(135deg, #252649 0%, #2a2f5c 25%, #1f2b58 50%, #3d2868 75%, #252649 100%) !important;
+        background: #333680 !important;
+        background-image: linear-gradient(135deg, #333680 0%, #393f84 25%, #343f78 50%, #4e3688 75%, #333680 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
-        background-color: #0a0a0a !important;
+        background-color: #2e3070 !important;
         color: #ffffff !important;
         color-scheme: dark only !important;
         -webkit-color-scheme: dark !important;
