@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #ffffff;
     background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%);
+    min-height: 100vh;
     overflow-x: hidden;
     position: relative;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><radialGradient id="cursorGrad" cx="50%25" cy="50%25" r="50%25"><stop offset="0%25" style="stop-color:%234fc3f7;stop-opacity:1"/><stop offset="30%25" style="stop-color:%2329b6f6;stop-opacity:0.8"/><stop offset="60%25" style="stop-color:%234fc3f7;stop-opacity:0.4"/><stop offset="100%25" style="stop-color:%23ffffff;stop-opacity:0.1"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="16" cy="16" r="12" fill="url(%23cursorGrad)" opacity="0.4" filter="url(%23glow)"><animate attributeName="r" values="12;15;12" dur="2s" repeatCount="indefinite"/></circle><circle cx="16" cy="16" r="6" fill="%234fc3f7" opacity="0.8"><animate attributeName="opacity" values="0.8;1;0.8" dur="1.5s" repeatCount="indefinite"/></circle><circle cx="16" cy="16" r="2" fill="%23ffffff"><animate attributeName="r" values="2;3;2" dur="1s" repeatCount="indefinite"/></circle><path d="M16,8 L18,14 L16,16 L14,14 Z" fill="%234fc3f7" opacity="0.6"><animateTransform attributeName="transform" type="rotate" values="0 16 16;360 16 16" dur="3s" repeatCount="indefinite"/></path></svg>'), auto;
@@ -604,7 +605,7 @@ body.scrolling::after {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     position: relative;
     border: 1px solid rgba(79, 195, 247, 0.3);
     box-shadow: 0 0 20px rgba(79, 195, 247, 0.2);
@@ -637,7 +638,7 @@ body.scrolling::after {
     justify-content: space-between;
     align-items: center;
     width: 350px;
-    margin: 20px auto 0;
+    margin: 0 auto;
     font-family: 'Inter', sans-serif;
 }
 
@@ -690,6 +691,7 @@ body.scrolling::after {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-shrink: 0;
 }
 
 .nav-logo {
@@ -724,6 +726,7 @@ body.scrolling::after {
     background: rgba(79, 195, 247, 0.1);
     border: 1px solid rgba(79, 195, 247, 0.2);
     position: relative;
+    flex-shrink: 0;
 }
 
 .nav-home-link:hover {
@@ -751,6 +754,13 @@ body.scrolling::after {
     border-radius: 40px;
     border: 1px solid rgba(79, 195, 247, 0.2);
     padding: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.nav-menu::-webkit-scrollbar {
+    display: none;
 }
 
 .nav-link {
@@ -763,6 +773,7 @@ body.scrolling::after {
     position: relative;
     font-size: 0.95rem;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .nav-link:hover {
@@ -792,61 +803,103 @@ body.scrolling::after {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Force dark background on mobile */
+    body {
+        background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background-attachment: fixed !important;
+        min-height: 100vh !important;
+    }
+    
+    /* Container adjustments */
     .container {
-        padding: 0 25px;
+        padding: 0 20px;
     }
     
+    /* Navigation fixes */
     .nav-container {
-        padding: 0 25px;
-        height: 65px;
+        padding: 0 20px;
+        height: 60px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
     
-    .nav-home-link {
-        font-size: 0.9rem;
-        padding: 6px 12px;
+    .nav-container::-webkit-scrollbar {
+        display: none;
     }
     
     .nav-menu {
         gap: 0;
         padding: 4px;
+        white-space: nowrap;
+        min-width: max-content;
     }
     
     .nav-link {
-        padding: 10px 16px;
-        font-size: 0.9rem;
+        padding: 8px 14px;
+        font-size: 0.85rem;
+        white-space: nowrap;
     }
     
-    .navbar {
-        top: 20px;
-        left: 20px;
+    .nav-home-link {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        white-space: nowrap;
     }
     
+    /* Loading screen mobile fixes */
+    .loading-progress {
+        width: 280px;
+    }
+    
+    .loading-status {
+        width: 280px;
+        margin: 15px auto 0 auto;
+    }
+    
+    .code-line {
+        font-size: 12px;
+    }
+    
+    .dna-container {
+        gap: 40px;
+    }
+    
+    .dna-helix {
+        width: 100px;
+        height: 100px;
+    }
+    
+    /* Hero section mobile */
     .hero {
         min-height: 70vh;
-        padding-top: 110px;
-        padding-bottom: 20px;
+        padding-top: 100px;
+        padding-bottom: 40px;
     }
     
     .hero-content {
-        padding: 40px 25px;
+        padding: 30px 20px;
         border-radius: 20px;
         max-width: calc(100% - 40px);
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
     }
     
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-bottom: 30px;
     }
     
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
     
+    /* About section mobile fixes */
     .about {
         padding: 40px 0;
     }
@@ -854,177 +907,155 @@ body.scrolling::after {
     .about-text-section {
         grid-template-columns: 1fr;
         gap: 30px;
-        text-align: center;
+        text-align: left;
+    }
+    
+    .about-text {
+        order: 2;
+    }
+    
+    .about-image {
+        order: 1;
+        justify-content: center;
+        margin-top: 0;
+        margin-bottom: 20px;
     }
     
     .about-text p {
-        font-size: 1rem;
+        font-size: 0.95rem;
         margin-bottom: 15px;
         padding-left: 15px;
+        line-height: 1.6;
     }
     
+    /* Stats section mobile fixes */
     .about-stats {
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: 20px;
         max-width: 100%;
-    }
-    
-    .image-placeholder {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .image-placeholder i {
-        font-size: 3rem;
+        padding: 0 10px;
     }
     
     .stat {
-        padding: 15px;
+        padding: 20px;
         border-radius: 12px;
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
+        text-align: center;
     }
     
     .stat h3 {
         font-size: 1.8rem;
+        margin-bottom: 8px;
     }
     
+    .stat p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .skill-list {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    .image-placeholder {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .image-placeholder i {
+        font-size: 2.5rem;
+    }
+    
+    /* Section container mobile */
     .section-container {
-        margin: 20px;
-        padding: 30px;
+        margin: 20px 15px;
+        padding: 25px 20px;
         border-radius: 12px;
-        max-width: calc(100% - 40px);
+        max-width: calc(100% - 30px);
     }
     
     .section-title {
-        font-size: 2.2rem;
-        text-align: left;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 10px;
-        margin-bottom: 30px;
+        font-size: 2rem;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 25px;
     }
     
+    .section-title i {
+        font-size: 1.5rem;
+    }
+    
+    /* Experience and Education mobile */
     .experience-item,
     .education-item {
-        padding: 25px;
+        padding: 20px;
         margin-bottom: 20px;
     }
     
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
+    .experience-item h3,
+    .education-item h3 {
+        font-size: 1.1rem;
     }
     
-    .contact-description {
+    .experience-item h4,
+    .education-item h4 {
         font-size: 1rem;
-        margin-bottom: 30px;
     }
     
-    .contact-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .experience-item p,
+    .education-item p {
+        font-size: 0.9rem;
+    }
+    
+    /* Projects grid mobile fixes */
+    .projects-grid {
+        grid-template-columns: 1fr;
         gap: 20px;
+        justify-items: center;
     }
     
-    .contact-card {
-        padding: 20px;
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
     }
     
-    .dna-container {
-        gap: 30px;
+    /* Blogs grid mobile fixes */
+    .blogs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-items: center;
     }
     
-    .dna-helix {
-        width: 150px;
-        height: 200px;
+    .blog-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
     }
     
-    .loading-progress {
-        width: 250px;
-    }
-    
-    .code-line {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-container {
-        padding: 0 15px;
-        height: 60px;
-    }
-    
-    .nav-home-link {
-        font-size: 0.85rem;
-        padding: 5px 10px;
-    }
-    
-    .nav-menu {
-        padding: 3px;
-    }
-    
-    .nav-link {
-        padding: 8px 12px;
-        font-size: 0.85rem;
-    }
-    
-    .navbar {
-        top: 15px;
-        left: 15px;
-    }
-    
-    .hero {
-        min-height: 60vh;
-        padding-top: 90px;
-        padding-bottom: 10px;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .about {
-        padding: 30px 0;
-    }
-    
-    .about-text p {
-        font-size: 0.95rem;
-        padding-left: 12px;
-    }
-    
-    .about-stats {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .stat {
-        padding: 12px;
-    }
-    
-    .stat h3 {
-        font-size: 1.6rem;
-    }
-    
-    .section-container {
-        margin: 15px;
-        padding: 20px;
-        border-radius: 10px;
-    }
-    
+    /* Contact grid mobile fixes */
     .contact-description {
         font-size: 0.95rem;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         padding: 0 10px;
     }
     
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 20px;
+        justify-items: center;
     }
     
     .contact-card {
-        padding: 18px;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 20px;
     }
     
     .contact-icon {
@@ -1035,18 +1066,86 @@ body.scrolling::after {
     .contact-icon i {
         font-size: 1.5rem;
     }
+}
+
+@media (max-width: 480px) {
+    /* Extra small mobile devices */
+    body {
+        background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%) !important;
+        background-attachment: fixed !important;
+    }
     
-    .dna-helix {
-        width: 120px;
-        height: 180px;
+    .container {
+        padding: 0 15px;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+        height: 55px;
+    }
+    
+    .nav-home-link {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    
+    .nav-link {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .hero {
+        min-height: 65vh;
+        padding-top: 80px;
+    }
+    
+    .hero-title {
+        font-size: 1.9rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .about-text p {
+        font-size: 0.9rem;
+        padding-left: 12px;
+    }
+    
+    .stat {
+        padding: 15px;
+        max-width: 300px;
+    }
+    
+    .stat h3 {
+        font-size: 1.6rem;
+    }
+    
+    .section-container {
+        margin: 15px 10px;
+        padding: 20px 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
     }
     
     .loading-progress {
-        width: 200px;
+        width: 250px;
     }
     
-    .code-line {
-        font-size: 11px;
+    .loading-status {
+        width: 250px;
+    }
+    
+    .contact-card {
+        max-width: 280px;
+        padding: 18px;
+    }
+    
+    .project-card,
+    .blog-card {
+        max-width: 300px;
     }
 }
 
