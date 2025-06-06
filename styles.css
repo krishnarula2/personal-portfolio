@@ -18,8 +18,8 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #ffffff !important;
-    background: #2d4a7a !important;
-    background-image: linear-gradient(135deg, #2d4a7a 0%, #4682b4 30%, #6495ed 70%, #87ceeb 100%) !important;
+    background: #0a0a0f !important;
+    background-image: linear-gradient(135deg, #0a0a0f 0%, #0f1018 25%, #080810 50%, #1a0f28 75%, #0a0a0f 100%) !important;
     background-attachment: fixed !important;
     min-height: 100vh !important;
     overflow-x: hidden;
@@ -276,7 +276,7 @@ body.scrolling::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #4682b4 0%, #5b9bd5 30%, #6bb6ff 70%, #87ceeb 100%);
+    background: linear-gradient(135deg, #0a0a0f 0%, #0f1018 25%, #080810 50%, #1a0f28 75%, #0a0a0f 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -865,22 +865,22 @@ body.scrolling::after {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* BRIGHTER MOBILE BACKGROUND */
+    /* DARK BLUE TO PURPLE MOBILE BACKGROUND */
     html {
-        background: #5b9bd5 !important;
-        background-image: linear-gradient(135deg, #4682b4 0%, #5b9bd5 30%, #6bb6ff 70%, #87ceeb 100%) !important;
+        background: #0a0a0f !important;
+        background-image: linear-gradient(135deg, #0a0a0f 0%, #0f1018 25%, #080810 50%, #1a0f28 75%, #0a0a0f 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
         min-height: 100vh !important;
         color-scheme: dark only !important;
         -webkit-color-scheme: dark !important;
-        background-color: #1a1a2e !important;
+        background-color: #0a0a0f !important;
     }
     
     body {
-        background: #5b9bd5 !important;
-        background-image: linear-gradient(135deg, #4682b4 0%, #5b9bd5 30%, #6bb6ff 70%, #87ceeb 100%) !important;
+        background: #0a0a0f !important;
+        background-image: linear-gradient(135deg, #0a0a0f 0%, #0f1018 25%, #080810 50%, #1a0f28 75%, #0a0a0f 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
@@ -1410,8 +1410,8 @@ body.scrolling::after {
     }
     
     body {
-        background: #6bb6ff !important;
-        background-image: linear-gradient(135deg, #5b9bd5 0%, #6bb6ff 30%, #7ac4ff 70%, #87ceeb 100%) !important;
+        background: #0a0a0f !important;
+        background-image: linear-gradient(135deg, #0a0a0f 0%, #0f1018 25%, #080810 50%, #1a0f28 75%, #0a0a0f 100%) !important;
         background-attachment: fixed !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
