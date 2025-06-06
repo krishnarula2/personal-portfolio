@@ -2889,166 +2889,105 @@ section {
     }
 }
 
-/* MOVING BALL ANIMATION - Like your friend's website! */
+/* CLEAN MOVING BALL ANIMATION - WORKS ON BOTH DESKTOP & MOBILE */
 .moving-orb {
     position: fixed;
-    width: 80px;
-    height: 80px;
-    background: radial-gradient(circle, rgba(79, 195, 247, 0.3) 0%, rgba(79, 195, 247, 0.1) 50%, transparent 100%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(79, 195, 247, 0.4) 0%, rgba(79, 195, 247, 0.2) 40%, transparent 80%);
     border-radius: 50%;
     pointer-events: none;
-    z-index: -2;
-    filter: blur(1px);
-    box-shadow: 0 0 40px rgba(79, 195, 247, 0.4);
+    z-index: -1;
+    box-shadow: 0 0 50px rgba(79, 195, 247, 0.6);
 }
 
-.moving-orb:nth-child(1) {
-    animation: floatAcross1 15s linear infinite;
-    background: radial-gradient(circle, rgba(79, 195, 247, 0.35) 0%, rgba(79, 195, 247, 0.12) 50%, transparent 100%);
+.orb-1 {
+    animation: moveAcross1 12s linear infinite;
+    background: radial-gradient(circle, rgba(79, 195, 247, 0.5) 0%, rgba(79, 195, 247, 0.2) 40%, transparent 80%);
 }
 
-.moving-orb:nth-child(2) {
-    animation: floatAcross2 20s linear infinite;
+.orb-2 {
+    animation: moveAcross2 15s linear infinite;
     animation-delay: -5s;
-    background: radial-gradient(circle, rgba(41, 182, 246, 0.3) 0%, rgba(41, 182, 246, 0.1) 50%, transparent 100%);
-    box-shadow: 0 0 35px rgba(41, 182, 246, 0.3);
+    background: radial-gradient(circle, rgba(41, 182, 246, 0.4) 0%, rgba(41, 182, 246, 0.15) 40%, transparent 80%);
+    box-shadow: 0 0 45px rgba(41, 182, 246, 0.5);
 }
 
-.moving-orb:nth-child(3) {
-    animation: floatAcross3 25s linear infinite;
+.orb-3 {
+    animation: moveAcross3 18s linear infinite;
     animation-delay: -10s;
-    background: radial-gradient(circle, rgba(3, 169, 244, 0.25) 0%, rgba(3, 169, 244, 0.08) 50%, transparent 100%);
-    box-shadow: 0 0 30px rgba(3, 169, 244, 0.3);
-    width: 60px;
-    height: 60px;
+    background: radial-gradient(circle, rgba(3, 169, 244, 0.35) 0%, rgba(3, 169, 244, 0.12) 40%, transparent 80%);
+    box-shadow: 0 0 40px rgba(3, 169, 244, 0.4);
+    width: 80px;
+    height: 80px;
 }
 
-@keyframes floatAcross1 {
+@keyframes moveAcross1 {
     0% {
-        transform: translate(-100px, 20vh) scale(0.8);
+        left: -120px;
+        top: 20vh;
         opacity: 0;
     }
-    10% {
+    5% {
         opacity: 1;
     }
-    90% {
+    95% {
         opacity: 1;
     }
     100% {
-        transform: translate(calc(100vw + 100px), 80vh) scale(1.2);
+        left: 100vw;
+        top: 70vh;
         opacity: 0;
     }
 }
 
-@keyframes floatAcross2 {
+@keyframes moveAcross2 {
     0% {
-        transform: translate(calc(100vw + 100px), 60vh) scale(1);
+        left: 100vw;
+        top: 60vh;
         opacity: 0;
     }
-    10% {
+    5% {
         opacity: 1;
     }
-    90% {
+    95% {
         opacity: 1;
     }
     100% {
-        transform: translate(-100px, 30vh) scale(0.9);
+        left: -120px;
+        top: 25vh;
         opacity: 0;
     }
 }
 
-@keyframes floatAcross3 {
+@keyframes moveAcross3 {
     0% {
-        transform: translate(-80px, 70vh) scale(0.7);
+        left: -100px;
+        top: 75vh;
         opacity: 0;
     }
-    15% {
+    8% {
         opacity: 1;
     }
-    85% {
+    92% {
         opacity: 1;
     }
     100% {
-        transform: translate(calc(100vw + 80px), 15vh) scale(1.1);
+        left: 100vw;
+        top: 15vh;
         opacity: 0;
     }
 }
 
-/* Mobile optimized moving orbs */
+/* Mobile - same animation, just smaller orbs */
 @media (max-width: 768px) {
     .moving-orb {
-        width: 50px;
-        height: 50px;
-        filter: blur(0.5px);
+        width: 70px;
+        height: 70px;
     }
     
-    .moving-orb:nth-child(3) {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .moving-orb:nth-child(1) {
-        animation: floatAcrossMobile1 12s linear infinite;
-    }
-    
-    .moving-orb:nth-child(2) {
-        animation: floatAcrossMobile2 16s linear infinite;
-        animation-delay: -4s;
-    }
-    
-    .moving-orb:nth-child(3) {
-        animation: floatAcrossMobile3 20s linear infinite;
-        animation-delay: -8s;
-    }
-}
-
-@keyframes floatAcrossMobile1 {
-    0% {
-        transform: translate(-60px, 15vh) scale(0.8);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        transform: translate(calc(100vw + 60px), 75vh) scale(1.1);
-        opacity: 0;
-    }
-}
-
-@keyframes floatAcrossMobile2 {
-    0% {
-        transform: translate(calc(100vw + 60px), 55vh) scale(1);
-        opacity: 0;
-    }
-    15% {
-        opacity: 1;
-    }
-    85% {
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-60px, 25vh) scale(0.9);
-        opacity: 0;
-    }
-}
-
-@keyframes floatAcrossMobile3 {
-    0% {
-        transform: translate(-50px, 65vh) scale(0.7);
-        opacity: 0;
-    }
-    20% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        transform: translate(calc(100vw + 50px), 35vh) scale(1);
-        opacity: 0;
+    .orb-3 {
+        width: 60px;
+        height: 60px;
     }
 }
