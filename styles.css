@@ -960,11 +960,21 @@ body.scrolling::after {
         padding: 0 20px;
     }
     
-    /* Hamburger Menu Mobile */
+    /* Mobile Navigation - Blends with background */
+    .navbar {
+        background: transparent !important;
+        backdrop-filter: blur(10px) !important;
+        border-bottom: 1px solid rgba(79, 195, 247, 0.1) !important;
+        box-shadow: none !important;
+    }
+    
     .nav-container {
         padding: 0 20px !important;
         height: 60px !important;
         justify-content: center;
+        background: rgba(39, 41, 90, 0.3) !important;
+        backdrop-filter: blur(15px) !important;
+        border-radius: 0 0 15px 15px !important;
     }
     
     .hamburger {
@@ -1580,10 +1590,20 @@ body.scrolling::after {
         padding: 0 15px;
     }
     
+    .navbar {
+        background: transparent !important;
+        backdrop-filter: blur(8px) !important;
+        border-bottom: 1px solid rgba(79, 195, 247, 0.08) !important;
+        box-shadow: none !important;
+    }
+    
     .nav-container {
         padding: 0 15px !important;
         height: 50px !important;
         justify-content: flex-start;
+        background: rgba(43, 45, 108, 0.25) !important;
+        backdrop-filter: blur(12px) !important;
+        border-radius: 0 0 12px 12px !important;
     }
     
     .hamburger {
