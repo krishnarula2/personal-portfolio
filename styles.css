@@ -744,7 +744,7 @@ body.scrolling::after {
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     height: 70px;
 }
