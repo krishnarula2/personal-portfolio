@@ -229,15 +229,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = navMenu.contains(event.target);
+        const isClickOnHamburger = hamburger.contains(event.target);
+        
+        if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
             closeMenu();
         }
     });
 
     // Close menu on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && navMenu.classList.contains('active')) {
             closeMenu();
         }
     });
