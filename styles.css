@@ -5,126 +5,189 @@
     box-sizing: border-box;
 }
 
+html {
+    background: #0a0a0a !important;
+    background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%) !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+    /* Force dark mode override */
+    color-scheme: dark !important;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #ffffff;
-    background: linear-gradient(135deg, #050a12 0%, #0a1018 25%, #0f1520 50%, #0a1018 75%, #050a12 100%);
+    color: #ffffff !important;
+    background: #252650 !important;
+    background-image: linear-gradient(135deg, #252650 0%, #2d3166 25%, #22305a 50%, #3c2a6a 75%, #252650 100%) !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
     overflow-x: hidden;
     position: relative;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><radialGradient id="cursorGrad" cx="50%25" cy="50%25" r="50%25"><stop offset="0%25" style="stop-color:%234fc3f7;stop-opacity:1"/><stop offset="30%25" style="stop-color:%2329b6f6;stop-opacity:0.8"/><stop offset="60%25" style="stop-color:%234fc3f7;stop-opacity:0.4"/><stop offset="100%25" style="stop-color:%23ffffff;stop-opacity:0.1"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="16" cy="16" r="12" fill="url(%23cursorGrad)" opacity="0.4" filter="url(%23glow)"><animate attributeName="r" values="12;15;12" dur="2s" repeatCount="indefinite"/></circle><circle cx="16" cy="16" r="6" fill="%234fc3f7" opacity="0.8"><animate attributeName="opacity" values="0.8;1;0.8" dur="1.5s" repeatCount="indefinite"/></circle><circle cx="16" cy="16" r="2" fill="%23ffffff"><animate attributeName="r" values="2;3;2" dur="1s" repeatCount="indefinite"/></circle><path d="M16,8 L18,14 L16,16 L14,14 Z" fill="%234fc3f7" opacity="0.6"><animateTransform attributeName="transform" type="rotate" values="0 16 16;360 16 16" dur="3s" repeatCount="indefinite"/></path></svg>'), auto;
+    /* Force dark mode override */
+    color-scheme: dark !important;
 }
 
-/* Custom cursor for interactive elements */
-a, button, .nav-link, .contact-card, .project-card {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><defs><radialGradient id="hoverGrad" cx="50%25" cy="50%25" r="50%25"><stop offset="0%25" style="stop-color:%234fc3f7;stop-opacity:1"/><stop offset="40%25" style="stop-color:%2329b6f6;stop-opacity:0.9"/><stop offset="70%25" style="stop-color:%234fc3f7;stop-opacity:0.5"/><stop offset="100%25" style="stop-color:%23ffffff;stop-opacity:0.2"/></radialGradient><filter id="hoverGlow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="20" cy="20" r="16" fill="url(%23hoverGrad)" opacity="0.3" filter="url(%23hoverGlow)"><animate attributeName="r" values="16;20;16" dur="1.5s" repeatCount="indefinite"/></circle><circle cx="20" cy="20" r="8" fill="%234fc3f7" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="1s" repeatCount="indefinite"/></circle><circle cx="20" cy="20" r="3" fill="%23ffffff"/><polygon points="20,10 22,16 20,20 18,16" fill="%234fc3f7" opacity="0.8"><animateTransform attributeName="transform" type="rotate" values="0 20 20;360 20 20" dur="2s" repeatCount="indefinite"/></polygon><polygon points="20,24 22,30 20,32 18,30" fill="%2329b6f6" opacity="0.6"><animateTransform attributeName="transform" type="rotate" values="360 20 20;0 20 20" dur="2.5s" repeatCount="indefinite"/></polygon></svg>'), pointer;
+/* Custom cursor for interactive elements - DESKTOP ONLY */
+@media (min-width: 769px) {
+    a, button, .nav-link, .contact-card, .project-card {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><defs><radialGradient id="hoverGrad" cx="50%25" cy="50%25" r="50%25"><stop offset="0%25" style="stop-color:%234fc3f7;stop-opacity:1"/><stop offset="40%25" style="stop-color:%2329b6f6;stop-opacity:0.9"/><stop offset="70%25" style="stop-color:%234fc3f7;stop-opacity:0.5"/><stop offset="100%25" style="stop-color:%23ffffff;stop-opacity:0.2"/></radialGradient><filter id="hoverGlow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="20" cy="20" r="16" fill="url(%23hoverGrad)" opacity="0.3" filter="url(%23hoverGlow)"><animate attributeName="r" values="16;20;16" dur="1.5s" repeatCount="indefinite"/></circle><circle cx="20" cy="20" r="8" fill="%234fc3f7" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="1s" repeatCount="indefinite"/></circle><circle cx="20" cy="20" r="3" fill="%23ffffff"/><polygon points="20,10 22,16 20,20 18,16" fill="%234fc3f7" opacity="0.8"><animateTransform attributeName="transform" type="rotate" values="0 20 20;360 20 20" dur="2s" repeatCount="indefinite"/></polygon><polygon points="20,24 22,30 20,32 18,30" fill="%2329b6f6" opacity="0.6"><animateTransform attributeName="transform" type="rotate" values="360 20 20;0 20 20" dur="2.5s" repeatCount="indefinite"/></polygon></svg>'), pointer;
+    }
 }
 
-/* Enhanced Creative Animated Background */
-body::before {
-    content: '';
-    position: fixed;
-    top: -20%;
-    left: -20%;
-    width: 140%;
-    height: 140%;
-    z-index: -4;
-    background-image: 
-        /* Large floating orbs with enhanced glow - spread across entire screen */
-        radial-gradient(circle at 15% 20%, rgba(79, 195, 247, 0.18) 80px, rgba(79, 195, 247, 0.08) 140px, transparent 180px),
-        radial-gradient(circle at 85% 30%, rgba(41, 182, 246, 0.15) 70px, rgba(41, 182, 246, 0.06) 120px, transparent 160px),
-        radial-gradient(circle at 25% 80%, rgba(3, 169, 244, 0.20) 90px, rgba(3, 169, 244, 0.09) 150px, transparent 190px),
-        radial-gradient(circle at 75% 85%, rgba(79, 195, 247, 0.16) 75px, rgba(79, 195, 247, 0.07) 125px, transparent 165px),
-        radial-gradient(circle at 50% 10%, rgba(41, 182, 246, 0.17) 85px, rgba(41, 182, 246, 0.08) 135px, transparent 175px),
-        radial-gradient(circle at 90% 60%, rgba(3, 169, 244, 0.19) 95px, rgba(3, 169, 244, 0.10) 155px, transparent 195px),
-        
-        /* Energy rings - more distributed */
-        radial-gradient(circle at 10% 50%, transparent 45px, rgba(79, 195, 247, 0.10) 47px, rgba(79, 195, 247, 0.15) 50px, rgba(79, 195, 247, 0.10) 53px, transparent 55px),
-        radial-gradient(circle at 90% 15%, transparent 35px, rgba(41, 182, 246, 0.08) 37px, rgba(41, 182, 246, 0.12) 40px, rgba(41, 182, 246, 0.08) 43px, transparent 45px),
-        radial-gradient(circle at 30% 90%, transparent 40px, rgba(3, 169, 244, 0.09) 42px, rgba(3, 169, 244, 0.13) 45px, rgba(3, 169, 244, 0.09) 48px, transparent 50px),
-        
-        /* Medium floating particles - full coverage */
-        radial-gradient(circle at 20% 25%, rgba(79, 195, 247, 0.30) 3px, transparent 6px),
-        radial-gradient(circle at 40% 15%, rgba(41, 182, 246, 0.32) 2.5px, transparent 5px),
-        radial-gradient(circle at 60% 35%, rgba(3, 169, 244, 0.28) 3.5px, transparent 7px),
-        radial-gradient(circle at 80% 25%, rgba(79, 195, 247, 0.35) 2.8px, transparent 5.6px),
-        radial-gradient(circle at 15% 60%, rgba(41, 182, 246, 0.29) 3.2px, transparent 6.4px),
-        radial-gradient(circle at 35% 70%, rgba(3, 169, 244, 0.33) 2.7px, transparent 5.4px),
-        radial-gradient(circle at 55% 80%, rgba(79, 195, 247, 0.31) 3.1px, transparent 6.2px),
-        radial-gradient(circle at 75% 65%, rgba(41, 182, 246, 0.34) 2.9px, transparent 5.8px),
-        radial-gradient(circle at 85% 90%, rgba(3, 169, 244, 0.30) 3.3px, transparent 6.6px),
-        radial-gradient(circle at 25% 45%, rgba(79, 195, 247, 0.32) 2.6px, transparent 5.2px),
-        radial-gradient(circle at 65% 55%, rgba(41, 182, 246, 0.28) 3.4px, transparent 6.8px),
-        radial-gradient(circle at 45% 95%, rgba(3, 169, 244, 0.31) 2.8px, transparent 5.6px),
-        
-        /* Small sparkle particles - dense coverage */
-        radial-gradient(circle at 12% 18%, rgba(79, 195, 247, 0.40) 1.2px, transparent 2.4px),
-        radial-gradient(circle at 28% 32%, rgba(41, 182, 246, 0.42) 1px, transparent 2px),
-        radial-gradient(circle at 42% 22%, rgba(3, 169, 244, 0.38) 1.4px, transparent 2.8px),
-        radial-gradient(circle at 58% 38%, rgba(79, 195, 247, 0.41) 1.1px, transparent 2.2px),
-        radial-gradient(circle at 72% 28%, rgba(41, 182, 246, 0.39) 1.3px, transparent 2.6px),
-        radial-gradient(circle at 88% 42%, rgba(3, 169, 244, 0.43) 1px, transparent 2px),
-        radial-gradient(circle at 18% 75%, rgba(79, 195, 247, 0.37) 1.2px, transparent 2.4px),
-        radial-gradient(circle at 32% 85%, rgba(41, 182, 246, 0.40) 1.1px, transparent 2.2px),
-        radial-gradient(circle at 48% 72%, rgba(3, 169, 244, 0.36) 1.3px, transparent 2.6px),
-        radial-gradient(circle at 62% 88%, rgba(79, 195, 247, 0.42) 1px, transparent 2px),
-        radial-gradient(circle at 78% 75%, rgba(41, 182, 246, 0.38) 1.2px, transparent 2.4px),
-        radial-gradient(circle at 92% 82%, rgba(3, 169, 244, 0.41) 1.1px, transparent 2.2px);
-        
-    background-size: 
-        /* Large orbs with enhanced glow */
-        100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
-        /* Energy rings */
-        100% 100%, 100% 100%, 100% 100%,
-        /* Medium particles */
-        100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
-        /* Small sparkles */
-        100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-        
-    animation: floatingOrbs 25s ease-in-out infinite, gentleRotate 40s linear infinite;
-    pointer-events: none;
-    will-change: transform;
-    transform: translateZ(0);
+/* DISABLE CURSORS ON MOBILE */
+@media (max-width: 768px) {
+    body {
+        cursor: auto !important;
+    }
+    
+    a, button, .nav-link, .contact-card, .project-card {
+        cursor: auto !important;
+    }
 }
 
-/* Enhanced Secondary animated layer */
-body::after {
-    content: '';
-    position: fixed;
-    top: -20%;
-    left: -20%;
-    width: 140%;
-    height: 140%;
-    z-index: -3;
-    background-image: 
-        /* Floating bubbles with soft glow - full coverage */
-        radial-gradient(circle at 22% 15%, rgba(79, 195, 247, 0.12) 45px, rgba(79, 195, 247, 0.04) 75px, transparent 95px),
-        radial-gradient(circle at 68% 25%, rgba(41, 182, 246, 0.10) 35px, rgba(41, 182, 246, 0.03) 60px, transparent 80px),
-        radial-gradient(circle at 38% 65%, rgba(3, 169, 244, 0.14) 50px, rgba(3, 169, 244, 0.05) 85px, transparent 105px),
-        radial-gradient(circle at 82% 75%, rgba(79, 195, 247, 0.11) 40px, rgba(79, 195, 247, 0.04) 70px, transparent 90px),
-        radial-gradient(circle at 15% 85%, rgba(41, 182, 246, 0.13) 55px, rgba(41, 182, 246, 0.05) 90px, transparent 110px),
-        radial-gradient(circle at 75% 45%, rgba(3, 169, 244, 0.09) 30px, rgba(3, 169, 244, 0.03) 55px, transparent 75px),
-        radial-gradient(circle at 52% 88%, rgba(79, 195, 247, 0.12) 42px, rgba(79, 195, 247, 0.04) 72px, transparent 92px),
-        radial-gradient(circle at 88% 35%, rgba(41, 182, 246, 0.10) 38px, rgba(41, 182, 246, 0.03) 65px, transparent 85px),
-        
-        /* Drifting motes with trails - more distributed */
-        radial-gradient(ellipse 4px 2px at 25% 20%, rgba(79, 195, 247, 0.25) 0%, transparent 100%),
-        radial-gradient(ellipse 3.5px 1.8px at 65% 30%, rgba(41, 182, 246, 0.27) 0%, transparent 100%),
-        radial-gradient(ellipse 4.2px 2.1px at 45% 70%, rgba(3, 169, 244, 0.23) 0%, transparent 100%),
-        radial-gradient(ellipse 3.8px 1.9px at 85% 80%, rgba(79, 195, 247, 0.26) 0%, transparent 100%),
-        radial-gradient(ellipse 3.2px 1.6px at 15% 50%, rgba(41, 182, 246, 0.24) 0%, transparent 100%),
-        radial-gradient(ellipse 4.5px 2.2px at 75% 15%, rgba(3, 169, 244, 0.28) 0%, transparent 100%);
-        
-    background-size: 
-        /* Floating bubbles with glow */
-        100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
-        /* Drifting motes with trails */
-        100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-        
-    animation: driftingElements 30s ease-in-out infinite reverse, subtleFloat 35s linear infinite;
-    pointer-events: none;
-    will-change: transform;
-    transform: translateZ(0);
+/* Enhanced Creative Animated Background - DESKTOP ONLY FOR FULL PERFORMANCE */
+@media (min-width: 769px) {
+    body::before {
+        content: '';
+        position: fixed;
+        top: -20%;
+        left: -20%;
+        width: 140%;
+        height: 140%;
+        z-index: -4;
+        background-image: 
+            /* Large floating orbs with enhanced glow - spread across entire screen */
+            radial-gradient(circle at 15% 20%, rgba(79, 195, 247, 0.18) 80px, rgba(79, 195, 247, 0.08) 140px, transparent 180px),
+            radial-gradient(circle at 85% 30%, rgba(41, 182, 246, 0.15) 70px, rgba(41, 182, 246, 0.06) 120px, transparent 160px),
+            radial-gradient(circle at 25% 80%, rgba(3, 169, 244, 0.20) 90px, rgba(3, 169, 244, 0.09) 150px, transparent 190px),
+            radial-gradient(circle at 75% 85%, rgba(79, 195, 247, 0.16) 75px, rgba(79, 195, 247, 0.07) 125px, transparent 165px),
+            radial-gradient(circle at 50% 10%, rgba(41, 182, 246, 0.17) 85px, rgba(41, 182, 246, 0.08) 135px, transparent 175px),
+            radial-gradient(circle at 90% 60%, rgba(3, 169, 244, 0.19) 95px, rgba(3, 169, 244, 0.10) 155px, transparent 195px),
+            
+            /* Energy rings - more distributed */
+            radial-gradient(circle at 10% 50%, transparent 45px, rgba(79, 195, 247, 0.10) 47px, rgba(79, 195, 247, 0.15) 50px, rgba(79, 195, 247, 0.10) 53px, transparent 55px),
+            radial-gradient(circle at 90% 15%, transparent 35px, rgba(41, 182, 246, 0.08) 37px, rgba(41, 182, 246, 0.12) 40px, rgba(41, 182, 246, 0.08) 43px, transparent 45px),
+            radial-gradient(circle at 30% 90%, transparent 40px, rgba(3, 169, 244, 0.09) 42px, rgba(3, 169, 244, 0.13) 45px, rgba(3, 169, 244, 0.09) 48px, transparent 50px),
+            
+            /* Medium floating particles - full coverage */
+            radial-gradient(circle at 20% 25%, rgba(79, 195, 247, 0.30) 3px, transparent 6px),
+            radial-gradient(circle at 40% 15%, rgba(41, 182, 246, 0.32) 2.5px, transparent 5px),
+            radial-gradient(circle at 60% 35%, rgba(3, 169, 244, 0.28) 3.5px, transparent 7px),
+            radial-gradient(circle at 80% 25%, rgba(79, 195, 247, 0.35) 2.8px, transparent 5.6px),
+            radial-gradient(circle at 15% 60%, rgba(41, 182, 246, 0.29) 3.2px, transparent 6.4px),
+            radial-gradient(circle at 35% 70%, rgba(3, 169, 244, 0.33) 2.7px, transparent 5.4px),
+            radial-gradient(circle at 55% 80%, rgba(79, 195, 247, 0.31) 3.1px, transparent 6.2px),
+            radial-gradient(circle at 75% 65%, rgba(41, 182, 246, 0.34) 2.9px, transparent 5.8px),
+            radial-gradient(circle at 85% 90%, rgba(3, 169, 244, 0.30) 3.3px, transparent 6.6px),
+            radial-gradient(circle at 25% 45%, rgba(79, 195, 247, 0.32) 2.6px, transparent 5.2px),
+            radial-gradient(circle at 65% 55%, rgba(41, 182, 246, 0.28) 3.4px, transparent 6.8px),
+            radial-gradient(circle at 45% 95%, rgba(3, 169, 244, 0.31) 2.8px, transparent 5.6px),
+            
+            /* Small sparkle particles - dense coverage */
+            radial-gradient(circle at 12% 18%, rgba(79, 195, 247, 0.40) 1.2px, transparent 2.4px),
+            radial-gradient(circle at 28% 32%, rgba(41, 182, 246, 0.42) 1px, transparent 2px),
+            radial-gradient(circle at 42% 22%, rgba(3, 169, 244, 0.38) 1.4px, transparent 2.8px),
+            radial-gradient(circle at 58% 38%, rgba(79, 195, 247, 0.41) 1.1px, transparent 2.2px),
+            radial-gradient(circle at 72% 28%, rgba(41, 182, 246, 0.39) 1.3px, transparent 2.6px),
+            radial-gradient(circle at 88% 42%, rgba(3, 169, 244, 0.43) 1px, transparent 2px),
+            radial-gradient(circle at 18% 75%, rgba(79, 195, 247, 0.37) 1.2px, transparent 2.4px),
+            radial-gradient(circle at 32% 85%, rgba(41, 182, 246, 0.40) 1.1px, transparent 2.2px),
+            radial-gradient(circle at 48% 72%, rgba(3, 169, 244, 0.36) 1.3px, transparent 2.6px),
+            radial-gradient(circle at 62% 88%, rgba(79, 195, 247, 0.42) 1px, transparent 2px),
+            radial-gradient(circle at 78% 75%, rgba(41, 182, 246, 0.38) 1.2px, transparent 2.4px),
+            radial-gradient(circle at 92% 82%, rgba(3, 169, 244, 0.41) 1.1px, transparent 2.2px);
+            
+        background-size: 
+            /* Large orbs with enhanced glow */
+            100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+            /* Energy rings */
+            100% 100%, 100% 100%, 100% 100%,
+            /* Medium particles */
+            100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+            /* Small sparkles */
+            100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+            
+        animation: floatingOrbs 25s ease-in-out infinite, gentleRotate 40s linear infinite;
+        pointer-events: none;
+        will-change: transform;
+        transform: translateZ(0);
+    }
+
+    /* Enhanced Secondary animated layer */
+    body::after {
+        content: '';
+        position: fixed;
+        top: -20%;
+        left: -20%;
+        width: 140%;
+        height: 140%;
+        z-index: -3;
+        background-image: 
+            /* Floating bubbles with soft glow - full coverage */
+            radial-gradient(circle at 22% 15%, rgba(79, 195, 247, 0.12) 45px, rgba(79, 195, 247, 0.04) 75px, transparent 95px),
+            radial-gradient(circle at 68% 25%, rgba(41, 182, 246, 0.10) 35px, rgba(41, 182, 246, 0.03) 60px, transparent 80px),
+            radial-gradient(circle at 38% 65%, rgba(3, 169, 244, 0.14) 50px, rgba(3, 169, 244, 0.05) 85px, transparent 105px),
+            radial-gradient(circle at 82% 75%, rgba(79, 195, 247, 0.11) 40px, rgba(79, 195, 247, 0.04) 70px, transparent 90px),
+            radial-gradient(circle at 15% 85%, rgba(41, 182, 246, 0.13) 55px, rgba(41, 182, 246, 0.05) 90px, transparent 110px),
+            radial-gradient(circle at 75% 45%, rgba(3, 169, 244, 0.09) 30px, rgba(3, 169, 244, 0.03) 55px, transparent 75px),
+            radial-gradient(circle at 52% 88%, rgba(79, 195, 247, 0.12) 42px, rgba(79, 195, 247, 0.04) 72px, transparent 92px),
+            radial-gradient(circle at 88% 35%, rgba(41, 182, 246, 0.10) 38px, rgba(41, 182, 246, 0.03) 65px, transparent 85px),
+            
+            /* Drifting motes with trails - more distributed */
+            radial-gradient(ellipse 4px 2px at 25% 20%, rgba(79, 195, 247, 0.25) 0%, transparent 100%),
+            radial-gradient(ellipse 3.5px 1.8px at 65% 30%, rgba(41, 182, 246, 0.27) 0%, transparent 100%),
+            radial-gradient(ellipse 4.2px 2.1px at 45% 70%, rgba(3, 169, 244, 0.23) 0%, transparent 100%),
+            radial-gradient(ellipse 3.8px 1.9px at 85% 80%, rgba(79, 195, 247, 0.26) 0%, transparent 100%),
+            radial-gradient(ellipse 3.2px 1.6px at 15% 50%, rgba(41, 182, 246, 0.24) 0%, transparent 100%),
+            radial-gradient(ellipse 4.5px 2.2px at 75% 15%, rgba(3, 169, 244, 0.28) 0%, transparent 100%);
+            
+        background-size: 
+            /* Floating bubbles with glow */
+            100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+            /* Drifting motes with trails */
+            100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+            
+        animation: driftingElements 30s ease-in-out infinite reverse, subtleFloat 35s linear infinite;
+        pointer-events: none;
+        will-change: transform;
+        transform: translateZ(0);
+    }
+}
+
+/* SIMPLIFIED MOBILE BACKGROUND - NO COMPLEX ANIMATIONS */
+@media (max-width: 768px) {
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -4;
+        background-image: 
+            radial-gradient(circle at 20% 20%, rgba(79, 195, 247, 0.08) 40px, transparent 80px),
+            radial-gradient(circle at 80% 80%, rgba(41, 182, 246, 0.06) 35px, transparent 70px);
+        background-size: 100% 100%;
+        pointer-events: none;
+        /* No animation on mobile for performance */
+    }
+    
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -3;
+        background-image: 
+            radial-gradient(circle at 50% 50%, rgba(3, 169, 244, 0.04) 30px, transparent 60px);
+        background-size: 100% 100%;
+        pointer-events: none;
+        /* No animation on mobile for performance */
+    }
 }
 
 @keyframes floatingOrbs {
@@ -213,7 +276,7 @@ body.scrolling::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%);
+    background: linear-gradient(135deg, #1f1f38 0%, #252649 25%, #1b2648 50%, #362255 75%, #1f1f38 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -604,7 +667,7 @@ body.scrolling::after {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     position: relative;
     border: 1px solid rgba(79, 195, 247, 0.3);
     box-shadow: 0 0 20px rgba(79, 195, 247, 0.2);
@@ -637,7 +700,7 @@ body.scrolling::after {
     justify-content: space-between;
     align-items: center;
     width: 350px;
-    margin: 20px auto 0;
+    margin: 0 auto;
     font-family: 'Inter', sans-serif;
 }
 
@@ -681,7 +744,7 @@ body.scrolling::after {
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     height: 70px;
 }
@@ -690,6 +753,7 @@ body.scrolling::after {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-shrink: 0;
 }
 
 .nav-logo {
@@ -724,6 +788,7 @@ body.scrolling::after {
     background: rgba(79, 195, 247, 0.1);
     border: 1px solid rgba(79, 195, 247, 0.2);
     position: relative;
+    flex-shrink: 0;
 }
 
 .nav-home-link:hover {
@@ -751,6 +816,13 @@ body.scrolling::after {
     border-radius: 40px;
     border: 1px solid rgba(79, 195, 247, 0.2);
     padding: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.nav-menu::-webkit-scrollbar {
+    display: none;
 }
 
 .nav-link {
@@ -763,6 +835,7 @@ body.scrolling::after {
     position: relative;
     font-size: 0.95rem;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .nav-link:hover {
@@ -814,13 +887,83 @@ body.scrolling::after {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 25px;
+    /* DARK BLUE TO PURPLE MOBILE BACKGROUND */
+    html {
+        background: #1f1f38 !important;
+        background-image: linear-gradient(135deg, #1f1f38 0%, #252649 25%, #1b2648 50%, #362255 75%, #1f1f38 100%) !important;
+        background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        min-height: 100vh !important;
+        color-scheme: dark only !important;
+        -webkit-color-scheme: dark !important;
+        background-color: #1f1f38 !important;
     }
     
+    body {
+        background: #27295a !important;
+        background-image: linear-gradient(135deg, #27295a 0%, #2d316c 25%, #253262 50%, #422e72 75%, #27295a 100%) !important;
+        background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        min-height: 100vh !important;
+        color: #ffffff !important;
+        color-scheme: dark only !important;
+        -webkit-color-scheme: dark !important;
+        background-color: #222552 !important;
+    }
+    
+    /* DISABLE ONLY PROBLEMATIC ANIMATIONS - KEEP BACKGROUND ANIMATIONS */
+    .stat:hover {
+        transform: none !important;
+    }
+    
+    .project-card:hover,
+    .blog-card:hover,
+    .contact-card:hover,
+    .experience-item:hover,
+    .education-item:hover {
+        transform: none !important;
+    }
+    
+    .nav-link:hover,
+    .nav-home-link:hover {
+        transform: none !important;
+    }
+    
+    /* Keep loading screen animations */
+    .progress-bar {
+        animation: progressLoad 3s ease-out forwards, progressShine 1.5s ease-in-out infinite !important;
+    }
+    
+    .code-line {
+        animation: codeAppear 0.8s ease-out forwards !important;
+    }
+
+    /* Preserve sequential animation delays on mobile */
+    .code-line:nth-child(1) { animation-delay: 0.2s !important; }
+    .code-line:nth-child(2) { animation-delay: 0.6s !important; }
+    .code-line:nth-child(3) { animation-delay: 1.0s !important; }
+    .code-line:nth-child(4) { animation-delay: 1.4s !important; }
+    
+    /* Keep DNA animations */
+    .dna-strand {
+        animation: advancedSpin 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite !important;
+    }
+    
+    .dna-base {
+        animation: quantumPulse 2s ease-in-out infinite !important;
+    }
+    
+    /* Container adjustments */
+    .container {
+        padding: 0 20px;
+    }
+    
+    /* Hamburger Menu Mobile */
     .nav-container {
-        padding: 0 25px;
-        height: 65px;
+        padding: 0 20px !important;
+        height: 60px !important;
         justify-content: flex-end;
     }
     
@@ -856,166 +999,517 @@ body.scrolling::after {
     
     .nav-link {
         width: 85%;
-        padding: 20px 30px;
-        font-size: 1.4rem;
+        padding: 20px 30px !important;
+        font-size: 1.4rem !important;
         text-align: center;
         border: 2px solid rgba(79, 195, 247, 0.2);
-        border-radius: 12px;
-        margin: 0;
-        background: rgba(79, 195, 247, 0.05);
+        border-radius: 12px !important;
+        margin: 0 !important;
+        background: rgba(79, 195, 247, 0.05) !important;
         transition: all 0.3s ease;
+        white-space: normal;
         font-weight: 600;
     }
     
     .nav-link:hover {
-        background: rgba(79, 195, 247, 0.15);
+        background: rgba(79, 195, 247, 0.15) !important;
         border-color: rgba(79, 195, 247, 0.4);
         transform: translateY(-2px);
     }
     
     .nav-link.active {
-        background: rgba(79, 195, 247, 0.25);
+        background: rgba(79, 195, 247, 0.25) !important;
         border: 2px solid #4fc3f7;
         color: #4fc3f7;
     }
     
-    .navbar {
-        top: 20px;
-        left: 20px;
-    }
-    
-    .hero {
-        min-height: 50vh;
-        padding-top: 110px;
-        padding-bottom: 10px;
-    }
-    
-    .hero-content {
-        padding: 40px 25px;
-        border-radius: 20px;
-        max-width: calc(100% - 40px);
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .about {
-        padding: 40px 0;
-    }
-    
-    .about-text-section {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
-    
-    .about-text p {
-        font-size: 1rem;
-        margin-bottom: 15px;
-        padding-left: 15px;
-    }
-    
-    .about-stats {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        max-width: 100%;
-    }
-    
-    .image-placeholder {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .image-placeholder i {
-        font-size: 3rem;
-    }
-    
-    .stat {
-        padding: 15px;
-        border-radius: 12px;
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    .stat h3 {
-        font-size: 1.8rem;
-    }
-    
-    .section-container {
-        margin: 20px;
-        padding: 30px;
-        border-radius: 12px;
-        max-width: calc(100% - 40px);
-    }
-    
-    .section-title {
-        font-size: 2.2rem;
-        text-align: left;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 10px;
-        margin-bottom: 30px;
-    }
-    
-    .experience-item,
-    .education-item {
-        padding: 25px;
-        margin-bottom: 20px;
-    }
-    
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-    }
-    
-    .contact-description {
-        font-size: 1rem;
-        margin-bottom: 30px;
-    }
-    
-    .contact-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-    
-    .contact-card {
-        padding: 20px;
-    }
-    
-    .dna-container {
-        gap: 30px;
-    }
-    
-    .dna-helix {
-        width: 150px;
-        height: 200px;
-    }
-    
+    /* Loading screen mobile fixes */
     .loading-progress {
-        width: 250px;
+        width: 280px;
+    }
+    
+    .loading-status {
+        width: 280px;
+        margin: 15px auto 0 auto;
     }
     
     .code-line {
         font-size: 12px;
     }
+    
+    .dna-container {
+        gap: 40px;
+    }
+    
+    .dna-helix {
+        width: 100px;
+        height: 100px;
+    }
+    
+    /* Hero section mobile */
+    .hero {
+        min-height: 50vh;
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+    
+    .hero-content {
+        padding: 30px 20px;
+        border-radius: 20px;
+        max-width: calc(100% - 40px);
+    }
+    
+    .hero-title {
+        font-size: 0.45rem;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    
+    /* Beautiful gradient overlay for mobile hero */
+    .hero-title::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: linear-gradient(135deg, 
+            rgba(79, 195, 247, 0.1) 0%, 
+            rgba(41, 182, 246, 0.08) 25%,
+            rgba(3, 169, 244, 0.06) 50%,
+            rgba(41, 182, 246, 0.08) 75%,
+            rgba(79, 195, 247, 0.1) 100%);
+        border-radius: 20px;
+        blur: 20px;
+        z-index: -1;
+        animation: gradientShift 4s ease-in-out infinite;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 30px;
+        text-align: center;
+        line-height: 1.2;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    /* Mobile - make all text same size */
+    .hero-subtitle, .hero-subtitle * {
+        font-size: 0.85rem !important;
+    }
+    
+    /* Mobile typing text alignment fix */
+    #dynamic-text {
+        display: inline;
+        text-align: center;
+        white-space: nowrap;
+        font-size: 0.85rem !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    /* CLEAN MOBILE ABOUT SECTION LAYOUT */
+    .about {
+        padding: 40px 0 !important;
+    }
+    
+    .about-text-section {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    /* Profile image FIRST - directly under About Me title */
+    .about-image {
+        order: 1 !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 50px 0 35px 0 !important;
+        clear: both !important;
+        float: none !important;
+    }
+    
+    /* Text content SECOND - below image */
+    .about-text {
+        order: 2 !important;
+        display: block !important;
+        width: 100% !important;
+        clear: both !important;
+        margin: 15px 0 35px 0 !important;
+        float: none !important;
+    }
+    
+    .about-text p {
+        font-size: 0.9rem !important;
+        margin-bottom: 15px !important;
+        padding: 0 20px !important;
+        line-height: 1.7 !important;
+        text-align: center !important;
+        color: #e2e8f0 !important;
+        clear: both !important;
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    /* Remove bullet points on mobile */
+    .about-text p:before {
+        display: none !important;
+    }
+    
+    /* Force clean layout */
+    .image-placeholder {
+        float: none !important;
+        margin: 0 auto 20px auto !important;
+        position: relative !important;
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    /* MOBILE AI TOOLS SECTION FIX */
+    .about-stats {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        margin-top: 25px !important;
+        width: 100% !important;
+    }
+    
+    .stat {
+        display: block !important;
+        width: 100% !important;
+        padding: 20px 15px !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+    
+    .stat h3 {
+        font-size: 1.8rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .stat p {
+        font-size: 0.9rem !important;
+        margin-bottom: 10px !important;
+        font-weight: 600 !important;
+    }
+    
+    .skill-list {
+        font-size: 0.8rem !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+        color: #cccccc !important;
+    }
+    
+    /* Profile image sizing */
+    .profile-image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+    }
+    
+    /* FIXED STATS SECTION - NO MORE TEXT CUTOFF */
+    .about-stats {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 100%;
+        padding: 0 10px;
+        justify-items: center;
+    }
+    
+    .stat {
+        padding: 20px 15px;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+    
+    .stat h3 {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+    
+    .stat p {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+    
+    .skill-list {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+    
+    .image-placeholder {
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgba(79, 195, 247, 0.4);
+        box-shadow: 0 4px 15px rgba(79, 195, 247, 0.2);
+    }
+    
+    .image-placeholder i {
+        font-size: 2.2rem;
+        color: #4fc3f7;
+    }
+    
+    /* Section container mobile */
+    .section-container {
+        margin: 20px 15px;
+        padding: 25px 20px;
+        border-radius: 12px;
+        max-width: calc(100% - 30px);
+    }
+    
+    .section-title {
+        font-size: 2rem !important;
+        text-align: center !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px;
+        margin-bottom: 25px;
+        display: flex !important;
+        width: 100% !important;
+    }
+    
+    .section-title i {
+        font-size: 1.5rem;
+    }
+    
+    /* Experience and Education mobile */
+    .experience-item,
+    .education-item {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .experience-item h3,
+    .education-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .experience-item h4,
+    .education-item h4 {
+        font-size: 1rem;
+    }
+    
+    .experience-item p,
+    .education-item p {
+        font-size: 0.9rem;
+    }
+    
+    /* PROPERLY CENTERED PROJECTS GRID FOR MOBILE */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .project-card {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .project-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .project-card h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .project-card p {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 25px;
+        justify-content: center;
+    }
+    
+    .project-link {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: fit-content;
+    }
+    
+    /* PROPERLY CENTERED BLOGS GRID FOR MOBILE */
+    .blogs-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+        justify-items: center !important;
+        align-items: center !important;
+        display: grid !important;
+        width: 100% !important;
+    }
+    
+    .blog-card {
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        display: block !important;
+        position: relative !important;
+    }
+    
+    .blog-image {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 0 auto 20px auto !important;
+    }
+    
+    .blog-card h3 {
+        text-align: center !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .blog-card p {
+        text-align: center !important;
+        margin-bottom: 15px !important;
+        padding: 0 10px !important;
+    }
+    
+    .blog-tags {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        margin-bottom: 25px !important;
+        justify-content: center !important;
+    }
+    
+    .blog-link {
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        width: fit-content !important;
+    }
+    
+    /* PROPERLY CENTERED CONTACT GRID FOR MOBILE */
+    .contact-description {
+        font-size: 0.95rem !important;
+        margin-bottom: 30px !important;
+        padding: 0 !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+        justify-items: center !important;
+        align-items: center !important;
+        display: grid !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+    
+    .contact-card {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
+        padding: 20px !important;
+        text-align: center !important;
+        display: block !important;
+        position: relative !important;
+    }
+    
+    .contact-icon {
+        width: 60px !important;
+        height: 60px !important;
+        margin: 0 auto 15px auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: 12px !important;
+    }
+    
+    .contact-icon i {
+        font-size: 1.6rem !important;
+        text-align: center !important;
+        display: block !important;
+        width: 100% !important;
+        line-height: 1 !important;
+    }
+    
+    .contact-card h3 {
+        text-align: center !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .contact-card p {
+        text-align: center !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .contact-link {
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        width: fit-content !important;
+    }
 }
 
 @media (max-width: 480px) {
-    .nav-container {
+    /* Extra small mobile devices - STRONGER DARK BACKGROUND */
+    html {
+        background: #0a0a0a !important;
+        background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%) !important;
+        background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-color: #0a0a0a !important;
+        color-scheme: dark only !important;
+        -webkit-color-scheme: dark !important;
+    }
+    
+    body {
+        background: #2b2d6c !important;
+        background-image: linear-gradient(135deg, #2b2d6c 0%, #313576 25%, #2c356a 50%, #46327a 75%, #2b2d6c 100%) !important;
+        background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-color: #262862 !important;
+        color: #ffffff !important;
+        color-scheme: dark only !important;
+        -webkit-color-scheme: dark !important;
+    }
+    
+    .container {
         padding: 0 15px;
-        height: 60px;
+    }
+    
+    .nav-container {
+        padding: 0 15px !important;
+        height: 50px !important;
         justify-content: flex-end;
     }
     
@@ -1025,92 +1519,213 @@ body.scrolling::after {
     
     .nav-menu {
         width: 95vw;
-        max-width: 400px;
+        max-width: 380px;
     }
     
     .nav-link {
-        padding: 18px 25px;
-        font-size: 1.3rem;
-    }
-    
-    .navbar {
-        top: 15px;
-        left: 15px;
+        padding: 16px 22px !important;
+        font-size: 1.2rem !important;
+        margin: 0 !important;
     }
     
     .hero {
         min-height: 45vh;
-        padding-top: 90px;
-        padding-bottom: 5px;
+        padding-top: 80px;
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 0.4rem;
     }
     
-    .about {
-        padding: 30px 0;
+    /* Enhanced gradient overlay for small mobile */
+    .hero-title::before {
+        background: linear-gradient(135deg, 
+            rgba(79, 195, 247, 0.12) 0%, 
+            rgba(41, 182, 246, 0.1) 25%,
+            rgba(3, 169, 244, 0.08) 50%,
+            rgba(41, 182, 246, 0.1) 75%,
+            rgba(79, 195, 247, 0.12) 100%);
+        border-radius: 15px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.75rem;
+        text-align: center;
+        line-height: 1.1;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    /* Small mobile - make all text same size */
+    .hero-subtitle, .hero-subtitle * {
+        font-size: 0.75rem !important;
+    }
+    
+    /* Small mobile typing text alignment */
+    #dynamic-text {
+        display: inline;
+        text-align: center;
+        white-space: nowrap;
+        font-size: 0.75rem !important;
+    }
+    
+    /* Small mobile about section improvements */
+    .about-image {
+        margin: 45px 0 30px 0 !important;
+        order: 1 !important;
+    }
+    
+    .about-text {
+        margin: 12px 0 30px 0 !important;
+        order: 2 !important;
     }
     
     .about-text p {
-        font-size: 0.95rem;
-        padding-left: 12px;
+        font-size: 0.85rem !important;
+        padding: 0 15px !important;
+        margin-bottom: 12px !important;
+        text-align: center !important;
+        line-height: 1.6 !important;
     }
     
+    .image-placeholder {
+        width: 70px !important;
+        height: 70px !important;
+        margin: 0 auto 15px auto !important;
+    }
+    
+    .image-placeholder i {
+        font-size: 2rem !important;
+    }
+    
+    /* Small mobile AI Tools improvements */
     .about-stats {
-        flex-direction: column;
-        gap: 15px;
+        gap: 12px !important;
+        margin-top: 20px !important;
     }
     
     .stat {
-        padding: 12px;
+        padding: 15px 10px !important;
+    }
+    
+    .stat h3 {
+        font-size: 1.6rem !important;
+    }
+    
+    .stat p {
+        font-size: 0.85rem !important;
+    }
+    
+    .skill-list {
+        font-size: 0.75rem !important;
+        padding: 0 5px !important;
+    }
+    
+    .stat {
+        padding: 15px 10px;
+        max-width: 280px;
     }
     
     .stat h3 {
         font-size: 1.6rem;
     }
     
+    .stat p {
+        font-size: 0.8rem;
+    }
+    
+    .skill-list {
+        font-size: 0.75rem;
+    }
+    
     .section-container {
-        margin: 15px;
-        padding: 20px;
-        border-radius: 10px;
+        margin: 15px 10px;
+        padding: 20px 15px;
     }
     
-    .contact-description {
-        font-size: 0.95rem;
-        margin-bottom: 25px;
-        padding: 0 10px;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .contact-card {
-        padding: 18px;
-    }
-    
-    .contact-icon {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .contact-icon i {
-        font-size: 1.5rem;
-    }
-    
-    .dna-helix {
-        width: 120px;
-        height: 180px;
+    .section-title {
+        font-size: 1.8rem !important;
+        text-align: center !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        display: flex !important;
+        width: 100% !important;
+        margin: 0 auto 25px auto !important;
     }
     
     .loading-progress {
-        width: 200px;
+        width: 250px;
     }
     
-    .code-line {
-        font-size: 11px;
+    .loading-status {
+        width: 250px;
+    }
+    
+    .contact-card {
+        max-width: 280px;
+        padding: 18px;
+    }
+    
+    .project-card,
+    .blog-card {
+        max-width: 300px;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    
+    /* Ensure projects grid is properly centered on small mobile */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        justify-items: center !important;
+        align-items: center !important;
+        display: grid !important;
+    }
+    
+    /* Fix project card centering */
+    .project-card {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        display: block !important;
+        position: relative !important;
+    }
+    
+    .project-image {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 0 auto 15px auto !important;
+    }
+    
+    .project-card h3 {
+        text-align: center !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .project-card p {
+        text-align: center !important;
+        margin-bottom: 15px !important;
+        padding: 0 10px !important;
+    }
+    
+    .project-tech {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+        margin-bottom: 20px !important;
+        justify-content: center !important;
+    }
+    
+    .project-link {
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        width: fit-content !important;
     }
 }
 
@@ -1146,21 +1761,52 @@ body.scrolling::after {
     animation: fadeInUp 1s ease-out;
     text-shadow: 0 0 40px rgba(79, 195, 247, 0.4);
     letter-spacing: -1px;
+    position: relative;
+}
+
+/* Desktop gradient overlay */
+.hero-title::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: linear-gradient(135deg, 
+        rgba(79, 195, 247, 0.08) 0%, 
+        rgba(41, 182, 246, 0.06) 25%,
+        rgba(3, 169, 244, 0.04) 50%,
+        rgba(41, 182, 246, 0.06) 75%,
+        rgba(79, 195, 247, 0.08) 100%);
+    border-radius: 25px;
+    blur: 25px;
+    z-index: -1;
+    animation: gradientShift 6s ease-in-out infinite;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 40px;
     color: #f1f5f9;
     animation: fadeInUp 1s ease-out 0.2s both;
     text-shadow: 0 0 25px rgba(79, 195, 247, 0.3);
     font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Make all text in hero-subtitle the same size */
+.hero-subtitle, .hero-subtitle * {
+    font-size: 1.2rem !important;
 }
 
 #dynamic-text {
-    display: inline-block;
-    min-width: 250px;
-    text-align: left;
+    display: inline;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1.2rem !important;
 }
 
 .highlight {
@@ -1345,18 +1991,19 @@ section {
     margin-top: -30px;
 }
 
-.image-placeholder {
-    width: 85px;
-    height: 85px;
-    background: rgba(10, 15, 28, 0.5);
-    border: 2px solid rgba(79, 195, 247, 0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(8px);
-    transition: all 0.3s ease;
-}
+    .image-placeholder {
+        width: 80px !important;
+        height: 80px !important;
+        background: rgba(10, 15, 28, 0.5);
+        border: 2px solid rgba(79, 195, 247, 0.3);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(8px);
+        transition: all 0.3s ease;
+        margin: 0 auto 20px auto !important;
+    }
 
 .image-placeholder:hover {
     border-color: rgba(79, 195, 247, 0.5);
@@ -1765,7 +2412,7 @@ section {
     padding: 30px;
     border-radius: 12px;
     border: 1px solid rgba(79, 195, 247, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    transition: all 0.3s ease;
     backdrop-filter: blur(8px);
     text-align: center;
     display: flex;
@@ -1784,6 +2431,9 @@ section {
 .project-image {
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-image i {
@@ -1796,6 +2446,7 @@ section {
     margin-bottom: 15px;
     font-size: 1.3rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .project-card p {
@@ -1804,6 +2455,7 @@ section {
     line-height: 1.6;
     font-size: 0.95rem;
     flex-grow: 1;
+    text-align: center;
 }
 
 .project-tech {
@@ -1918,7 +2570,7 @@ section {
     border: 1px solid rgba(79, 195, 247, 0.2);
     border-radius: 12px;
     padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    transition: all 0.3s ease;
     backdrop-filter: blur(8px);
     text-align: center;
     text-decoration: none;
@@ -1952,7 +2604,7 @@ section {
 }
 
 .contact-card h3 {
-    color: #ffffff;
+    text-align: center;
     margin-bottom: 12px;
     font-size: 1.2rem;
     font-weight: 600;
@@ -2130,9 +2782,9 @@ section {
     padding: 30px;
     border-radius: 12px;
     border: 1px solid rgba(79, 195, 247, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    transition: all 0.3s ease;
     backdrop-filter: blur(8px);
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2149,6 +2801,9 @@ section {
 .blog-image {
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .blog-image i {
@@ -2365,5 +3020,162 @@ section {
     100% { 
         transform: translate(-50%, -50%) rotate(calc(var(--rotation) + 360deg));
         opacity: 0.6;
+    }
+}
+
+/* Mobile hero gradient animation */
+@keyframes gradientShift {
+    0%, 100% { 
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+/* ANIMATED VISIBLE BACKGROUND ORBS */
+.moving-orb {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 50%;
+    background: 
+        radial-gradient(circle, rgba(79, 195, 247, 0.25) 0%, rgba(79, 195, 247, 0.1) 70%, transparent 100%);
+    box-shadow: 
+        0 0 50px rgba(79, 195, 247, 0.4),
+        0 0 80px rgba(79, 195, 247, 0.2);
+    filter: blur(2px);
+    animation: orbPulse 4s ease-in-out infinite;
+}
+
+/* Dynamic Animated Orbs */
+.orb-1 {
+    width: 110px;
+    height: 110px;
+    animation: simpleFloat1 25s linear infinite, orbPulse 3s ease-in-out infinite;
+    animation-delay: 0s, 0.5s;
+}
+
+.orb-2 {
+    width: 90px;
+    height: 90px;
+    animation: simpleFloat2 20s linear infinite, orbPulse 4s ease-in-out infinite;
+    animation-delay: -8s, 1s;
+}
+
+.orb-3 {
+    width: 130px;
+    height: 130px;
+    animation: simpleFloat3 30s linear infinite, orbPulse 5s ease-in-out infinite;
+    animation-delay: -15s, 2s;
+}
+
+/* Dynamic Tech Float Animations */
+@keyframes simpleFloat1 {
+    0% {
+        transform: translateX(-120px) translateY(10vh) rotate(0deg) scale(0.8);
+    }
+    25% {
+        transform: translateX(25vw) translateY(30vh) rotate(90deg) scale(1.1);
+    }
+    50% {
+        transform: translateX(50vw) translateY(20vh) rotate(180deg) scale(0.9);
+    }
+    75% {
+        transform: translateX(75vw) translateY(50vh) rotate(270deg) scale(1.2);
+    }
+    100% {
+        transform: translateX(calc(100vw + 120px)) translateY(70vh) rotate(360deg) scale(0.8);
+    }
+}
+
+@keyframes simpleFloat2 {
+    0% {
+        transform: translateX(calc(100vw + 100px)) translateY(70vh) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translateX(75vw) translateY(40vh) rotate(-90deg) scale(1.3);
+    }
+    50% {
+        transform: translateX(50vw) translateY(60vh) rotate(-180deg) scale(0.7);
+    }
+    75% {
+        transform: translateX(25vw) translateY(30vh) rotate(-270deg) scale(1.1);
+    }
+    100% {
+        transform: translateX(-100px) translateY(20vh) rotate(-360deg) scale(1);
+    }
+}
+
+@keyframes simpleFloat3 {
+    0% {
+        transform: translateX(-130px) translateY(80vh) rotate(0deg) scale(0.9);
+    }
+    33% {
+        transform: translateX(33vw) translateY(15vh) rotate(120deg) scale(1.4);
+    }
+    66% {
+        transform: translateX(66vw) translateY(65vh) rotate(240deg) scale(0.6);
+    }
+    100% {
+        transform: translateX(calc(100vw + 130px)) translateY(40vh) rotate(360deg) scale(0.9);
+    }
+}
+
+/* Pulsing Animation */
+@keyframes orbPulse {
+    0%, 100% {
+        opacity: 0.6;
+        box-shadow: 
+            0 0 50px rgba(79, 195, 247, 0.4),
+            0 0 80px rgba(79, 195, 247, 0.2);
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 
+            0 0 70px rgba(79, 195, 247, 0.6),
+            0 0 120px rgba(79, 195, 247, 0.3);
+    }
+}
+
+
+
+/* Mobile - aesthetic tech orbs scale down */
+@media (max-width: 768px) {
+    .orb-1 {
+        width: 60px;
+        height: 60px;
+        box-shadow: 
+            0 0 20px rgba(79, 195, 247, 0.3),
+            inset 0 0 15px rgba(79, 195, 247, 0.1);
+    }
+    
+    .orb-1::before {
+        width: 15px;
+        height: 15px;
+        box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+    }
+    
+    .orb-2 {
+        width: 70px;
+        height: 70px;
+        box-shadow: 
+            0 0 25px rgba(41, 182, 246, 0.3),
+            inset 0 0 18px rgba(41, 182, 246, 0.1);
+    }
+    
+    .orb-2::after {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .orb-3 {
+        width: 50px;
+        height: 50px;
+        box-shadow: 
+            0 0 20px rgba(3, 169, 244, 0.3),
+            inset 0 0 15px rgba(3, 169, 244, 0.1);
     }
 }
