@@ -997,9 +997,9 @@ body.scrolling::after {
     
     /* Hero section mobile */
     .hero {
-        min-height: 70vh;
+        min-height: 50vh;
         padding-top: 100px;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
     }
     
     .hero-content {
@@ -1474,7 +1474,7 @@ body.scrolling::after {
     }
     
     .hero {
-        min-height: 65vh;
+        min-height: 45vh;
         padding-top: 80px;
     }
     
@@ -1676,14 +1676,14 @@ body.scrolling::after {
 
 /* Hero Section */
 .hero {
-    min-height: 80vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background: transparent;
     overflow: hidden;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-top: 120px;
 }
 
