@@ -229,18 +229,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const isClickInsideNav = navMenu.contains(event.target);
-        const isClickOnHamburger = hamburger.contains(event.target);
-        
-        if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
+    document.addEventListener('click', function(e) {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
             closeMenu();
         }
     });
 
     // Close menu on escape key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
             closeMenu();
         }
     });
@@ -267,4 +264,28 @@ document.querySelectorAll('.project-card, .blog-card, .about-text, .about-stats,
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
+});
+
+// Scroll to Top Button Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    if (!scrollToTopBtn) return;
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+    
+    // Smooth scroll to top when clicked
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 }); 
