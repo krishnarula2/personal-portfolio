@@ -964,11 +964,11 @@ body.scrolling::after {
     .nav-container {
         padding: 0 20px !important;
         height: 60px !important;
-        justify-content: flex-start;
+        justify-content: center;
     }
     
     .hamburger {
-        display: flex !important;
+        display: none !important;
     }
     
     .nav-menu {
@@ -1532,7 +1532,7 @@ body.scrolling::after {
     }
     
     .hamburger {
-        display: flex !important;
+        display: none !important;
     }
     
     .nav-menu {
@@ -3299,5 +3299,49 @@ section {
 }
 
 .blog-footer .blog-tags {
-    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+/* Scroll to Top Button - Mobile Only */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(79, 195, 247, 0.9);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(79, 195, 247, 0.3);
+    display: none;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: rgba(79, 195, 247, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 195, 247, 0.4);
+}
+
+.scroll-to-top i {
+    line-height: 50px;
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top {
+        display: block;
+    }
 }
