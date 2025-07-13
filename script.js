@@ -68,11 +68,11 @@ function startNameTyping() {
 function startDynamicTyping() {
     const dynamicTextElement = document.getElementById('dynamic-text');
     const texts = [
-        'Tech Innovator & AI Enthusiast',
+        'Product Growth Specialist',
         'Computer Science Student',
-        'Full Stack Developer',
-        'AI & Machine Learning Enthusiast',
-        'Problem Solver & Builder'
+        'GTM Strategy Enthusiast',
+        'Product & Business Development',
+        'Growth Marketing Strategist'
     ];
     
     let currentTextIndex = 0;
