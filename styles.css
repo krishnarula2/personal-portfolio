@@ -1202,83 +1202,62 @@ body.scrolling::after {
         height: 80px !important;
     }
     
-    /* MOBILE AI TOOLS SECTION FIX */
+        /* MOBILE SKILLS SECTION - PROPERLY CENTERED AND ORGANIZED */
     .about-stats {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 15px !important;
-        margin-top: 25px !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        margin-top: 30px !important;
         width: 100% !important;
+        padding: 0 15px !important;
+        justify-items: center !important;
+        max-width: 100% !important;
     }
-    
+
     .stat {
-        display: block !important;
-        width: 100% !important;
+        background: rgba(10, 15, 28, 0.5) !important;
+        border: 1px solid rgba(79, 195, 247, 0.2) !important;
+        border-radius: 12px !important;
         padding: 20px 15px !important;
-        margin: 0 !important;
+        width: 100% !important;
+        max-width: 320px !important;
         text-align: center !important;
+        margin: 0 auto !important;
+        display: block !important;
+        backdrop-filter: blur(8px) !important;
     }
-    
+
     .stat h3 {
-        font-size: 1.8rem !important;
+        font-size: 1.6rem !important;
         margin-bottom: 8px !important;
+        color: #ffffff !important;
     }
-    
+
     .stat p {
-        font-size: 0.9rem !important;
-        margin-bottom: 10px !important;
+        font-size: 0.75rem !important;
+        margin-bottom: 12px !important;
         font-weight: 600 !important;
+        color: #4fc3f7 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
     }
-    
+
     .skill-list {
         font-size: 0.8rem !important;
-        line-height: 1.5 !important;
+        line-height: 1.6 !important;
         text-align: center !important;
         color: #cccccc !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
     }
-    
+
     /* Profile image sizing */
     .profile-image {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
         border-radius: 50% !important;
-    }
-    
-    /* FIXED STATS SECTION - NO MORE TEXT CUTOFF */
-    .about-stats {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        max-width: 100%;
-        padding: 0 10px;
-        justify-items: center;
-    }
-    
-    .stat {
-        padding: 20px 15px;
-        border-radius: 12px;
-        width: 100%;
-        max-width: 300px;
-        text-align: center;
-    }
-    
-    .stat h3 {
-        font-size: 1.8rem;
-        margin-bottom: 8px;
-    }
-    
-    .stat p {
-        font-size: 0.85rem;
-        margin-bottom: 12px;
-        font-weight: 600;
-    }
-    
-    .skill-list {
-        font-size: 0.8rem;
-        line-height: 1.5;
-        word-wrap: break-word;
-        white-space: normal;
     }
     
     .image-placeholder {
@@ -1694,27 +1673,38 @@ body.scrolling::after {
         font-size: 2rem !important;
     }
     
-    /* Small mobile AI Tools improvements */
+    /* Small mobile Skills improvements */
     .about-stats {
-        gap: 12px !important;
+        gap: 15px !important;
         margin-top: 20px !important;
+        padding: 0 10px !important;
     }
     
     .stat {
         padding: 15px 10px !important;
+        background: rgba(10, 15, 28, 0.5) !important;
+        border: 1px solid rgba(79, 195, 247, 0.2) !important;
+        border-radius: 12px !important;
+        max-width: 280px !important;
     }
     
     .stat h3 {
-        font-size: 1.6rem !important;
+        font-size: 1.4rem !important;
+        color: #ffffff !important;
     }
     
     .stat p {
-        font-size: 0.85rem !important;
+        font-size: 0.7rem !important;
+        color: #4fc3f7 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
     }
     
     .skill-list {
         font-size: 0.75rem !important;
-        padding: 0 5px !important;
+        color: #cccccc !important;
+        line-height: 1.6 !important;
+        padding: 0 !important;
     }
     
     .stat {
