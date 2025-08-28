@@ -701,8 +701,9 @@ section {
 
 .contact-email-popup {
     position: absolute;
-    top: -60px;
-    left: 120px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--bg-card);
     border: 2px solid var(--border);
     border-radius: 12px;
