@@ -692,33 +692,46 @@ section {
     align-items: center;
 }
 
+.contact-email-container {
+    position: relative;
+    display: inline-block;
+}
+
 .contact-email-btn {
     background: none;
     border: none;
     cursor: pointer;
-    position: relative;
 }
 
-.contact-email-popup {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--bg-card);
-    border: 2px solid var(--border);
-    border-radius: 12px;
-    padding: 16px 20px;
+.contact-email-display {
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 8px 20px var(--shadow);
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    min-width: 280px;
     transition: all 0.3s ease;
-    z-index: 100;
-    white-space: nowrap;
 }
 
-.contact-email-popup.hidden {
+.contact-email-display.hidden {
     display: none;
+}
+
+.close-email-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0 4px;
+    margin-left: 8px;
+    transition: color 0.2s ease;
+}
+
+.close-email-btn:hover {
+    color: var(--text-primary);
 }
 
 .contact-link {
