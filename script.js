@@ -1,3 +1,51 @@
+// Theme Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('.theme-icon');
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+    
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+    
+    function updateThemeIcon(theme) {
+        themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+});
+
+// Typing Animation for Hero Text
+document.addEventListener('DOMContentLoaded', function() {
+    const typingText = document.getElementById('typingText');
+    const cursor = document.getElementById('cursor');
+    const text = "i'm krish narula!";
+    let index = 0;
+    
+    function typeText() {
+        if (index < text.length) {
+            typingText.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeText, 100); // Adjust speed here (lower = faster)
+        } else {
+            // Hide cursor after typing is complete
+            setTimeout(() => {
+                cursor.style.opacity = '0';
+            }, 1000);
+        }
+    }
+    
+    // Start typing animation after a brief delay
+    setTimeout(typeText, 500);
+});
+
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -12,7 +60,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Simple scroll handling for navigation
+// Scroll handling for navigation
 let ticking = false;
 
 function updateOnScroll() {
@@ -68,12 +116,41 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Mobile menu functionality (if needed)
+// Intersection Observer for Experience Cards Animation
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            // Add staggered animation delay
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 100);
+        }
+    });
+}, observerOptions);
+
+// Observe experience cards for animation
 document.addEventListener('DOMContentLoaded', function() {
-    // Simple fade-in animation for content
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    }, 100);
+    const experienceCards = document.querySelectorAll('.experience-card');
+    
+    experienceCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+    });
+    
+    // Also observe other sections
+    const otherElements = document.querySelectorAll('.thought-post, .contact-description');
+    otherElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
 });
