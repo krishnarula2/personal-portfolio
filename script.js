@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const typingText = document.getElementById('typingText');
     const cursor = document.getElementById('cursor');
-    const text = "i'm krish narula!";
+    const text = "i'm krish narula and i love gooning all day long!";
     let index = 0;
     
     function typeText() {
@@ -46,48 +46,51 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(typeText, 500);
 });
 
-// Get In Touch Email Reveal Functionality
+// Email Popup Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const getInTouchBtn = document.getElementById('getInTouchBtn');
-    const emailReveal = document.getElementById('emailReveal');
+    const emailBtn = document.getElementById('emailBtn');
+    const emailPopup = document.getElementById('emailPopup');
     const copyEmailBtn = document.getElementById('copyEmailBtn');
     const emailText = document.querySelector('.email-text');
     
-    getInTouchBtn.addEventListener('click', function() {
-        emailReveal.classList.remove('hidden');
-        getInTouchBtn.style.display = 'none';
-    });
-    
-    copyEmailBtn.addEventListener('click', function() {
-        // Copy email to clipboard
-        navigator.clipboard.writeText(emailText.textContent).then(function() {
-            // Show success feedback
-            copyEmailBtn.textContent = 'copied!';
-            copyEmailBtn.classList.add('copied');
-            
-            // Reset button after 2 seconds
-            setTimeout(() => {
-                copyEmailBtn.textContent = 'copy';
-                copyEmailBtn.classList.remove('copied');
-            }, 2000);
-        }).catch(function() {
-            // Fallback for older browsers
-            const textArea = document.createElement('textarea');
-            textArea.value = emailText.textContent;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-            
-            copyEmailBtn.textContent = 'copied!';
-            copyEmailBtn.classList.add('copied');
-            
-            setTimeout(() => {
-                copyEmailBtn.textContent = 'copy';
-                copyEmailBtn.classList.remove('copied');
-            }, 2000);
+    if (emailBtn && emailPopup) {
+        emailBtn.addEventListener('click', function() {
+            emailPopup.classList.toggle('hidden');
         });
-    });
+    }
+    
+    if (copyEmailBtn && emailText) {
+        copyEmailBtn.addEventListener('click', function() {
+            // Copy email to clipboard
+            navigator.clipboard.writeText(emailText.textContent).then(function() {
+                // Show success feedback
+                copyEmailBtn.textContent = 'copied!';
+                copyEmailBtn.classList.add('copied');
+                
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    copyEmailBtn.textContent = 'copy';
+                    copyEmailBtn.classList.remove('copied');
+                }, 2000);
+            }).catch(function() {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = emailText.textContent;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                copyEmailBtn.textContent = 'copied!';
+                copyEmailBtn.classList.add('copied');
+                
+                setTimeout(() => {
+                    copyEmailBtn.textContent = 'copy';
+                    copyEmailBtn.classList.remove('copied');
+                }, 2000);
+            });
+        });
+    }
 });
 
 // Smooth Scrolling for Navigation Links
