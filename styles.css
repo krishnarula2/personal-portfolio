@@ -713,6 +713,8 @@ section {
     padding: 12px 16px;
     min-width: 280px;
     transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-email-display.hidden {
