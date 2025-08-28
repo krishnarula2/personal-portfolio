@@ -239,8 +239,9 @@ body {
 
 .hero-links {
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .hero-link {
@@ -261,6 +262,60 @@ body {
     border-color: var(--accent);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px var(--shadow);
+}
+
+.get-in-touch-btn {
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.email-reveal {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: var(--bg-card);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.email-reveal.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+.email-text {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    user-select: all;
+}
+
+.copy-email-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-email-btn:hover {
+    background: var(--accent-hover);
+    transform: scale(1.05);
+}
+
+.copy-email-btn.copied {
+    background: #10b981;
+    transform: scale(0.95);
 }
 
 /* Sections */
@@ -532,12 +587,23 @@ section {
     }
 
     .hero-links {
-        justify-content: center;
-        gap: 12px;
+        align-items: center;
+        gap: 16px;
     }
 
     .hero-link {
         padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .email-reveal {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 16px;
+    }
+
+    .email-text {
         font-size: 0.9rem;
     }
 
