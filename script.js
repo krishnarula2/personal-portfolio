@@ -54,8 +54,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const emailText = document.querySelector('.email-text');
     
     if (emailBtn && emailPopup) {
-        emailBtn.addEventListener('click', function() {
+        emailBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             emailPopup.classList.toggle('hidden');
+        });
+        
+        // Close popup when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!emailPopup.contains(e.target) && !emailBtn.contains(e.target)) {
+                emailPopup.classList.add('hidden');
+            }
         });
     }
     
