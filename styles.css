@@ -689,19 +689,20 @@ section {
     gap: 20px;
     flex-wrap: wrap;
     position: relative;
+    align-items: center;
 }
 
 .contact-email-btn {
     background: none;
     border: none;
     cursor: pointer;
+    position: relative;
 }
 
 .contact-email-popup {
     position: absolute;
-    top: -70px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: -60px;
+    left: 120px;
     background: var(--bg-card);
     border: 2px solid var(--border);
     border-radius: 12px;
