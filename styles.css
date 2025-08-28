@@ -226,7 +226,7 @@ body {
     font-family: 'JetBrains Mono', monospace;
     line-height: 1.6; /* Small gap between toronto and western lines */
     letter-spacing: 0.5px;
-    margin-bottom: 15px; /* Much smaller gap to next section */
+    margin-bottom: 8px; /* Much smaller gap to next section */
 }
 
 .hero-description {
@@ -246,12 +246,7 @@ body {
     font-weight: 600;
 }
 
-.hero-links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-}
+
 
 .social-icons {
     display: flex;
@@ -309,17 +304,29 @@ body {
     color: white;
 }
 
+.hero-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    position: relative;
+}
+
 .email-popup {
+    position: absolute;
+    top: 60px;
+    left: 152px;
     background: var(--bg-card);
     border: 2px solid var(--border);
     border-radius: 12px;
     padding: 16px 20px;
-    margin-top: 12px;
     display: flex;
     align-items: center;
     gap: 12px;
     box-shadow: 0 8px 20px var(--shadow);
     transition: all 0.3s ease;
+    z-index: 100;
+    white-space: nowrap;
 }
 
 .email-popup.hidden {
@@ -783,6 +790,12 @@ section {
         width: 44px;
         height: 44px;
         font-size: 1.1rem;
+    }
+    
+    .email-popup {
+        top: 56px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .hero-link {
