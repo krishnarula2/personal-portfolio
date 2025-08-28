@@ -101,24 +101,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Contact Email Popup Functionality
+// Contact Email Display Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const contactEmailBtn = document.getElementById('contactEmailBtn');
-    const contactEmailPopup = document.getElementById('contactEmailPopup');
+    const contactEmailDisplay = document.getElementById('contactEmailDisplay');
     const contactCopyEmailBtn = document.getElementById('contactCopyEmailBtn');
-    const contactEmailText = contactEmailPopup?.querySelector('.email-text');
+    const contactCloseEmailBtn = document.getElementById('contactCloseEmailBtn');
+    const contactEmailText = contactEmailDisplay?.querySelector('.email-text');
 
-    if (contactEmailBtn && contactEmailPopup) {
-        contactEmailBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            contactEmailPopup.classList.toggle('hidden');
+    if (contactEmailBtn && contactEmailDisplay) {
+        contactEmailBtn.addEventListener('click', function() {
+            contactEmailBtn.style.display = 'none';
+            contactEmailDisplay.classList.remove('hidden');
         });
-        
-        // Close popup when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!contactEmailPopup.contains(e.target) && !contactEmailBtn.contains(e.target)) {
-                contactEmailPopup.classList.add('hidden');
-            }
+    }
+    
+    if (contactCloseEmailBtn) {
+        contactCloseEmailBtn.addEventListener('click', function() {
+            contactEmailDisplay.classList.add('hidden');
+            contactEmailBtn.style.display = 'inline-block';
         });
     }
     
