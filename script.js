@@ -1,113 +1,3 @@
-// Loading Screen Animation - Extended duration for better experience
-document.addEventListener('DOMContentLoaded', function() {
-    const loadingScreen = document.getElementById('loadingScreen');
-    const mainContent = document.getElementById('mainContent');
-    const progressBar = document.querySelector('.progress-bar');
-    const percentageDisplay = document.getElementById('loadingPercentage');
-    
-    // Ensure main content starts hidden
-    mainContent.style.display = 'block';
-    mainContent.style.opacity = '0';
-    
-    let progress = 0;
-    const interval = setInterval(() => {
-        progress += Math.random() * 8; // Slower progress increments (was 20)
-        if (progress > 100) progress = 100;
-        
-        if (progressBar) {
-            progressBar.style.width = progress + '%';
-        }
-        
-        if (percentageDisplay) {
-            percentageDisplay.textContent = Math.floor(progress) + '%';
-        }
-        
-        if (progress >= 100) {
-            clearInterval(interval);
-            setTimeout(() => {
-                // Start fading out loading screen
-                loadingScreen.style.opacity = '0';
-                
-                setTimeout(() => {
-                    // Hide loading screen and show main content
-                    loadingScreen.style.display = 'none';
-                    mainContent.classList.add('loaded');
-                    mainContent.style.opacity = '1';
-                    document.body.style.overflow = 'auto';
-                    
-                    // Start the name typing animation first
-                    startNameTyping();
-                }, 500); // Longer transition
-            }, 800); // Longer pause at 100%
-        }
-    }, 150); // Slower interval (was 60ms)
-});
-
-// Name Typing Animation (runs once on first load)
-function startNameTyping() {
-    const nameElement = document.getElementById('typing-name');
-    const name = 'Krish Narula';
-    let currentCharIndex = 0;
-    
-    function typeName() {
-        if (currentCharIndex < name.length) {
-            nameElement.textContent = name.substring(0, currentCharIndex + 1);
-            currentCharIndex++;
-            setTimeout(typeName, 50); // Faster typing speed (was 80ms)
-        } else {
-            // After name is fully typed, start the subtitle typing animation
-            setTimeout(startDynamicTyping, 300); // Reduced delay (was 500ms)
-        }
-    }
-    
-    // Start typing the name after a shorter delay
-    setTimeout(typeName, 400); // Reduced delay (was 800ms)
-}
-
-// Dynamic Typing Animation for Hero Subtitle
-function startDynamicTyping() {
-    const dynamicTextElement = document.getElementById('dynamic-text');
-    const texts = [
-        'Product Growth Specialist',
-        'Computer Science Student',
-        'GTM Strategy Enthusiast',
-        'Product & Business Development',
-        'Growth Marketing Strategist'
-    ];
-    
-    let currentTextIndex = 0;
-    let currentCharIndex = 0;
-    let isDeleting = false;
-    let typeSpeed = 60;
-    
-    function type() {
-        const currentText = texts[currentTextIndex];
-        
-        if (isDeleting) {
-            dynamicTextElement.textContent = currentText.substring(0, currentCharIndex - 1);
-            currentCharIndex--;
-            typeSpeed = 30;
-        } else {
-            dynamicTextElement.textContent = currentText.substring(0, currentCharIndex + 1);
-            currentCharIndex++;
-            typeSpeed = 60;
-        }
-        
-        if (!isDeleting && currentCharIndex === currentText.length) {
-            typeSpeed = 1500; // Pause at end - reduced from 2000
-            isDeleting = true;
-        } else if (isDeleting && currentCharIndex === 0) {
-            isDeleting = false;
-            currentTextIndex = (currentTextIndex + 1) % texts.length;
-            typeSpeed = 300; // Pause before typing new text - reduced from 500
-        }
-        
-        setTimeout(type, typeSpeed);
-    }
-    
-    setTimeout(type, 200); // Start shortly after name is typed
-}
-
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -122,9 +12,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Optimized scroll handling with throttling
+// Simple scroll handling for navigation
 let ticking = false;
-let lastScrollTop = 0;
 
 function updateOnScroll() {
     const navbar = document.querySelector('.navbar');
@@ -135,20 +24,6 @@ function updateOnScroll() {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
-    }
-    
-    // Add scrolling class to body for darker background
-    if (currentScroll > 10) {
-        document.body.classList.add('scrolling');
-    } else {
-        document.body.classList.remove('scrolling');
-    }
-    
-    // Optimized parallax effect
-    const parallax = document.querySelector('.hero-background');
-    if (parallax) {
-        const speed = currentScroll * 0.15; // Reduced parallax intensity
-        parallax.style.transform = `translate3d(0, ${speed}px, 0)`;
     }
     
     // Active Navigation Link
@@ -182,7 +57,6 @@ function updateOnScroll() {
         if (currentLink) currentLink.classList.add('active');
     }
     
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     ticking = false;
 }
 
@@ -194,98 +68,12 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Hamburger Menu Toggle
+// Mobile menu functionality (if needed)
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    function toggleMenu() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        
-        // Prevent body scroll when menu is open
-        if (navMenu.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
-    }
-
-    function closeMenu() {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-
-    // Toggle menu when hamburger is clicked
-    if (hamburger) {
-        hamburger.addEventListener('click', toggleMenu);
-    }
-
-    // Close menu when a nav link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-            closeMenu();
-        }
-    });
-
-    // Close menu on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeMenu();
-        }
-    });
+    // Simple fade-in animation for content
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '1';
+    }, 100);
 });
-
-// Intersection Observer for Animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe elements for animation
-document.querySelectorAll('.project-card, .blog-card, .about-text, .about-stats, .experience-item, .education-item, .contact-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
-
-// Scroll to Top Button Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const scrollToTopBtn = document.getElementById('scrollToTop');
-    
-    if (!scrollToTopBtn) return;
-    
-    // Show/hide button based on scroll position
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.classList.add('show');
-        } else {
-            scrollToTopBtn.classList.remove('show');
-        }
-    });
-    
-    // Smooth scroll to top when clicked
-    scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}); 
