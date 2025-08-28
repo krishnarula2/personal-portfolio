@@ -224,8 +224,9 @@ body {
     color: var(--text-muted);
     font-weight: 400;
     font-family: 'JetBrains Mono', monospace;
-    line-height: 1.8;
+    line-height: 2.2; /* Increased for more gap between lines */
     letter-spacing: 0.5px;
+    margin-bottom: 25px; /* Reduced gap to next section */
 }
 
 .hero-description {
