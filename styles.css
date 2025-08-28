@@ -7,16 +7,16 @@
 
 :root {
     /* Light mode colors */
-    --bg-primary: #f8fafc;
+    --bg-primary: #fef9f4;
     --bg-secondary: #ffffff;
     --bg-card: #ffffff;
-    --text-primary: #1e293b;
-    --text-secondary: #475569;
-    --text-muted: #64748b;
-    --accent: #0ea5e9;
-    --accent-hover: #0284c7;
-    --border: #e2e8f0;
-    --shadow: rgba(71, 85, 105, 0.1);
+    --text-primary: #2c1810;
+    --text-secondary: #6b4e3d;
+    --text-muted: #8b6f47;
+    --accent: #d97706;
+    --accent-hover: #b45309;
+    --border: #e7d3c8;
+    --shadow: rgba(139, 111, 71, 0.1);
 }
 
 [data-theme="dark"] {
@@ -40,7 +40,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
     background: var(--bg-primary);
@@ -194,9 +194,10 @@ body {
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 16px;
-    letter-spacing: -0.03em;
-    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+    font-family: 'Space Grotesk', sans-serif;
     line-height: 1.1;
+    text-transform: lowercase;
 }
 
 .typing-text {
@@ -220,8 +221,9 @@ body {
     font-size: 1.1rem;
     color: var(--text-muted);
     font-weight: 400;
-    font-style: italic;
+    font-family: 'JetBrains Mono', monospace;
     line-height: 1.5;
+    letter-spacing: 0.5px;
 }
 
 .hero-description {
@@ -359,7 +361,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, transparent 0%, rgba(14, 165, 233, 0.1) 50%, transparent 100%);
+    background: linear-gradient(45deg, transparent 0%, rgba(217, 119, 6, 0.1) 50%, transparent 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -392,6 +394,8 @@ section {
     margin-bottom: 60px;
     text-align: left;
     letter-spacing: -0.02em;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: lowercase;
 }
 
 /* Experience Section */
@@ -428,7 +432,7 @@ section {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.1), transparent);
     transition: left 0.6s ease;
 }
 
