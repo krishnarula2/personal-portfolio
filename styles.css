@@ -188,6 +188,7 @@ body {
 
 .hero-intro {
     margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 .hero-greeting {
@@ -249,6 +250,68 @@ body {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--shadow);
+}
+
+.linkedin-icon:hover {
+    background: #0077b5;
+    border-color: #0077b5;
+    color: white;
+}
+
+.github-icon:hover {
+    background: #333;
+    border-color: #333;
+    color: white;
+}
+
+[data-theme="dark"] .github-icon:hover {
+    background: #fff;
+    border-color: #fff;
+    color: #333;
+}
+
+.twitter-icon:hover {
+    background: #1da1f2;
+    border-color: #1da1f2;
+    color: white;
+}
+
+.email-icon:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+}
+
+.menu-icon:hover {
+    background: var(--text-muted);
+    border-color: var(--text-muted);
+    color: white;
 }
 
 .hero-link {
@@ -673,6 +736,17 @@ section {
     .hero-links {
         align-items: center;
         gap: 16px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .social-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
     }
 
     .hero-link {
