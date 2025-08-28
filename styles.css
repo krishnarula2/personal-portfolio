@@ -699,7 +699,7 @@ section {
 
 .contact-email-popup {
     position: absolute;
-    top: 60px;
+    top: -70px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--bg-card);
