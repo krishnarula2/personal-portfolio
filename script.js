@@ -101,6 +101,61 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Contact Email Popup Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const contactEmailBtn = document.getElementById('contactEmailBtn');
+    const contactEmailPopup = document.getElementById('contactEmailPopup');
+    const contactCopyEmailBtn = document.getElementById('contactCopyEmailBtn');
+    const contactEmailText = contactEmailPopup?.querySelector('.email-text');
+
+    if (contactEmailBtn && contactEmailPopup) {
+        contactEmailBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            contactEmailPopup.classList.toggle('hidden');
+        });
+        
+        // Close popup when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!contactEmailPopup.contains(e.target) && !contactEmailBtn.contains(e.target)) {
+                contactEmailPopup.classList.add('hidden');
+            }
+        });
+    }
+    
+    if (contactCopyEmailBtn && contactEmailText) {
+        contactCopyEmailBtn.addEventListener('click', function() {
+            // Copy email to clipboard
+            navigator.clipboard.writeText(contactEmailText.textContent).then(function() {
+                // Show success feedback
+                contactCopyEmailBtn.textContent = 'copied!';
+                contactCopyEmailBtn.classList.add('copied');
+                
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    contactCopyEmailBtn.textContent = 'copy';
+                    contactCopyEmailBtn.classList.remove('copied');
+                }, 2000);
+            }).catch(function() {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = contactEmailText.textContent;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                contactCopyEmailBtn.textContent = 'copied!';
+                contactCopyEmailBtn.classList.add('copied');
+                
+                setTimeout(() => {
+                    contactCopyEmailBtn.textContent = 'copy';
+                    contactCopyEmailBtn.classList.remove('copied');
+                }, 2000);
+            });
+        });
+    }
+});
+
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
