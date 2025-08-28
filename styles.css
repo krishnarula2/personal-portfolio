@@ -224,9 +224,9 @@ body {
     color: var(--text-muted);
     font-weight: 400;
     font-family: 'JetBrains Mono', monospace;
-    line-height: 2.2; /* Increased for more gap between lines */
+    line-height: 1.6; /* Small gap between toronto and western lines */
     letter-spacing: 0.5px;
-    margin-bottom: 25px; /* Reduced gap to next section */
+    margin-bottom: 15px; /* Much smaller gap to next section */
 }
 
 .hero-description {
@@ -309,10 +309,45 @@ body {
     color: white;
 }
 
-.menu-icon:hover {
-    background: var(--text-muted);
-    border-color: var(--text-muted);
+.email-popup {
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 20px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.email-popup.hidden {
+    display: none;
+}
+
+.email-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.copy-email-btn {
+    background: var(--accent);
     color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.copy-email-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .hero-link {
