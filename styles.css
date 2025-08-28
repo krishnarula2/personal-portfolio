@@ -224,7 +224,7 @@ body {
     color: var(--text-muted);
     font-weight: 400;
     font-family: 'JetBrains Mono', monospace;
-    line-height: 1.6; /* Small gap between toronto and western lines */
+    line-height: 1.9; /* Increased gap between toronto and western lines */
     letter-spacing: 0.5px;
     margin-bottom: 8px; /* Much smaller gap to next section */
 }
@@ -688,6 +688,35 @@ section {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.contact-email-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-email-popup {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 20px var(--shadow);
+    transition: all 0.3s ease;
+    z-index: 100;
+    white-space: nowrap;
+}
+
+.contact-email-popup.hidden {
+    display: none;
 }
 
 .contact-link {
