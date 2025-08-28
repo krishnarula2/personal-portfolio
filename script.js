@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const typingText = document.getElementById('typingText');
     const cursor = document.getElementById('cursor');
-    const text = "i'm krish narula and i love gooning all day long!";
+    const text = "i'm krish narula!";
     let index = 0;
     
     function typeText() {
