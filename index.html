@@ -17,12 +17,16 @@
                     <span class="nav-logo">k</span>
                     <a href="#home" class="nav-home-link">krish narula</a>
                 </div>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#about" class="nav-link">about</a></li>
-                    <li><a href="#experience" class="nav-link">experience</a></li>
-                    <li><a href="#thoughts" class="nav-link">thoughts</a></li>
-                    <li><a href="#contact" class="nav-link">contact</a></li>
-                </ul>
+                <div class="nav-right">
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="#experience" class="nav-link">experience</a></li>
+                        <li><a href="#thoughts" class="nav-link">thoughts</a></li>
+                        <li><a href="#contact" class="nav-link">contact</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
             </div>
         </nav>
 
@@ -30,122 +34,69 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <div class="hero-intro">
-                    <p class="hero-greeting">hey! i'm krish.</p>
-                    <p class="hero-location">toronto (born & raised), chapel hill (school) & the world (always)</p>
+                    <p class="hero-greeting">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="cursor" id="cursor">|</span>
+                    </p>
+                    <p class="hero-location">toronto (born & raised), western university - computer science & ivey business school entrepreneurship</p>
                 </div>
                 <div class="hero-description">
-                    <p class="hero-present">my present // product growth in <span class="highlight">growth hacking</span> and <span class="highlight">writing every day</span>.</p>
-                    <p class="hero-past">my past // scaled a <span class="highlight">health tech startup</span> from $0 to $10m arr in 8 months, reformed provincial education policy on <span class="highlight">tech requirements for 300,000+ students</span>, and summitted <span class="highlight">mt. kilimanjaro</span>.</p>
-                    <p class="hero-future">my future // make a lot of <span class="highlight">friends</span>, and help a lot more people.</p>
+                    <p class="hero-present">my present // exploring opportunities in <span class="highlight">growth, GTM, business and tech</span> related roles. bringing <span class="highlight">technical ability</span> with <span class="highlight">business and growth interest</span>.</p>
+                    <p class="hero-past">my past // built amazing products at <span class="highlight">Blanc AI</span> and <span class="highlight">Requiem Solutions</span>, looking forward to what's next.</p>
+                    <p class="hero-future">my future // make countless memories by <span class="highlight">exploring the world</span>, doing what i love.</p>
                 </div>
                 <div class="hero-links">
-                    <a href="#thoughts" class="hero-link">daily substack</a>
-                    <a href="#contact" class="hero-link">bi-monthly update</a>
+                    <a href="https://github.com/krishnarula2" target="_blank" class="hero-link">github</a>
+                    <a href="https://www.linkedin.com/in/krish-narula-b50724274/" target="_blank" class="hero-link">linkedin</a>
+                    <a href="mailto:narulakrish2@gmail.com" class="hero-link">email</a>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">present</h2>
-                <div class="present-content">
-                    <div class="present-info">
-                        <p class="present-detail">cs & stats major + neuro minor @ <span class="highlight">unc chapel hill</span> on a <span class="highlight">full-ride</span>.</p>
-                        <p class="present-detail">product growth with voice + ai & commercializing biomarker-based depression diagnostics with <span class="highlight">eshelman innovation</span>.</p>
-                        <p class="present-detail">sharing <span class="highlight">my writing</span> with <span class="highlight">contrary research</span> and <span class="highlight">4000+ inboxes</span> <span class="highlight">every day</span>.</p>
-                    </div>
-                    <div class="profile-section">
-                        <div class="profile-image-container">
-                            <img src="profile kn.jpg" alt="Krish Narula" class="profile-image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
 
 
         <!-- Experience Section -->
         <section id="experience" class="experience">
             <div class="container">
-                <div class="section-container">
-                    <h2 class="section-title">
-                        <i class="fas fa-briefcase"></i>
-                        Experience
-                    </h2>
-                    <div class="experience-list">
-                        <div class="experience-item">
-                            <div class="experience-date">NOV 2024 - MAY 2025 • 7 MOS</div>
-                            <h3>Product & Growth</h3>
-                            <h4>Blanc AI</h4>
-                            <p>🚀 Automated Bidding & Quoting for Contractors — 5,000+ quotes generated, revolutionizing the construction industry workflow</p>
-                            <p>⚡ Generate Quotes in Minutes — Built lightning-fast quote generation system that reduced quote creation time from hours to minutes</p>
-                            <p>🔗 Integrated LLMs to keep legacy ERP systems to cut manual data entry by 40% and automate business-critical workflows across departments</p>
-                            <p>📈 Contributed to scalable REST APIs and responsive React interfaces, improving real-time AI interactions and user experience</p>
-                            <div class="experience-tech">
-                                <span class="tech-tag">AI</span>
-                                <span class="tech-tag">LLMs</span>
-                                <span class="tech-tag">REST APIs</span>
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">ERP Systems</span>
-                                <span class="tech-tag">Automation</span>
-                                <span class="tech-tag">Construction Tech</span>
-                                <span class="tech-tag">Product Growth</span>
-                            </div>
+                <h2 class="section-title">experience</h2>
+                <div class="experience-grid">
+                    <a href="https://www.blancai.ca" target="_blank" class="experience-card">
+                        <div class="experience-header">
+                            <h3>blanc ai</h3>
+                            <span class="experience-arrow">→</span>
                         </div>
+                        <p class="experience-role">founder</p>
+                        <p class="experience-description">quoting and bidding automation for contractors</p>
+                    </a>
 
-                        <div class="experience-item">
-                            <div class="experience-date">MAR 2025 - PRESENT</div>
-                            <h3>Lead Software Developer</h3>
-                            <h4>Western Cyber Society</h4>
-                            <p>🚀 Directed product development team of 5+ members to build full-stack banking simulation platform, managing project timeline and deliverables from conception to successful launch</p>
-                            <p>⚡ Implemented automated system processes that eliminated manual interventions, improving operational efficiency by 30% and reducing system maintenance requirements</p>
-                            <p>🎯 Optimized platform performance through architectural improvements, resulting in 30% faster processing speeds and enhanced user experience for 500+ platform users</p>
-                            <div class="experience-tech">
-                                <span class="tech-tag">Team Leadership</span>
-                                <span class="tech-tag">Full-Stack Development</span>
-                                <span class="tech-tag">Banking Simulation</span>
-                                <span class="tech-tag">System Architecture</span>
-                                <span class="tech-tag">Process Automation</span>
-                                <span class="tech-tag">Project Management</span>
-                            </div>
+                    <a href="#" class="experience-card">
+                        <div class="experience-header">
+                            <h3>requiem solutions</h3>
+                            <span class="experience-arrow">→</span>
                         </div>
+                        <p class="experience-role">growth engineer</p>
+                        <p class="experience-description">building automated consulting for B2B</p>
+                    </a>
 
-                        <div class="experience-item">
-                            <div class="experience-date">APR 2024 - JUN 2024 • 3 MOS</div>
-                            <h3>Software Engineer</h3>
-                            <h4>Site4U</h4>
-                            <p>👥 Led a team of 15+ developers to design, build, and launch responsive web solutions</p>
-                            <p>🚀 Developed 30+ production-ready web applications using HTML, CSS, JavaScript, and React — achieving a 100% client satisfaction rate</p>
-                            <div class="experience-tech">
-                                <span class="tech-tag">APIs</span>
-                                <span class="tech-tag">LLMs</span>
-                                <span class="tech-tag">AI</span>
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">React</span>
-                            </div>
+                    <a href="https://www.westerncybersociety.ca/" target="_blank" class="experience-card">
+                        <div class="experience-header">
+                            <h3>western cyber society</h3>
+                            <span class="experience-arrow">→</span>
                         </div>
+                        <p class="experience-role">lead software developer</p>
+                        <p class="experience-description">leading tech club at western university</p>
+                    </a>
 
-                        <div class="experience-item">
-                            <div class="experience-date">JUN 2024 - AUG 2024 • 3 MOS</div>
-                            <h3>Technology Intern</h3>
-                            <h4>CEVA</h4>
-                            <p>📊 Engineered and optimized automated data pipelines using Software, processing data for 1,200+ shipments over 90 days (an average of 13+ shipments/day) and cutting manual input time by 45% 🚀</p>
-                            <p>📈 Developed dynamic, data-driven Excel dashboards that integrated live logistics metrics, resulting in a 35% decrease in shipment processing delays and a 25% boost in broker response efficiency</p>
-                            <div class="experience-tech">
-                                <span class="tech-tag">Software Analyzation</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">Data Management</span>
-                                <span class="tech-tag">Excel</span>
-                                <span class="tech-tag">Automation</span>
-                                <span class="tech-tag">Logistics</span>
-                            </div>
+                    <a href="#" class="experience-card">
+                        <div class="experience-header">
+                            <h3>ceva logistics</h3>
+                            <span class="experience-arrow">→</span>
                         </div>
-                    </div>
+                        <p class="experience-role">technology intern</p>
+                        <p class="experience-description">automated data pipelines for 1,200+ shipments</p>
+                    </a>
                 </div>
             </div>
         </section>
