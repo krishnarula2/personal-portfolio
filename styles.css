@@ -719,6 +719,13 @@ section {
     max-width: 800px;
 }
 
+.thoughts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+}
+
 .thought-post {
     border: 2px solid var(--border);
     border-radius: 12px;
