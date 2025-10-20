@@ -3,215 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krish Narula - Product & Growth</title>
+    <title>Krish Narula - Tech Innovator & AI Enthusiast</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="dna-container">
+            <div class="dna-helix">
+                <div class="dna-strand strand-1"></div>
+                <div class="dna-strand strand-2"></div>
+                <div class="dna-base base-1"></div>
+                <div class="dna-base base-2"></div>
+                <div class="dna-base base-3"></div>
+                <div class="dna-base base-4"></div>
+                <div class="dna-base base-5"></div>
+                <div class="dna-base base-6"></div>
+            </div>
+            <div class="loading-text">
+                <div class="code-lines">
+                    <div class="code-line">initializing neural_networks...</div>
+                    <div class="code-line">loading quantum_algorithms...</div>
+                    <div class="code-line">compiling portfolio_data...</div>
+                    <div class="code-line">deploying krish.portfolio.exe...</div>
+                </div>
+                <div class="loading-progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="loading-status">
+                    <span class="status-text">Generating content</span>
+                    <span class="status-percentage" id="loadingPercentage">0%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Website -->
+    <div class="main-content" id="mainContent">
         <!-- Navigation -->
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-brand">
-                    <span class="nav-logo">k</span>
+                    <a href="#home" class="nav-home-link">Home</a>
                 </div>
-                <div class="nav-right">
-                    <ul class="nav-menu" id="nav-menu">
-                        <li><a href="#experience" class="nav-link">Experience</a></li>
-                        <li><a href="#technical-work" class="nav-link">Technical Work</a></li>
-                        <li><a href="#thoughts" class="nav-link">Media</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
-                    </ul>
-                    <button class="theme-toggle" id="themeToggle">
-                        <span class="theme-icon">🌙</span>
-                    </button>
-                </div>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#blogs" class="nav-link">Blogs</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
             </div>
         </nav>
 
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-intro">
-                        <p class="hero-greeting">
-                            <span class="typing-text" id="typingText"></span>
-                            <span class="cursor" id="cursor">|</span>
-                        </p>
-                        <p class="hero-location">toronto (born & raised),<br>western university - computer science & ivey business school entrepreneurship</p>
-                    </div>
-                    <div class="hero-description">
-                        <p class="hero-present">my present: fellow @ <span class="highlight">boardy</span>.</p>
-                        <p class="hero-past">my past: built amazing products at <span class="highlight">Blanc AI</span>, looking forward to what's next.</p>
-                        <p class="hero-future">my future: make countless memories by <span class="highlight">exploring the world</span>, doing what i love.</p>
-                    </div>
-                    <div class="hero-links">
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/krish-narula-b50724274/" target="_blank" class="social-icon linkedin-icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/krishnarula2" target="_blank" class="social-icon github-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://x.com/krishnarula__" target="_blank" class="social-icon twitter-icon">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <button id="emailBtn" class="social-icon email-icon">
-                                <i class="fas fa-envelope"></i>
-                            </button>
-                        </div>
-                        <div id="emailPopup" class="email-popup hidden">
-                            <span class="email-text">narulakrish2@gmail.com</span>
-                            <button class="copy-email-btn" id="copyEmailBtn">copy</button>
-                        </div>
-                    </div>
+                <h1 class="hero-title" id="hero-name">I'm <span id="typing-name"></span></h1>
+                <p class="hero-subtitle">I am a <span class="highlight" id="dynamic-text">Fellow @ Boardy</span></p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">View My Work</a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
                 </div>
-                <div class="hero-image">
-                    <div class="profile-container">
-                        <img src="profile picture.jpeg" alt="Krish Narula" class="hero-profile-image">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-container">
+                    <h2 class="section-title">
+                        <i class="fas fa-user"></i>
+                        About Me
+                    </h2>
+                    <div class="about-content">
+                        <div class="about-text-section">
+                            <div class="about-text">
+                                <p>I'm a passionate technologist with a deep fascination for artificial intelligence and innovative solutions. I love building things that make a difference and exploring the endless possibilities of technology.</p>
+                                <p>My journey in tech is driven by curiosity and the desire to create meaningful impact through code, AI, and cutting-edge technologies.</p>
+                            </div>
+                            <div class="about-image">
+                                <div class="image-placeholder">
+                                    <img src="profile%20picture.jpeg" alt="Krish Narula" class="profile-image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <h3>🧠</h3>
+                                <p>AI TOOLS</p>
+                                <div class="skill-list">OpenAI APIs, LangChain, Hugging Face, OpenCV, FastAPI, Reinforcement Learning</div>
+                            </div>
+                            <div class="stat">
+                                <h3>🔧</h3>
+                                <p>LANGUAGES</p>
+                                <div class="skill-list">Python, Java, JavaScript, SQL, C, HTML, CSS</div>
+                            </div>
+                            <div class="stat">
+                                <h3>🌍</h3>
+                                <p>TECH</p>
+                                <div class="skill-list">React, PyTorch, Next.js, Node.js</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Education Section -->
+        <section id="education" class="education">
+            <div class="container">
+                <div class="section-container">
+                    <h2 class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Education
+                    </h2>
+                    <div class="education-list">
+                        <div class="education-item">
+                            <h3>University of Western Ontario</h3>
+                            <h4>Bachelor of Science - Specialization in Computer Science</h4>
+                            <p>Pursuing a comprehensive education in computer science with focus on software engineering, algorithms, data structures, and artificial intelligence. Actively engaged in research and practical applications of cutting-edge technologies.</p>
+                            <div class="education-tech">
+                                <span class="tech-tag">Computer Science</span>
+                                <span class="tech-tag">Software Engineering</span>
+                                <span class="tech-tag">Algorithms</span>
+                                <span class="tech-tag">Data Structures</span>
+                                <span class="tech-tag">AI Research</span>
+                            </div>
+                        </div>
 
-
-
+                        <div class="education-item">
+                            <h3>Fletcher's Meadow Secondary School</h3>
+                            <h4>High School Diploma</h4>
+                            <p>Completed high school education with strong focus on mathematics, sciences, and technology courses. Developed foundational skills in programming and problem-solving that led to pursuing computer science.</p>
+                            <div class="education-tech">
+                                <span class="tech-tag">Mathematics</span>
+                                <span class="tech-tag">Sciences</span>
+                                <span class="tech-tag">Programming Fundamentals</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Experience Section -->
         <section id="experience" class="experience">
             <div class="container">
-                <h2 class="section-title">experience</h2>
-                <div class="experience-grid">
-                    <a href="#" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>boardy</h3>
-                            <span class="experience-arrow">→</span>
+                <div class="section-container">
+                    <h2 class="section-title">
+                        <i class="fas fa-briefcase"></i>
+                        Experience
+                    </h2>
+                    <div class="experience-list">
+                        <div class="experience-item">
+                            <div class="experience-date">PRESENT</div>
+                            <h3>Fellow</h3>
+                            <h4>Boardy</h4>
+                            <p>AI connector making impactful connections. Raised $8 million.</p>
                         </div>
-                        <p class="experience-role">fellow</p>
-                        <p class="experience-description">AI connector making impactful connections. Raised $8 million.</p>
-                    </a>
 
-                    <a href="https://syndicategroup.io/" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>syndicate</h3>
-                            <span class="experience-arrow">→</span>
-                        </div>
-                        <p class="experience-role">growth</p>
-                        <p class="experience-description">Accelerating early-stage startups with users, virality, and $50k-$3m+ in funding.</p>
-                    </a>
-
-                    <a href="https://entrepreneurship.uwo.ca/accelerator/" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>ivey business school</h3>
-                            <span class="experience-arrow">→</span>
-                        </div>
-                        <p class="experience-role">generalist</p>
-                        <p class="experience-description">helping scale the western accelerator</p>
-                    </a>
-
-                    <a href="https://www.blancai.ca" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>blanc ai</h3>
-                            <span class="experience-arrow">→</span>
-                        </div>
-                        <p class="experience-role">growth</p>
-                        <p class="experience-description">5000+ quotes generated with 1000+ users</p>
-                    </a>
-
-                    <a href="#" class="experience-card">
-                        <div class="experience-header">
-                            <h3>requiem solutions</h3>
-                            <span class="experience-arrow">→</span>
-                        </div>
-                        <p class="experience-role">growth</p>
-                        <p class="experience-description">building automated consulting for B2B</p>
-                    </a>
-
-                    <a href="https://www.westerncybersociety.ca/" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>western cyber society</h3>
-                            <span class="experience-arrow">→</span>
-                        </div>
-                        <p class="experience-role">lead software developer</p>
-                        <p class="experience-description">leading tech club at western university</p>
-                    </a>
-
-                    <a href="https://www.bollore.com/en/" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>bollore logistics</h3>
-                            <span class="experience-arrow">→</span>
-                        </div>
-                        <p class="experience-role">technology intern</p>
-                        <p class="experience-description">automated data pipelines for 1,200+ shipments</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Work Section -->
-        <section id="technical-work" class="technical-work">
-            <div class="container">
-                <h2 class="section-title">technical work</h2>
-                <div class="technical-projects">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>advanced brain tumor detection system</h3>
-                            <p>state-of-the-art deep learning system for automated brain tumor detection using VGG16 transfer learning and advanced computer vision techniques. achieved 96.15% accuracy on medical imaging datasets.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">python</span>
-                                <span class="tech-tag">tensorflow</span>
-                                <span class="tech-tag">computer vision</span>
-                                <span class="tech-tag">medical ai</span>
+                        <div class="experience-item">
+                            <div class="experience-date">JUN 2024 - AUG 2024 • 3 MOS</div>
+                            <h3>Technology Intern</h3>
+                            <h4>CEVA</h4>
+                            <p>📊 Engineered and optimized automated data pipelines using Software, processing data for 1,200+ shipments over 90 days (an average of 13+ shipments/day) and cutting manual input time by 45% 🚀</p>
+                            <p>📈 Developed dynamic, data-driven Excel dashboards that integrated live logistics metrics, resulting in a 35% decrease in shipment processing delays and a 25% boost in broker response efficiency</p>
+                            <div class="experience-tech">
+                                <span class="tech-tag">Software Analyzation</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Data Management</span>
+                                <span class="tech-tag">Excel</span>
+                                <span class="tech-tag">Automation</span>
+                                <span class="tech-tag">Logistics</span>
                             </div>
                         </div>
-                        <a href="https://github.com/krishnarula2/BrainTumorDetector" target="_blank" class="project-link">
-                            <span>view project</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>ai-powered comic story generator</h3>
-                            <p>full-stack application that creates dynamic superhero-style stories with generated visuals. built with react frontend, fastapi backend, and integrates azure openai gpt-4 for narrative generation.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">react</span>
-                                <span class="tech-tag">python</span>
-                                <span class="tech-tag">openai gpt-4</span>
-                                <span class="tech-tag">full-stack</span>
+
+                        <div class="experience-item">
+                            <div class="experience-date">APR 2024 - JUN 2024 • 3 MOS</div>
+                            <h3>Software Engineer</h3>
+                            <h4>Site4U</h4>
+                            <p>👥 Led a team of 15+ developers to design, build, and launch responsive web solutions</p>
+                            <p>🚀 Developed 30+ production-ready web applications using HTML, CSS, JavaScript, and React — achieving a 100% client satisfaction rate</p>
+                            <div class="experience-tech">
+                                <span class="tech-tag">APIs</span>
+                                <span class="tech-tag">LLMs</span>
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">React</span>
                             </div>
                         </div>
-                        <a href="https://github.com/krishnarula2/ai-storygenerator" target="_blank" class="project-link">
-                            <span>view project</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+
+                        <div class="experience-item">
+                            <div class="experience-date">SEP 2025 - PRESENT</div>
+                            <h3>Growth Specialist</h3>
+                            <h4><a href="https://syndicategroup.io/" target="_blank">Syndicate</a></h4>
+                            <p>Driving growth through UGC strategy and outbound acquisition.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Media Section -->
-        <section id="thoughts" class="thoughts">
+        <!-- Cool Tech Work Section -->
+        <section id="projects" class="projects">
             <div class="container">
-                <h2 class="section-title">media</h2>
-                <div class="thoughts-content thoughts-grid">
-                    <div class="thought-post">
-                        <h3>content creator</h3>
-                        <p>making real transparent content to change the game</p>
-                        <a href="https://www.instagram.com/imkrishnarula/" target="_blank" class="thought-link">follow on instagram →</a>
-                    </div>
-
-                    <div class="thought-post">
-                        <h3>leveraging algorithms for e-commerce growth: the autotap case study</h3>
-                        <p>how i combined growth marketing expertise with technical skills to build an e-commerce platform that uses AI to analyze viral content trends, optimize product positioning, and drive social media engagement through data-driven marketing strategies.</p>
-                        <div class="thought-stats">
-                            <span>1.5m+ accounts reached</span>
-                            <span>10k+ website visitors</span>
-                            <span>30 days</span>
+                <div class="section-container">
+                    <h2 class="section-title">Projects & Tech Work</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3>NASA Wildfire Tracker Application</h3>
+                            <p>A web application that visualizes wildfire data from NASA's Fire Information for Resource Management System (FIRMS) on an interactive Google Map. Stay informed about active fire incidents around the globe.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Google Maps API</span>
+                                <span>NASA FIRMS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="https://github.com/krishnarula2/WildfireTracker" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
                         </div>
-                        <a href="https://www.instagram.com/autotap.store/" target="_blank" class="thought-link">view autotap →</a>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>AI Chatbot for Small Businesses</h3>
+                            <p>AskBot is an AI-powered chatbot designed to serve local businesses by answering customer inquiries in real time. Features GPT-like experience with real-time Q&A and sleek UI design.</p>
+                            <div class="project-tech">
+                                <span>Django</span>
+                                <span>OpenAI</span>
+                                <span>Python</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="https://github.com/krishnarula2/AIAskBot" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h3>Virtual Pet Adventure Game</h3>
+                            <p>Interactive desktop simulation game where users care for a virtual pet by managing its health, sleep, hunger, and happiness. Built using Java Swing with object-oriented principles.</p>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Java Swing</span>
+                                <span>Maven</span>
+                                <span>OOP</span>
+                            </div>
+                            <a href="https://github.com/krishnarula2/VirtualGame" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blogs Section -->
+        <section id="blogs" class="blogs">
+            <div class="container">
+                <div class="section-container">
+                    <h2 class="section-title">
+                        <i class="fas fa-blog"></i>
+                        Latest Blogs
+                    </h2>
+                    <div class="blogs-grid">
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="https://via.placeholder.com/120x120/4fc3f7/ffffff?text=AutoTap" alt="AutoTap Logo" class="blog-product-image" 
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="blog-icon-fallback" style="display: none;">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>AutoTap</span>
+                                </div>
+                            </div>
+                            <h3>Leveraging Algorithms for E-Commerce Growth: The AutoTap Case Study</h3>
+                            <p>How I built an AI-driven e-commerce platform that analyzes viral content patterns and leverages machine learning algorithms to optimize product positioning and social media engagement for maximum reach and conversion.</p>
+                            <p><strong>Key Results Achieved:</strong></p>
+                            <p>🚀 <strong>Scaled to over 1.5M+ accounts reached</strong> in less than 30 days through strategic AI-powered content optimization and viral algorithm analysis.</p>
+                            <p>📈 <strong>Drove over 10,000+ people as traffic</strong> to the deployed product website, resulting in significant conversion improvements and brand awareness growth.</p>
+                            <p>The platform utilizes advanced machine learning models to predict content virality, optimize posting schedules, and automatically adjust product positioning based on real-time social media trends and engagement patterns.</p>
+                            <div class="blog-tags">
+                                <span>AI</span>
+                                <span>E-Commerce</span>
+                                <span>Machine Learning</span>
+                                <span>Viral Algorithms</span>
+                            </div>
+                            <div class="blog-cta">
+                                <p>Click here for more info:</p>
+                                <a href="https://www.instagram.com/autotap.store/" target="_blank" class="blog-link">View AutoTap on Instagram <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -220,20 +307,43 @@
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="container">
-                <h2 class="section-title">let's connect</h2>
-                <p class="contact-description">feel free to reach out to me! :)</p>
-                <div class="contact-links">
-                    <a href="https://github.com/krishnarula2" target="_blank" class="contact-link">github</a>
-                    <a href="https://www.linkedin.com/in/krish-narula-b50724274/" target="_blank" class="contact-link">linkedin</a>
-                    <div class="contact-email-container">
-                        <button id="contactEmailBtn" class="contact-link contact-email-btn">email</button>
-                        <div id="contactEmailDisplay" class="contact-email-display hidden">
-                            <span class="email-text">narulakrish2@gmail.com</span>
-                            <button class="copy-email-btn" id="contactCopyEmailBtn">copy</button>
-                            <button class="close-email-btn" id="contactCloseEmailBtn">×</button>
-                        </div>
+                <div class="section-container">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="contact-description">Feel free to reach out to me! :)</p>
+                    <div class="contact-grid">
+                        <a href="https://github.com/krishnarula2" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h3>GitHub</h3>
+                            <p>Where my tech work is displayed</p>
+                            <span class="contact-link">Visit Profile <i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/krish-narula-b50724274/" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <h3>LinkedIn</h3>
+                            <p>Connect with me professionally</p>
+                            <span class="contact-link">Connect <i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                        <a href="mailto:narulakrish2@gmail.com?subject=Hello%20Krish&body=Hi%20Krish,%0A%0AI%20found%20your%20portfolio%20and%20would%20like%20to%20connect.%0A%0A" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p>narulakrish2@gmail.com</p>
+                            <span class="contact-link">Send Email <i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                        <a href="https://x.com/krishnarula__" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <h3>X</h3>
+                            <p>Follow me for tech updates</p>
+                            <span class="contact-link">Follow <i class="fas fa-external-link-alt"></i></span>
+                        </a>
                     </div>
-                    <a href="https://x.com/krishnarula__" target="_blank" class="contact-link">x</a>
                 </div>
             </div>
         </section>
@@ -241,10 +351,11 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="container">
-                <p>&copy; 2025 krish narula. all rights reserved.</p>
+                <p>&copy; 2025 Krish Narula. All rights reserved.</p>
             </div>
         </footer>
-    
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html> 
