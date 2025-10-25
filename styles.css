@@ -998,6 +998,27 @@ section {
         padding: 28px;
     }
 
+    /* Thoughts section: stack cards and tune typography for phones */
+    .thoughts-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .thought-post h3 {
+        font-size: 1.3rem;
+        line-height: 1.35;
+    }
+
+    .thought-post p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .thought-stats span {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
     .thought-stats {
         flex-direction: column;
         gap: 8px;
@@ -1060,6 +1081,20 @@ section {
 
     .thought-post {
         padding: 24px;
+    }
+
+    /* Extra-small phones: slightly smaller media text */
+    .thought-post h3 {
+        font-size: 1.15rem;
+    }
+
+    .thought-post p {
+        font-size: 0.95rem;
+    }
+
+    .thought-stats span {
+        font-size: 0.78rem;
+        padding: 4px 9px;
     }
 
     .section-title {
