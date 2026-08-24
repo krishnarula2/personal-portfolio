@@ -53,6 +53,12 @@ window.addEventListener('scroll', () => {
 
 const revealItems = document.querySelectorAll('.reveal');
 
+document.querySelectorAll('.experience-list, .project-grid').forEach((group) => {
+    [...group.children].forEach((item, index) => {
+        item.style.setProperty('--reveal-delay', `${Math.min(index, 5) * 55}ms`);
+    });
+});
+
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
         for (const entry of entries) {
