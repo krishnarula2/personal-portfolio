@@ -3,6 +3,23 @@ const progressBar = document.querySelector('.scroll-progress span');
 const navLinks = [...document.querySelectorAll('.nav-link')];
 const sections = [...document.querySelectorAll('main section[id]')];
 const year = document.querySelector('#year');
+const themeToggle = document.querySelector('#themeToggle');
+const themeColor = document.querySelector('meta[name="theme-color"]');
+
+function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('portfolio-theme', theme);
+    themeToggle?.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+    const themeIcon = themeToggle?.querySelector('.theme-icon');
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀' : '☾';
+    themeColor?.setAttribute('content', theme === 'dark' ? '#0d0f0e' : '#f2f1ed');
+}
+
+themeToggle?.addEventListener('click', () => {
+    applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+});
+
+applyTheme(document.documentElement.dataset.theme || 'light');
 
 if (year) year.textContent = new Date().getFullYear();
 

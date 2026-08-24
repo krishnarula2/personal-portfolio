@@ -15,6 +15,13 @@
     <meta name="twitter:description" content="Experience across product, growth, and technology.">
     <meta name="twitter:image" content="https://www.itskrishnarula.com/og.png">
     <title>Krish Narula — Product, Growth & Technology</title>
+    <script>
+        (() => {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.dataset.theme = savedTheme || preferredTheme;
+        })();
+    </script>
     <link rel="icon" type="image/jpeg" href="krish-portrait.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +43,9 @@
                     <li><a href="#work" class="nav-link">Selected work</a></li>
                     <li><a href="#case-study" class="nav-link">Case study</a></li>
                 </ul>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+                    <span class="theme-icon" aria-hidden="true">◐</span>
+                </button>
                 <a href="mailto:narulakrish2@gmail.com" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a>
             </div>
         </div>
