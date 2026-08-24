@@ -647,6 +647,12 @@ button, input, textarea { font: inherit; }
     --card-shadow: 0 18px 55px rgba(30, 31, 28, .07);
     --contact-bg: #171816;
     --contact-text: #f4f2ea;
+    --panel-bg: #171816;
+    --panel-card: #20231f;
+    --panel-text: #f4f2ea;
+    --panel-muted: #aaa9a2;
+    --panel-border: #343834;
+    --panel-accent: #b7cabb;
 }
 
 [data-theme="dark"] {
@@ -661,6 +667,12 @@ button, input, textarea { font: inherit; }
     --card-shadow: 0 22px 70px rgba(0, 0, 0, .28);
     --contact-bg: #e7e4db;
     --contact-text: #171816;
+    --panel-bg: #e7e4db;
+    --panel-card: #f4f2ec;
+    --panel-text: #171816;
+    --panel-muted: #6d6c65;
+    --panel-border: #ccc8be;
+    --panel-accent: #536f64;
 }
 
 body,
@@ -945,4 +957,153 @@ body,
     .project-card { min-height: 520px; }
     .contact-section { padding: 20px 0 64px; }
     .contact-inner h2 { font-size: 3.45rem; }
+}
+
+/* Inverted section cards and tighter rhythm */
+.hero { padding-bottom: 34px; }
+
+.hero-content,
+.experience-section > .container,
+.work-section > .container,
+.case-study-section > .container,
+.contact-inner {
+    border: 1px solid var(--panel-border);
+    border-radius: 26px;
+    background: var(--panel-bg);
+    color: var(--panel-text);
+    box-shadow: var(--card-shadow);
+}
+
+.hero-content { border-color: var(--panel-border); }
+
+.hero-eyebrow,
+.hero-location,
+.hero-now p,
+.section-header > div > p,
+.experience-meta,
+.experience-copy,
+.project-body > p,
+.metric-visual p,
+.case-study-copy > p:not(.case-study-kicker) {
+    color: var(--panel-muted);
+}
+
+.hero-summary,
+.hero-now strong,
+.section-header h2,
+.project-body h3,
+.case-study-copy h3,
+.metric-visual strong {
+    color: var(--panel-text);
+}
+
+.section-index,
+.project-topline,
+.case-study-kicker,
+.experience-number,
+.item-arrow {
+    color: color-mix(in srgb, var(--panel-text) 52%, transparent);
+}
+
+.hero .button-primary {
+    border-color: var(--panel-text);
+    background: var(--panel-text);
+    color: var(--panel-bg);
+}
+
+.hero .button-primary:hover {
+    border-color: var(--panel-accent);
+    background: var(--panel-accent);
+    color: var(--panel-bg);
+}
+
+.hero .button-ghost { border-color: var(--panel-border); color: var(--panel-text); }
+.hero .button-ghost:hover { border-color: var(--panel-accent); }
+.profile-container { border-color: var(--panel-border); }
+
+.section { padding: 34px 0; }
+
+.experience-section > .container,
+.work-section > .container,
+.case-study-section > .container {
+    padding: clamp(34px, 5vw, 58px);
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.section-header h2 { margin-bottom: 8px; }
+.section-header > div > p { margin-inline: auto; }
+
+.experience-list,
+.project-grid { gap: 12px; }
+
+.experience-item,
+.project-card,
+.case-study-card {
+    border-color: var(--panel-border);
+    background: var(--panel-card);
+    color: var(--panel-text);
+}
+
+.experience-item {
+    min-height: 205px;
+    gap: 10px 14px;
+    padding: 22px;
+}
+
+.experience-item:hover {
+    padding-left: 22px;
+    border-color: var(--panel-accent);
+    background: var(--panel-card);
+}
+
+.experience-main p { color: var(--panel-accent); }
+
+.project-card { min-height: 510px; }
+.project-card:hover,
+.case-study-card:hover { border-color: var(--panel-accent); }
+.project-topline,
+.project-visual,
+.case-study-metrics,
+.case-study-metrics div { border-color: var(--panel-border); }
+.project-visual { min-height: 195px; background: color-mix(in srgb, var(--panel-text) 5%, var(--panel-card)); }
+.story-visual span:first-child,
+.story-visual span:last-child { border-color: var(--panel-border); background: var(--panel-card); color: var(--panel-text); }
+.tag-list span { border-color: var(--panel-border); color: var(--panel-muted); }
+.tag-list span:hover { border-color: var(--panel-accent); color: var(--panel-text); }
+.text-link { color: var(--panel-text); }
+
+.case-study-metrics span { color: var(--panel-muted); }
+.case-study-metrics strong { color: var(--panel-text); }
+
+.contact-section { padding: 34px 0 68px; }
+.contact-inner { background: var(--panel-bg); color: var(--panel-text); }
+.contact-inner > .section-index { color: color-mix(in srgb, var(--panel-text) 52%, transparent); }
+.contact-inner > p:not(.section-index) { color: var(--panel-muted); }
+.button-light { border-color: var(--panel-text); background: var(--panel-text); color: var(--panel-bg); }
+.button-light:hover { border-color: var(--panel-text); background: transparent; color: var(--panel-text); }
+.social-links a { color: var(--panel-muted); }
+.social-links a:hover { color: var(--panel-text); }
+
+@media (max-width: 720px) {
+    .hero { padding-bottom: 18px; }
+    .section { padding: 18px 0; }
+    .experience-section > .container,
+    .work-section > .container,
+    .case-study-section > .container,
+    .contact-inner { padding: 28px 20px; border-radius: 20px; }
+    .section-header { margin-bottom: 22px; }
+    .experience-list { gap: 10px; }
+    .experience-item { min-height: 190px; padding: 20px; }
+    .experience-item:hover { padding-left: 20px; }
+    .project-card { min-height: 480px; }
+    .contact-section { padding: 18px 0 46px; }
 }
