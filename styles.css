@@ -264,20 +264,6 @@ button, input, textarea { font: inherit; }
     filter: saturate(.82) contrast(1.02);
 }
 
-.portrait-caption {
-    position: absolute;
-    inset: auto 0 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 12px;
-    background: rgba(23, 23, 21, .72);
-    color: rgba(255, 255, 255, .82);
-    font-size: .57rem;
-    font-weight: 700;
-    letter-spacing: .11em;
-    text-transform: uppercase;
-}
-
 .section { padding: 118px 0; }
 .experience-section { background: var(--background); }
 .work-section { border-top: 1px solid var(--border); background: #efeee9; }
