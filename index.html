@@ -3,249 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krish Narula - Product & Growth</title>
-    <link rel="icon" type="image/jpeg" href="profile picture.jpeg">
+    <meta name="description" content="Krish Narula is a Computer Science and Ivey Entrepreneurship student with experience across product, growth, and technology.">
+    <meta name="theme-color" content="#0b0b0a">
+    <meta property="og:title" content="Krish Narula — Product, Growth & Technology">
+    <meta property="og:description" content="Experience across product, growth, and technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.itskrishnarula.com/">
+    <meta property="og:image" content="https://www.itskrishnarula.com/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Krish Narula — Product, Growth & Technology">
+    <meta name="twitter:description" content="Experience across product, growth, and technology.">
+    <meta name="twitter:image" content="https://www.itskrishnarula.com/og.png">
+    <title>Krish Narula — Product, Growth & Technology</title>
+    <link rel="icon" type="image/jpeg" href="krish-portrait.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body data-theme="dark">
-    <!-- Main Website -->
-        <!-- Navigation -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <span class="nav-logo">k</span>
-                </div>
-                <div class="nav-right">
-                    <ul class="nav-menu" id="nav-menu">
-                        <li><a href="#experience" class="nav-link">Experience</a></li>
-                        <li><a href="#technical-work" class="nav-link">Work</a></li>
-                        <li><a href="#thoughts" class="nav-link">Media</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
-                    </ul>
-                    <button class="theme-toggle" id="themeToggle">
-                        <span class="theme-icon">🌙</span>
-                    </button>
-                </div>
-            </div>
-        </nav>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-        <!-- Hero Section -->
+    <nav class="navbar" aria-label="Primary navigation">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand" aria-label="Krish Narula — home">
+                <span class="nav-logo">KN<span class="accent-dot">.</span></span>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#work" class="nav-link">Selected work</a></li>
+                    <li><a href="#case-study" class="nav-link">Case study</a></li>
+                </ul>
+                <a href="mailto:narulakrish2@gmail.com" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
         <section id="home" class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-intro">
-                        <p class="hero-greeting">
-                            <span class="typing-text" id="typingText"></span>
-                            <span class="cursor" id="cursor">|</span>
-                        </p>
-                        <p class="hero-location">toronto (born & raised),<br>western university - computer science & ivey business school entrepreneurship</p>
+            <div class="hero-content container">
+                <div class="hero-text reveal">
+                    <p class="hero-eyebrow">Product · Growth · Technology</p>
+                    <h1 class="hero-name">Krish Narula</h1>
+                    <p class="hero-summary">Computer Science and Ivey Entrepreneurship student at Western University.</p>
+                    <p class="hero-location">Toronto, Canada</p>
+                    <div class="hero-actions">
+                        <a href="#experience" class="button button-primary">View experience <span aria-hidden="true">↓</span></a>
+                        <a href="https://www.linkedin.com/in/krish-narula-b50724274/" target="_blank" rel="noopener noreferrer" class="button button-ghost">LinkedIn <span aria-hidden="true">↗</span></a>
                     </div>
-                    <div class="hero-description">
-                        <p class="hero-present">my present: doing product & gtm @ <span class="highlight">sepal ai (YC S24)</span>.</p>
-                        <p class="hero-past">my past: prev fellow @ <span class="highlight">boardy</span>,</p>
-                        <p class="hero-future">my future: make countless memories by <span class="highlight">exploring the world</span>, doing what i love.</p>
-                    </div>
-                    <div class="hero-links">
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/krish-narula-b50724274/" target="_blank" class="social-icon linkedin-icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/krishnarula2" target="_blank" class="social-icon github-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://x.com/krishnarula__" target="_blank" class="social-icon twitter-icon">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <button id="emailBtn" class="social-icon email-icon">
-                                <i class="fas fa-envelope"></i>
-                            </button>
-                        </div>
-                        <div id="emailPopup" class="email-popup hidden">
-                            <span class="email-text">narulakrish2@gmail.com</span>
-                            <button class="copy-email-btn" id="copyEmailBtn">copy</button>
-                        </div>
+                    <div class="hero-now">
+                        <span>Now</span>
+                        <p>Project Manager at <strong>Mercor</strong></p>
                     </div>
                 </div>
-                <div class="hero-image">
+
+                <figure class="hero-image reveal">
                     <div class="profile-container">
-                        <img src="profile picture.jpeg" alt="Krish Narula" class="hero-profile-image">
+                        <img src="krish-portrait.jpeg" alt="Portrait of Krish Narula" class="hero-profile-image" width="3456" height="4604">
+                        <figcaption class="portrait-caption"><span>Toronto, Canada</span><span>2026</span></figcaption>
                     </div>
+                </figure>
+            </div>
+
+        </section>
+
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <header class="section-header reveal">
+                    <p class="section-index">01 / Experience</p>
+                    <div>
+                        <h2>Experience</h2>
+                        <p>Product, growth, and technical roles across AI, startups, and logistics.</p>
+                    </div>
+                </header>
+
+                <div class="experience-list">
+                    <a href="https://www.mercor.com/" target="_blank" rel="noopener noreferrer" class="experience-item reveal">
+                        <span class="experience-number">01</span>
+                        <div class="experience-main"><h3>Mercor</h3><p>Project Manager</p></div>
+                        <div class="experience-meta"><p>Mar 2026 — Present · 6 mos</p><p>San Francisco Bay Area</p></div>
+                        <p class="experience-copy">$1–500M ARR in 1.5 years. Backed by General Catalyst, Benchmark, and Felicis.</p>
+                        <span class="item-arrow" aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="https://sepalai.com" target="_blank" rel="noopener noreferrer" class="experience-item reveal">
+                        <span class="experience-number">02</span>
+                        <div class="experience-main"><h3>Sepal AI</h3><p>GTM & Product</p></div>
+                        <div class="experience-meta"><p>Nov 2025 — Mar 2026 · 5 mos</p><p>San Francisco Bay Area</p></div>
+                        <p class="experience-copy">YC S24</p>
+                        <span class="item-arrow" aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="https://boardy.ai" target="_blank" rel="noopener noreferrer" class="experience-item reveal">
+                        <span class="experience-number">03</span>
+                        <div class="experience-main"><h3>Boardy</h3><p>Growth</p></div>
+                        <div class="experience-meta"><p>2026</p><p>Toronto, Ontario</p></div>
+                        <span class="item-arrow" aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="https://www.ivey.uwo.ca/" target="_blank" rel="noopener noreferrer" class="experience-item reveal">
+                        <span class="experience-number">04</span>
+                        <div class="experience-main"><h3>Ivey Business School</h3><p>Generalist</p></div>
+                        <div class="experience-meta"><p>Sep 2025 — Dec 2025 · 4 mos</p><p>Western University</p></div>
+                        <p class="experience-copy">Western Accelerator</p>
+                        <span class="item-arrow" aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="https://www.blancai.ca" target="_blank" rel="noopener noreferrer" class="experience-item reveal">
+                        <span class="experience-number">05</span>
+                        <div class="experience-main"><h3>Blanc AI</h3><p>Product & Growth</p></div>
+                        <div class="experience-meta"><p>Nov 2024 — Apr 2025 · 6 mos</p></div>
+                        <p class="experience-copy">Automated bidding and quoting for contractors—5,000+ quotes generated.</p>
+                        <span class="item-arrow" aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="https://www.cevalogistics.com/" target="_blank" rel="noopener noreferrer" class="experience-item reveal">
+                        <span class="experience-number">06</span>
+                        <div class="experience-main"><h3>Bolloré Logistics</h3><p>Technology Intern</p></div>
+                        <div class="experience-meta"><p>Jun 2024 — Sep 2024 · 4 mos</p></div>
+                        <p class="experience-copy">Engineered data pipelines and dynamic dashboards.</p>
+                        <span class="item-arrow" aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="https://www.westerncybersociety.ca/" target="_blank" rel="noopener noreferrer" class="experience-item reveal">
+                        <span class="experience-number">07</span>
+                        <div class="experience-main"><h3>Western Cyber Society</h3><p>Lead Software Developer</p></div>
+                        <div class="experience-meta"><p>Western University</p></div>
+                        <p class="experience-copy">Leading the university’s technology club and developer community.</p>
+                        <span class="item-arrow" aria-hidden="true">↗</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-
-
-
-
-        <!-- Experience Section -->
-        <section id="experience" class="experience">
+        <section id="work" class="section work-section">
             <div class="container">
-                <h2 class="section-title">experience</h2>
-                <div class="experience-grid">
-                    <a href="https://www.mercor.com/" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>Mercor</h3>
-                            <span class="experience-arrow">→</span>
-                        </div>
-                        <p class="experience-role">Project Manager</p>
-                        <p class="experience-date">Mar 2026 - Present · 6 mos · San Francisco Bay Area</p>
-                        <p class="experience-description">$1-500M ARR in 1.5 years. Backed by General Catalyst, Benchmark, Felicis</p>
-                    </a>
+                <header class="section-header reveal">
+                    <p class="section-index">02 / Selected work</p>
+                    <div>
+                        <h2>Selected work</h2>
+                        <p>A selection of technical projects.</p>
+                    </div>
+                </header>
 
-                    <a href="https://sepalai.com" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>Sepal AI</h3>
-                            <span class="experience-arrow">→</span>
+                <div class="project-grid">
+                    <article class="project-card project-card-featured reveal">
+                        <div class="project-topline"><span>Machine learning · Medical AI</span><span>01</span></div>
+                        <div class="project-visual metric-visual"><strong>96.15<span>%</span></strong><p>classification accuracy</p></div>
+                        <div class="project-body">
+                            <h3>Advanced Brain Tumor Detection</h3>
+                            <p>A deep-learning system for automated tumor detection using VGG16 transfer learning and computer vision.</p>
+                            <div class="tag-list"><span>Python</span><span>TensorFlow</span><span>Computer Vision</span></div>
+                            <a href="https://github.com/krishnarula2/BrainTumorDetector" target="_blank" rel="noopener noreferrer" class="text-link">View on GitHub <span aria-hidden="true">↗</span></a>
                         </div>
-                        <p class="experience-role">GTM & Product</p>
-                        <p class="experience-date">Nov 2025 - Mar 2026 · 5 mos · San Francisco Bay Area</p>
-                        <p class="experience-description">YC S24</p>
-                    </a>
+                    </article>
 
-                    <a href="https://boardy.ai" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>Boardy</h3>
-                            <span class="experience-arrow">→</span>
+                    <article class="project-card reveal">
+                        <div class="project-topline"><span>Generative AI · Full stack</span><span>02</span></div>
+                        <div class="project-visual story-visual" aria-hidden="true"><span>AI</span><span>→</span><span>STORY</span></div>
+                        <div class="project-body">
+                            <h3>AI Comic Story Generator</h3>
+                            <p>A full-stack experience that turns a prompt into a dynamic superhero narrative with generated visuals.</p>
+                            <div class="tag-list"><span>React</span><span>FastAPI</span><span>GPT-4</span></div>
+                            <a href="https://github.com/krishnarula2/ai-storygenerator" target="_blank" rel="noopener noreferrer" class="text-link">View on GitHub <span aria-hidden="true">↗</span></a>
                         </div>
-                        <p class="experience-role">Growth</p>
-                        <p class="experience-date">2026 – 2026 · Toronto, Ontario, Canada</p>
-                    </a>
-
-                    <a href="https://www.ivey.uwo.ca/" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>Ivey Business School at Western University</h3>
-                            <span class="experience-arrow">→</span>
-                        </div>
-                        <p class="experience-role">Generalist</p>
-                        <p class="experience-date">Sep 2025 - Dec 2025 · 4 mos</p>
-                        <p class="experience-description">Western Accelerator</p>
-                    </a>
-
-                    <a href="https://www.blancai.ca" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>Blanc AI</h3>
-                            <span class="experience-arrow">→</span>
-                        </div>
-                        <p class="experience-role">Product & Growth</p>
-                        <p class="experience-date">Nov 2024 - Apr 2025 · 6 mos</p>
-                        <p class="experience-description">Automated Bidding & Quoting for Contractors — 5,000+ quotes generated 💡</p>
-                    </a>
-
-                    <a href="https://www.cevalogistics.com/" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>Bolloré Logistics</h3>
-                            <span class="experience-arrow">→</span>
-                        </div>
-                        <p class="experience-role">Technology Intern</p>
-                        <p class="experience-date">Jun 2024 - Sep 2024 · 4 mos</p>
-                        <p class="experience-description">Engineered Data Pipelines & Dynamic Dashboards⚡</p>
-                    </a>
-
-                    <a href="https://www.westerncybersociety.ca/" target="_blank" class="experience-card">
-                        <div class="experience-header">
-                            <h3>Western Cyber Society</h3>
-                            <span class="experience-arrow">→</span>
-                        </div>
-                        <p class="experience-role">Lead Software Developer</p>
-                        <p class="experience-description">Leading the tech club at Western University.</p>
-                    </a>
-
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Work Section -->
-        <section id="technical-work" class="technical-work">
+        <section id="case-study" class="section case-study-section">
             <div class="container">
-                <h2 class="section-title">work</h2>
-                <div class="technical-projects">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>advanced brain tumor detection system</h3>
-                            <p>state-of-the-art deep learning system for automated brain tumor detection using VGG16 transfer learning and advanced computer vision techniques. achieved 96.15% accuracy on medical imaging datasets.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">python</span>
-                                <span class="tech-tag">tensorflow</span>
-                                <span class="tech-tag">computer vision</span>
-                                <span class="tech-tag">medical ai</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/krishnarula2/BrainTumorDetector" target="_blank" class="project-link">
-                            <span>view project</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                <header class="section-header reveal">
+                    <p class="section-index">03 / Growth case study</p>
+                    <div><h2>Growth case study</h2></div>
+                </header>
+
+                <a href="https://www.instagram.com/autotap.store/" target="_blank" rel="noopener noreferrer" class="case-study-card reveal">
+                    <div class="case-study-copy">
+                        <p class="case-study-kicker">Autotap · E-commerce growth</p>
+                        <h3>Autotap</h3>
+                        <p>An e-commerce growth project using content analysis, product positioning, and social distribution.</p>
+                        <span class="text-link">View case study <span aria-hidden="true">↗</span></span>
                     </div>
-                    
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>ai-powered comic story generator</h3>
-                            <p>full-stack application that creates dynamic superhero-style stories with generated visuals. built with react frontend, fastapi backend, and integrates azure openai gpt-4 for narrative generation.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">react</span>
-                                <span class="tech-tag">python</span>
-                                <span class="tech-tag">openai gpt-4</span>
-                                <span class="tech-tag">full-stack</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/krishnarula2/ai-storygenerator" target="_blank" class="project-link">
-                            <span>view project</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                    <div class="case-study-metrics">
+                        <div><strong>1.5M+</strong><span>accounts reached</span></div>
+                        <div><strong>10K+</strong><span>website visitors</span></div>
+                        <div><strong>30</strong><span>days</span></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container contact-inner reveal">
+                <p class="section-index">04 / Contact</p>
+                <h2>Let’s connect.</h2>
+                <p>For opportunities, projects, or a conversation, feel free to reach out.</p>
+                <div class="contact-actions">
+                    <a href="mailto:narulakrish2@gmail.com" class="button button-light">narulakrish2@gmail.com <span aria-hidden="true">↗</span></a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/krish-narula-b50724274/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                        <a href="https://github.com/krishnarula2" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        <a href="https://x.com/krishnarula__" target="_blank" rel="noopener noreferrer">X ↗</a>
                     </div>
                 </div>
             </div>
         </section>
+    </main>
 
-        <!-- Media Section -->
-        <section id="thoughts" class="thoughts">
-            <div class="container">
-                <h2 class="section-title">media</h2>
-                <div class="thoughts-content thoughts-grid">
-                    <div class="thought-post">
-                        <h3>leveraging algorithms for e-commerce growth: the autotap case study</h3>
-                        <p>how i combined growth marketing expertise with technical skills to build an e-commerce platform that uses AI to analyze viral content trends, optimize product positioning, and drive social media engagement through data-driven marketing strategies.</p>
-                        <div class="thought-stats">
-                            <span>1.5m+ accounts reached</span>
-                            <span>10k+ website visitors</span>
-                            <span>30 days</span>
-                        </div>
-                        <a href="https://www.instagram.com/autotap.store/" target="_blank" class="thought-link">view autotap →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year">2026</span> Krish Narula</p>
+            <p>Toronto, Canada · HTML, CSS, and JavaScript.</p>
+            <a href="#home">Back to top ↑</a>
+        </div>
+    </footer>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">let's connect</h2>
-                <p class="contact-description">feel free to reach out to me! :)</p>
-                <div class="contact-links">
-                    <a href="https://github.com/krishnarula2" target="_blank" class="contact-link">github</a>
-                    <a href="https://www.linkedin.com/in/krish-narula-b50724274/" target="_blank" class="contact-link">linkedin</a>
-                    <div class="contact-email-container">
-                        <button id="contactEmailBtn" class="contact-link contact-email-btn">email</button>
-                        <div id="contactEmailDisplay" class="contact-email-display hidden">
-                            <span class="email-text">narulakrish2@gmail.com</span>
-                            <button class="copy-email-btn" id="contactCopyEmailBtn">copy</button>
-                            <button class="close-email-btn" id="contactCloseEmailBtn">×</button>
-                        </div>
-                    </div>
-                    <a href="https://x.com/krishnarula__" target="_blank" class="contact-link">x</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; 2025 krish narula. all rights reserved.</p>
-            </div>
-        </footer>
-    
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
